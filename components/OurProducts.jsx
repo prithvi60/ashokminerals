@@ -10,7 +10,11 @@ const OurProducts = () => {
       </h3>
       <div className="grid w-full h-full grid-cols-2 gap-5 md:gap-10 xl:gap-20 font-RobotoSlab md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 place-content-center">
         {products.map((item, index) => (
-          <Card shadow="sm" key={index} className="hover:scale-110 md:min-w-64 max-w-80 min-h-64">
+          <Card
+            shadow="sm"
+            key={index}
+            className="hover:scale-110 md:min-w-64 max-w-80 min-h-64"
+          >
             <CardBody className="p-0 overflow-hidden">
               <Image
                 height={480}

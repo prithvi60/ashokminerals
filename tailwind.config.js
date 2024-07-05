@@ -5,7 +5,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(accordion|button|card|navbar|divider|ripple|spinner).js"
+    "./node_modules/@nextui-org/theme/dist/components/(accordion|button|card|input|navbar|select|divider|ripple|spinner|listbox|popover|scroll-shadow).js"
   ],
   theme: {
     extend: {
