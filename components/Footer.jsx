@@ -17,14 +17,14 @@ const Footer = () => {
             className="object-contain"
           />
         </div>
-        <h4 className="inline-flex text-base font-medium tracking-wide font-RobotoSlab text-zinc-500">
+        <h4 className="text-base font-medium tracking-wide font-RobotoSlab text-zinc-500">
           © {new Date().getFullYear()}
           <span className="font-semibold text-warning ms-1">
             Ashok Minerals Enterprises.
           </span>{" "}
           All Rights Reserved.
         </h4>
-        <div className="flex items-start justify-center gap-3 ">
+        <div className="flex flex-col items-start justify-center gap-2.5 sm:flex-row sm:gap-0 md:gap-3 ">
           {navbarMenu.map((item, id) => (
             <div className="flex flex-col gap-3" key={id}>
               <div className="flex items-center gap-2 text-base font-normal capitalize transition-colors duration-300 ease-linear hover:text-warning font-RobotoSlab text-primary group">
@@ -34,18 +34,18 @@ const Footer = () => {
                 {item.menu}
               </div>
               <div
-                className={`p-4 ${
+                className={`ps-10 ${
                   item.menu === "our company" && "columns-2"
-                } font-RobotoSlab space-y-2`}
+                } font-RobotoSlab`}
               >
                 {item?.subMenu?.map((l, index) => (
                   <Link
                     // title={l.listMenu}
-                    className={`text-sm text-primary cursor-pointer lg:text-lg hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-normal z-10 capitalize`}
+                    className={`text-sm text-primary cursor-pointer lg:text-lg hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-normal z-10 capitalize space-y-5`}
                     key={index}
                     href={l.menuRef}
                   >
-                    <h4 className="w-full h-full">{l.menuTitle}</h4>
+                    <h4 className="w-full h-full mb-2">{l.menuTitle}</h4>
                   </Link>
                 ))}
               </div>
@@ -53,7 +53,7 @@ const Footer = () => {
           ))}
           <Link
             href={"/blog"}
-            className="ms-2.5 text-base font-normal text-primary hover:text-warning font-RobotoSlab"
+            className="text-base font-normal ms-0 md:ms-5 text-primary hover:text-warning font-RobotoSlab"
           >
             Blog
           </Link>
