@@ -4,6 +4,7 @@ import { Providers } from "./providers";
 import NavbarComponent from "@/components/Navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Development from "@/components/Development";
 
 const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${robotoSlab.variable}`}>
         <Providers>
+          <Development />
           <NavbarComponent />
           {children}
         </Providers>

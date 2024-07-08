@@ -35,7 +35,7 @@ const NavbarComponent = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
-        base: ["!z-[990] py-2.5 h-auto"],
+        base: ["!z-[990] py-2.5 h-auto top-8 sm:top-8 "],
         item: ["data-[active=true]:text-warning"],
       }}
     >
@@ -74,12 +74,14 @@ const NavbarComponent = () => {
             </div>
             {item.subMenu && (
               <div
-                className={`absolute hidden top-[100px] -left-5 bg-primary p-4 shadow-md rounded-xl font-RobotoSlab w-max group-hover:grid grid-cols-2 gap-2`}
+                className={`absolute hidden top-[100px] -left-0 bg-primary p-4 shadow-md rounded-xl font-RobotoSlab w-max group-hover:block whitespace-nowrap ${
+                  item.menu === "our company" && "columns-2"
+                }`}
               >
                 {item?.subMenu?.map((l, index) => (
                   <Link
                     // title={l.listMenu}
-                    className={`pe-3 text-sm cursor-pointer lg:text-lg hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-normal z-10 capitalize`}
+                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-normal z-10 capitalize`}
                     key={index}
                     href={l.menuRef}
                   >

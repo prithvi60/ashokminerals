@@ -156,7 +156,6 @@ export const ContactForm = () => {
               placeholder="Comments Please..."
               className="max-w-full"
               variant="faded"
-              // color="secondary"
               size="lg"
             />
             <Button

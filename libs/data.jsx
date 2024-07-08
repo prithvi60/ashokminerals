@@ -3,11 +3,11 @@ export const navbarMenu = [
     menu: "our company",
     ref: "",
     subMenu: [
-      { menuTitle: "about us", menuRef: "/about_ us" },
+      { menuTitle: "about us", menuRef: "/about_us" },
       { menuTitle: "founder chairman", menuRef: "/founder_chairmans" },
       {
         menuTitle: "technology & innovation",
-        menuRef: "/technology_&_ innovation",
+        menuRef: "/technology_&_innovation",
       },
       { menuTitle: "certifications", menuRef: "/certifications" },
       { menuTitle: "operations", menuRef: "/operations" },
