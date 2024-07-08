@@ -1,9 +1,11 @@
 import { BlogSlug } from "@/components/BlogSlug";
+import OtherPageHero from "@/components/OtherPageHero";
 
 export default function Home({ params }) {
   return (
-    <main>
+    <section>
+      <OtherPageHero title={"Blog Content"} imgSrc={"/hero_1.jpg"} />
       <BlogSlug id={params.slug} />
-    </main>
+    </section>
   );
 }

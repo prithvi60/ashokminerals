@@ -4,7 +4,7 @@ const WhyAshokMinerals = () => {
   return (
     <section className="w-full h-full py-10 sm:py-14 font-RobotoSlab">
       <div className="flex flex-col-reverse w-full h-full md:flex-row">
-        <div className="space-y-4 px-14 py-14 md:basis-1/2 bg-warning text-primary">
+        <div className="px-8 space-y-4 sm:px-14 py-14 md:basis-1/2 bg-warning text-primary">
           <h3 className="text-lg font-light tracking-wide sm:text-xl lg:text-3xl">
             Why{" "}
             <strong className="font-bold">
@@ -32,7 +32,7 @@ const WhyAshokMinerals = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col-reverse w-full h-full md:flex-row">
+      <div className="flex flex-col w-full h-full md:flex-row">
         <div className="md:basis-1/2 relative w-full h-[60vh] md:h-[100vh]">
           <Image
             alt="image"
@@ -41,7 +41,7 @@ const WhyAshokMinerals = () => {
             className="object-cover object-center"
           />
         </div>
-        <div className="space-y-4 text-black px-14 py-14 md:basis-1/2 bg-secondary">
+        <div className="px-8 space-y-4 text-black sm:px-14 py-14 md:basis-1/2 bg-secondary">
           <h3 className="text-lg font-light tracking-wide sm:text-xl lg:text-3xl">
             Comprehensive {" "}
             <strong className="font-bold">Mineral Solutions</strong>

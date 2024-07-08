@@ -7,7 +7,7 @@ import { navbarMenu } from "@/libs/data";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-full px-5 py-10 mx-auto mt-10 sm:py-14 font-RobotoSlab bg-black/90 sm:mt-14">
+    <footer className="w-full h-full px-6 py-10 mx-auto mt-10 sm:px-14 sm:py-14 lg:px-16 xl:px-40 font-RobotoSlab bg-black/90 ">
       <div className="flex flex-col items-center justify-center gap-8">
         <div className="relative w-full h-16 overflow-hidden md:h-24">
           <Image

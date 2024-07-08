@@ -50,7 +50,7 @@ const Testimonials = () => {
           fill
           className="object-cover object-center brightness-[0.1]"
         />
-        <div className="absolute w-full px-5 py-10 -translate-x-1/2 -translate-y-1/2 max-w-7xl top-1/2 left-1/2 sm:py-14 text-primary slider-container">
+        <div className="absolute w-full px-6 py-10 -translate-x-1/2 -translate-y-1/2 sm:px-10 lg:px-16 xl:px-40 top-1/2 left-1/2 sm:py-14 text-primary slider-container">
           <Slider {...settings} className="mx-auto w-full md:!w-4/5">
             {testimonial.map((item, id) => (
               <blockquote
@@ -69,7 +69,7 @@ const Testimonials = () => {
         </div>
       </div>
       <div className="w-full h-[20vh]] bg-secondary">
-        <div className="w-full h-full px-8 py-5 mx-auto md:px-24 md:w-4/5">
+        <div className="w-full h-full px-6 py-6 sm:px-10 lg:px-16 xl:px-40 ">
           <Marquee
             autoFill
             direction="left"

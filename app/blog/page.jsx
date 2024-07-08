@@ -1,14 +1,13 @@
 
 import Blog from "@/components/Blog";
+import OtherPageHero from "@/components/OtherPageHero";
 import { Button } from "@nextui-org/button";
 
 export default function Home() {
 
   return (
     <main>
-      {/* <Button color="primary" className="mx-auto">
-        ashok minerals
-      </Button> */}
+      <OtherPageHero title={"Blog"} imgSrc={"/hero_4.jpg"} />
       <Blog/>
     </main>
   );

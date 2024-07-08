@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
@@ -31,11 +30,12 @@ const NavbarComponent = () => {
       position="sticky"
       isBordered="false"
       isBlurred="false"
-      maxWidth="2xl"
+      maxWidth="full"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
-        base: ["!z-[990] py-2.5 h-auto top-8 sm:top-8 "],
+        base: ["!z-[990] py-2.5 px-6 sm:px-10 lg:px-16 xl:px-40 h-auto top-8 sm:top-8 "],
+        wrapper:["!px-0"],
         item: ["data-[active=true]:text-warning"],
       }}
     >
@@ -85,7 +85,7 @@ const NavbarComponent = () => {
                     key={index}
                     href={l.menuRef}
                   >
-                    <h4 className="w-full h-full">{l.menuTitle}</h4>
+                    <h4 className="w-full h-full mb-2.5">{l.menuTitle}</h4>
                   </Link>
                 ))}
               </div>
@@ -157,7 +157,7 @@ const NavbarComponent = () => {
         }}
       >
         <NavbarMenuItem className="flex items-center justify-end w-full mt-11 ms-0">
-        {/* mt-3 ms-2.5 */}
+          {/* mt-3 ms-2.5 */}
           <IoClose
             onClick={() => setIsMenuOpen(false)}
             className="text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary"
@@ -193,7 +193,7 @@ const NavbarComponent = () => {
                       key={index}
                       href={l.menuRef}
                     >
-                      <h4 className="pb-3.5">{l.menuTitle}</h4>
+                      <h4 className="mb-2">{l.menuTitle}</h4>
                     </Link>
                   ))}
                 </AccordionItem>

@@ -11,7 +11,11 @@ import { Date } from "./Date";
 const Blog = () => {
   const { loading, error, data } = useQuery(getAllPosts);
   if (loading) {
-    return <Loader />;
+    return (
+      <div className="w-full h-[40dvh] flex justify-center items-center">
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {
@@ -25,11 +29,11 @@ const Blog = () => {
   // console.log(data);
 
   return (
-    <section className="w-full h-full space-y-8 font-RobotoSlab bg-primary p-3.5 sm:px-16 sm:py-10">
-      <h2 className="text-xl font-bold text-center md:text-5xl xl:text-7xl">
+    <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-10 lg:px-16 xl:px-40">
+      {/* <h2 className="text-xl font-bold text-center md:text-5xl xl:text-7xl">
         Blogs
-      </h2>
-      <div className="flex items-start w-full h-full gap-5 max-w-7xl">
+      </h2> */}
+      <div className="flex items-start w-full h-full gap-5">
         {data?.posts?.nodes?.map((post, idx) => (
           <Card
             className="h-auto max-w-sm pb-4 space-y-3 bg-secondary group"

@@ -16,12 +16,12 @@ const lists = [
 
 export const ContactForm = () => {
   return (
-    <section className="relative w-full h-full px-5 py-10 mx-auto my-12 space-y-10 md:h-auto sm:py-14 max-w-7xl">
+    <section className="relative w-full h-full px-6 py-10 space-y-10 md:h-auto sm:py-14 sm:px-10 lg:px-16 xl:px-40 ">
       <h3 className="relative w-full text-3xl text-warning font-semibold sm:text-4xl lg:text-6xl sm:w-4/5 mx-auto after:absolute after:content-[''] after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:rounded-sm after:w-24 after:bg-black/80 text-center capitalize">
         Contact <strong className="font-bold text-black">us</strong>
       </h3>
-      <div className="flex flex-col items-start justify-center gap-2 md:ga-4 lg:gap-8 md:flex-row">
-        <div className="w-full h-auto px-6 mx-auto space-y-5 rounded-md xl:px-20 py-7 md:w-1/2">
+      <div className="flex flex-col justify-center gap-2 md:ga-4 lg:gap-8 md:flex-row">
+        <div className="w-full h-auto space-y-5 rounded-md py-7 md:w-1/2">
           <form
             // action="https://public.herotofu.com/v1/19317a90-2945-11ef-b910-172fda062bcc"
             method="post"
@@ -29,7 +29,7 @@ export const ContactForm = () => {
             className="w-full h-auto space-y-4"
           >
             <h3 className="mb-12 text-lg font-semibold tracking-wide font-RobotoSlab md:text-xl xl:text-2xl">
-              Get in touch with us!
+              Let’s Get in touch to Explore business opportunities
             </h3>
             <Select
               name="selecting options"
@@ -169,34 +169,62 @@ export const ContactForm = () => {
               Submit
             </Button>
           </form>
-          <div className="space-y-5 text-center font-RobotoSlab">
+          <div className="space-y-1.5 text-center font-RobotoSlab">
             <h4 className="p-1 mx-auto text-sm font-semibold border-2 rounded-full w-max border-warning text-warning">
               OR
             </h4>
             <p className="text-base font-normal text-warning md:text-lg">
-              Mail Us:{" "}
-              <span className="italic font-normal text-black">
-                ashokMinerals@gmail.com
+              Email Us:{" "}
+              <span className="font-normal text-black">
+                contact@ashokminerals.com
               </span>
             </p>
             <p className="text-base font-normal text-warning md:text-lg">
-              Contact Us:{" "}
+              Marketing :{" "}
+              <span className="font-normal text-black">
+                marketing@ashokminerals.com
+              </span>
+            </p>
+            <p className="text-base font-normal text-warning md:text-lg">
+              Sales & Other Enquiries :{" "}
               <span className="italic font-normal text-black">
-                044 2451 2581
+                Vanessa@ashokminerals.com
               </span>
             </p>
           </div>
         </div>
-        <div className="w-full h-[350px] md:h-[750px] mx-auto md:mt-9 md:w-1/2">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15551.882871157884!2d80.2585246!3d12.9737247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d43de4e88cb%3A0x987781b6095c4a43!2sAshok%20Mineral%20Enterprises!5e0!3m2!1sen!2sin!4v1720184013835!5m2!1sen!2sin"
-            width={"100%"}
-            height={"100%"}
-            style={{ border: 0 }}
-            allowFullScreen
-            loading={"lazy"}
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div className="w-full h-full md:mt-6 md:w-1/2">
+          <div className="mb-8 space-y-3">
+            <h3 className="text-lg font-semibold tracking-wide font-RobotoSlab md:text-xl xl:text-2xl">
+              Office Details
+            </h3>
+            <address className="text-base font-normal font-RobotoSlab">
+              Ashok Mineral Enterprises
+              <br />
+              <span className="font-semibold text-warning">
+                {" "}
+                Primary Manufacturing Unit & Warehouse :
+              </span>
+              <br /> F 15 & F86, Sipcot industrial complex,
+              <br /> Gummidipoondi - 601201.
+              <br />
+              <span className="font-semibold text-warning">Contact No - </span>
+              +91-44-24512581/82/83
+              <br />
+              GST : 33AAPB8321M1Z0
+            </address>
+            <div className="w-full h-[380px] md:h-[630px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15551.882871157884!2d80.2585246!3d12.9737247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d43de4e88cb%3A0x987781b6095c4a43!2sAshok%20Mineral%20Enterprises!5e0!3m2!1sen!2sin!4v1720184013835!5m2!1sen!2sin"
+                width={"100%"}
+                height={"100%"}
+                style={{ border: 0 }}
+                allowFullScreen
+                loading={"lazy"}
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
       {/* </div> */}

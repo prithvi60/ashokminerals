@@ -3,18 +3,23 @@ export const navbarMenu = [
     menu: "our company",
     ref: "",
     subMenu: [
-      { menuTitle: "about us", menuRef: "/about_us" },
-      { menuTitle: "founder chairman", menuRef: "/founder_chairmans" },
+      // { menuTitle: "about us", menuRef: "/about_us" },
+      { menuTitle: "Our History ", menuRef: "/our_history " },
       {
-        menuTitle: "technology & innovation",
-        menuRef: "/technology_&_innovation",
+        menuTitle: "Our Associations",
+        menuRef: "/our_associations",
       },
-      { menuTitle: "certifications", menuRef: "/certifications" },
-      { menuTitle: "operations", menuRef: "/operations" },
-      { menuTitle: "milestones", menuRef: "/milestones" },
-      { menuTitle: "leadership team", menuRef: "/leadership_team" },
-      { menuTitle: "guiding principles", menuRef: "/guiding_principles" },
-      { menuTitle: "policies", menuRef: "/policies" },
+      { menuTitle: "Our Certifications", menuRef: "/our_certifications" },
+      {
+        menuTitle: "Our International Ties",
+        menuRef: "/our_international_ties",
+      },
+      { menuTitle: "Leadership", menuRef: "/leadership" },
+      { menuTitle: "Our Team", menuRef: "/our_team" },
+      {
+        menuTitle: "Our Manufacturing Setup",
+        menuRef: "/our_manufacturing_setup",
+      },
     ],
   },
   {

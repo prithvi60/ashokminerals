@@ -13,7 +13,11 @@ export const BlogSlug = ({ id }) => {
   });
 
   if (loading) {
-    return <Loader />;
+    return (
+      <div className="w-full h-[40dvh] flex justify-center items-center">
+        <Loader />
+      </div>
+    );
   }
 
   if (error) {
@@ -26,11 +30,11 @@ export const BlogSlug = ({ id }) => {
 
   // console.log(data);
   return (
-    <section className="w-full h-full space-y-8 font-RobotoSlab bg-primary p-3.5 sm:px-16 sm:py-10">
-      <h2 className="text-xl font-bold text-center md:text-5xl xl:text-7xl">
+    <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-10 lg:px-16 xl:px-40">
+      {/* <h2 className="text-xl font-bold text-center md:text-5xl xl:text-7xl">
         Blog
-      </h2>
-      <div className="relative w-full h-full p-5 mx-auto space-y-5 rounded-md max-w-7xl bg-secondary">
+      </h2> */}
+      <div className="relative w-full h-full p-5 space-y-5 rounded-md bg-secondary">
         <small className="text-sm font-normal text-zinc-500">
           <Date dateString={data.post.modified} />
         </small>
