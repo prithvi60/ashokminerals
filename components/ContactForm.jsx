@@ -17,7 +17,7 @@ const lists = [
 export const ContactForm = () => {
   return (
     <section className="relative w-full h-full px-5 py-10 mx-auto my-12 space-y-10 md:h-auto sm:py-14 max-w-7xl">
-      <h3 className="relative w-full text-3xl text-zinc-600 font-light sm:text-4xl lg:text-6xl sm:w-4/5 mx-auto after:absolute after:content-[''] after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:rounded-sm after:w-24 after:bg-black/80 text-center capitalize">
+      <h3 className="relative w-full text-3xl text-warning font-semibold sm:text-4xl lg:text-6xl sm:w-4/5 mx-auto after:absolute after:content-[''] after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:rounded-sm after:w-24 after:bg-black/80 text-center capitalize">
         Contact <strong className="font-bold text-black">us</strong>
       </h3>
       <div className="flex flex-col items-start justify-center gap-2 md:ga-4 lg:gap-8 md:flex-row">

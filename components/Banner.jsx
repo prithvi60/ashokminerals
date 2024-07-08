@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Slider from "react-slick";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
 
@@ -39,12 +39,24 @@ function PrevArrow(props) {
 
 const Banner = () => {
   const [isActive, setIsActive] = useState(0);
+  const [blur, setBlur] = useState(true);
+  const loadingImage = useRef();
+
+  useEffect(() => {
+    if (loadingImage.current.complete) {
+      setBlur(false);
+    }
+
+    loadingImage.current.addEventListener("load", () => {
+      setBlur(false);
+    });
+  }, []);
   const settings = {
     dots: true,
     infinite: true,
     fade: true,
     speed: 1000,
-    autoplay:2000,
+    autoplay: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
@@ -78,12 +90,27 @@ const Banner = () => {
   };
   return (
     <section className="relative w-full h-full overflow-hidden slider-container">
+      {blur === true && (
+        <div className="absolute top-0 left-0 z-50 w-full h-[90dvh]">
+          <Image
+            priority
+            loading={"eager"}
+            alt="bg image"
+            src={"/placeholder.jpg"}
+            style={{ objectFit: "cover", objectPosition: "center" }}
+            fill
+            className="blur-sm"
+          />
+        </div>
+      )}
       <Slider {...settings}>
         {imagSrc.map((img, id) => (
           <div className="relative w-full h-[90dvh]" key={id}>
             <Image
               alt="bg image"
               src={img}
+              ref={loadingImage}
+              loading="lazy"
               style={{ objectFit: "cover", objectPosition: "center" }}
               fill
             />

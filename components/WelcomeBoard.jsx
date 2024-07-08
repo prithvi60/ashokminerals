@@ -3,7 +3,7 @@ import React from "react";
 const WelcomeBoard = () => {
   return (
     <section className="w-full h-full px-5 py-10 mx-auto space-y-7 sm:py-14 max-w-7xl font-RobotoSlab">
-      <h3 className="relative w-full text-3xl text-zinc-600 font-light sm:text-4xl lg:text-6xl sm:w-4/5 mx-auto after:absolute after:content-[''] after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:rounded-sm after:w-24 after:bg-black/80 text-center ">
+      <h3 className="relative w-full text-3xl text-warning font-semibold sm:text-4xl lg:text-6xl sm:w-4/5 mx-auto after:absolute after:content-[''] after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:rounded-sm after:w-24 after:bg-black/80 text-center ">
         We Are{" "}
         <strong className="font-bold text-black">Leading Industrial Minerals Manufacturer & Supplier.</strong>
       </h3>

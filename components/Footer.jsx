@@ -62,18 +62,21 @@ const Footer = () => {
           <Link
             href="https://wa.me/9840899343?text=Thank%20You%20For%20Connecting%20With%20Ashok%20Minerals%20Marketing%20Team,%20We%20Will%20Get%20In%20Touch%20With%20You%20As%20Soon%20As%20Possible."
             title="whatsapp logo"
+            target="_blank"
           >
             <FaWhatsapp className="text-xl cursor-pointer md:text-2xl text-primary hover:animate-pulse" />
           </Link>
           <Link
             href={"https://www.instagram.com/ashokminerals/"}
             title="instagram logo"
+            target="_blank"
           >
             <FaInstagram className="text-xl cursor-pointer md:text-2xl text-primary hover:animate-pulse" />
           </Link>
           <Link
             href={"https://www.linkedin.com/company/ashokmineralenterprises/"}
             title="linkedin logo"
+            target="_blank"
           >
             <FaLinkedinIn className="text-xl cursor-pointer md:text-2xl text-primary hover:animate-pulse" />
           </Link>
