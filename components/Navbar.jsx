@@ -136,7 +136,7 @@ const NavbarComponent = () => {
       </NavbarContent>
       {/* Mobile menu */}
       <NavbarMenu
-        className="!z-[995] top-0 bg-secondary/75"
+        className="!z-[995] top-0 bg-secondary/95"
         motionProps={{
           variants: {
             enter: {
@@ -156,7 +156,8 @@ const NavbarComponent = () => {
           },
         }}
       >
-        <NavbarMenuItem className="flex items-center justify-end w-full mt-3 ms-2.5">
+        <NavbarMenuItem className="flex items-center justify-end w-full mt-11 ms-0">
+        {/* mt-3 ms-2.5 */}
           <IoClose
             onClick={() => setIsMenuOpen(false)}
             className="text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary"
