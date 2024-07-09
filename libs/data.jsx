@@ -113,3 +113,72 @@ export const marqueeEffect = [
   { altTxt: "logo 5", src: "/logo-5.png" },
   { altTxt: "logo 6", src: "/logo-6.png" },
 ];
+
+export const history = {
+  note: "Founded in 1956 - 68 years of Credibility",
+  para: "Join us as we continue to write new chapters in our illustrious history.",
+  lists: [
+    {
+      title:
+        "A Legacy of Excellence: Three Generations of Family Entrepreneurship",
+      desc: "Welcome to our journey through time. We are proud to share the story of our family-run business, now in its third generation, that has evolved into a significant name in the mining and mineral industry of South India.",
+    },
+    {
+      title: "Roots in Ore Sourcing",
+      desc: "Ashok Minerals story began with a focus on the sourcing of iron and manganese ores. In those early days, we established a strong relationship with Japanese trading houses, laying the foundation for our future growth and success. Our expertise in sourcing these vital ores marked the first chapter in our long and storied history.",
+    },
+    {
+      title: "Pioneering Calcium Carbonate Mining",
+      desc: "The entrepreneurial spirit led us to explore new opportunities. We ventured into owning and operating Calcium Carbonate Mines in the Salem District of Tamil Nadu, India. This significant step not only diversified our operations but also strengthened our presence in the mineral sector.",
+    },
+    {
+      title: "Leading in Barite Exports",
+      desc: "Our reputation grew further as we became a forefront player in the export of Barite, particularly to the Middle East, and more specifically, Saudi Arabia. Our South Indian Mines became synonymous with quality and reliability, helping us to cement our position as a key player in the global mineral export market.",
+    },
+    {
+      title: "Expansion and Diversification",
+      desc: "Over the years, our areas of activity have continuously expanded. We ventured beyond our initial focus, embracing the mining and processing of a diverse range of minerals. This growth transformed us into what we are today - an INR 500 million company with a rich heritage and an even richer promise for the future.",
+    },
+    {
+      title:
+        "Our Present Focus: Sourcing & Processing of Diverse Industrial Minerals",
+      desc: "Today, we stand at the forefront of sourcing and processing a diverse offering of industrial & speciality minerals. With a deep understanding of the market and a commitment to excellence, we continue to uphold the values of our founders while embracing modern technologies and practices. We are dedicated to sustaining our legacy of quality, reliability, and innovation for many more generations to come.",
+    },
+  ],
+};
+
+export const manufacturing = {
+  note: "Our Manufacturing Excellence",
+  para: "Explore our world of manufacturing excellence, where quality meets innovation, and every particle tells a story of perfection and precision.",
+  lists: [
+    {
+      title:
+        "Primary Manufacturing Unit & Warehouse: The Heart of Our Operations",
+      desc: "Located in the vibrant industrial hub of Gummidipoondi, Chennai, South India, our primary manufacturing unit and warehouse stand as a testament to our commitment to quality and efficiency. This strategic location not only situates us in the midst of a dynamic industrial environment but also ensures seamless accessibility to both our local and international clients.",
+    },
+    {
+      title: "State-of-the-Art Pulverisers: Precision in Every Particle",
+      desc: "At the core of our manufacturing process are our three state-of-the-art pulverisers. These sophisticated machines are capable of generating micronised powder up to 30 microns, ensuring unparalleled precision and quality in every product we produce. This advanced technology underscores our dedication to meeting the diverse needs of our clients with unmatched accuracy.",
+    },
+    {
+      title: "Advanced In-House Laboratory: Upholding Quality Standards",
+      desc: "Quality is not just a promise, but a practice at our manufacturing unit. Our state-of-the-art laboratory is dedicated to the rigorous testing of all incoming and finished goods. This ensures that every product that leaves our facility meets the highest standards of quality and reliability.",
+    },
+    {
+      title: "Future-Ready Expansion Plans**",
+      desc: "Looking towards the future, we are well-equipped and ready to expand our manufacturing capabilities. This foresight positions us to not only meet the growing demands of our clients but also to embrace new opportunities and challenges in the ever-evolving market.",
+    },
+    {
+      title: "Strategic Location: Accessibility and Connectivity",
+      desc: "Our primary manufacturing unit's location is a strategic asset. Situated just a few kilometers from the Port of Chennai and nestled within one of the biggest industrial estates of South India, our facility is in the company of renowned entities such as Michelin Tyres. This prime location ensures optimal accessibility and connectivity, enhancing our ability to serve both our domestic and international clientele efficiently.",
+    },
+    {
+      title: "Pan-India Network: Extensive Collaboration and Quality Assurance",
+      desc: "Beyond our primary manufacturing unit, we have established numerous tie-ups with units across India. This extensive network allows us to closely monitor production and maintain the highest quality standards across all our products. It's through these collaborations that we ensure consistency and excellence in every offering.",
+    },
+    {
+      title: "Access to Premium Mines and Minerals",
+      desc: "Our competitive edge is further sharpened by our access to some of the best mines and minerals in India. This rich resource base enables us to source high-quality raw materials, ensuring that the end product meets our stringent standards for quality and performance.",
+    },
+  ],
+};
