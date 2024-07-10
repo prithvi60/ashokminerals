@@ -182,3 +182,75 @@ export const manufacturing = {
     },
   ],
 };
+
+export const association = [
+  {
+    abbr: "Indian Small Scale Paint Association ",
+    imgSrc: "/ISSPA-logo.png",
+    altTxt: "ISSPA",
+  },
+  {
+    abbr: "Indian Paint Association ",
+    imgSrc: "/ipa-logo.png",
+    altTxt: "IPA",
+  },
+  {
+    abbr: "Federation of Indian Export Organisations",
+    imgSrc: "/FIEO Logo.png",
+    altTxt: "FIEO",
+  },
+  {
+    abbr: "Andhra Chamber of Commerce and Industry of India",
+    imgSrc: "/acc-logo.png",
+    altTxt: "ACC",
+  },
+  {
+    abbr: "All India Rubber Industries Association",
+    imgSrc: "/AIRIA_logo.png",
+    altTxt: "AIRIA",
+  },
+];
+
+export const certifications = [
+  {
+    abbr: "International Organization for Standardization certification, ensuring our products and services meet international standards.",
+    imgSrc: "/iso_logo.png",
+    altTxt: "ISO",
+  },
+  {
+    abbr: "Authorized Economic Operator status, recognizing our role in the international supply chain and our commitment to secure, efficient, and compliant operations.",
+    imgSrc: "/aeo_logo.png",
+    altTxt: "AEO",
+  },
+];
+
+export const importCountries = {
+  mainTitle: "Imports",
+  para1:
+    "To meet the growing demands of the Indian market, we import high-quality minerals from top mines around the world. Our import network includes:",
+  para2:
+    "This extensive network ensures we can provide our customers with the best materials available globally.",
+  logos: [
+    { countryName: "thailand", logo: "/thailand-logo.png" },
+    { countryName: "vietnam", logo: "/vietnam-logo.png" },
+    { countryName: "malaysia", logo: "/Malaysia-logo.png" },
+    { countryName: "egypt", logo: "/Egypt-logo.png" },
+    { countryName: "turkey", logo: "/Turkey-logo.png" },
+    { countryName: "oman", logo: "/Oman-logo.png" },
+    { countryName: "...other countries", logo: "/otherCountries-logo.png" },
+  ],
+};
+
+export const exportCountries = {
+  mainTitle: "Exports",
+  para1:
+    "Ashok Mineral Enterprises exports to several countries, ensuring our products reach a global market. Our export destinations include:",
+  para2:
+    "We have achieved self-sealing status, which allows us to perform container stuffing at our own factory. This capability enables us to bypass the Container Freight Station (CFS), saving valuable time and effort for our clients, ensuring faster delivery and greater efficiency in our operations.",
+  logos: [
+    { countryName: "UAE", logo: "/UAE-logo.png" },
+    { countryName: "saudi arabia", logo: "/Saudi-logo.png" },
+    { countryName: "bangladesh", logo: "/Bangladesh-logo.png" },
+    { countryName: "...more", logo: "/otherCountries-logo.png" },
+  ],
+};

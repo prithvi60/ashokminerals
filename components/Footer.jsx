@@ -13,17 +13,10 @@ const Footer = () => {
           <Image
             alt="footer logo"
             fill
-            src={"/footer-logo.png"}
-            className="object-contain"
+            src={"/Ashok-Minerals-Final-Logo.jpg"}
+            className="object-contain rounded-md"
           />
         </div>
-        <h4 className="text-base font-medium tracking-wide font-RobotoSlab text-zinc-500">
-          © {new Date().getFullYear()}
-          <span className="font-semibold text-warning ms-1">
-            Ashok Minerals Enterprises.
-          </span>{" "}
-          All Rights Reserved.
-        </h4>
         <div className="flex flex-col items-start justify-center gap-2.5 sm:flex-row sm:gap-0 md:gap-3 ">
           {navbarMenu.map((item, id) => (
             <div className="flex flex-col gap-3" key={id}>
@@ -81,6 +74,13 @@ const Footer = () => {
             <FaLinkedinIn className="text-xl cursor-pointer md:text-2xl text-primary hover:animate-pulse" />
           </Link>
         </div>
+        <h4 className="text-base font-medium tracking-wide font-RobotoSlab text-zinc-500">
+          © {new Date().getFullYear()}
+          <span className="font-semibold text-warning ms-1">
+            Ashok Minerals Enterprises.
+          </span>{" "}
+          All Rights Reserved.
+        </h4>
       </div>
     </footer>
   );

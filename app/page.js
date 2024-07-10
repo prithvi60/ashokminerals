@@ -1,7 +1,4 @@
 import Banner from "@/components/Banner";
-import { ContactForm } from "@/components/ContactForm";
-import FloatingButton from "@/components/FloatingButton";
-import Footer from "@/components/Footer";
 import OurProducts from "@/components/OurProducts";
 import OurStrength from "@/components/OurStrength";
 import Testimonials from "@/components/Testimonials";
@@ -17,9 +14,6 @@ export default function Home() {
       <OurProducts />
       <OurStrength />
       <Testimonials />
-      <ContactForm />
-      <Footer />
-      <FloatingButton />
     </main>
   );
 }

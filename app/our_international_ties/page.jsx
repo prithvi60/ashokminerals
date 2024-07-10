@@ -1,8 +1,14 @@
+import { InternationalTies } from "@/components/InternationalTies";
+import OtherPageHero from "@/components/OtherPageHero";
+import { exportCountries, importCountries } from "@/libs/data";
+
 const Home = () => {
   return (
-    <div className="flex items-center justify-center w-full h-[80vh] text-xl font-semibold text-center sm:text-4xl bg-primary font-RobotoSlab">
-      operations
-    </div>
+    <section className="w-full h-full font-RobotoSlab">
+      <OtherPageHero title={"Our International Ties"} imgSrc={"/hero_1.jpg"} />
+      <InternationalTies importCountries={importCountries} />
+      <InternationalTies importCountries={exportCountries} />
+    </section>
   );
 };
 

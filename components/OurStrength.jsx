@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const OurStrength = () => {
   return (
-    <section className="w-full h-full px-6 py-10 space-y-10 sm:px-10 lg:px-16 xl:px-40 sm:py-14 font-RobotoSlab">
+    <section className="w-full h-full  space-y-10 px-6 py-10 sm:px-10 lg:px-16 xl:px-40 sm:py-14 font-RobotoSlab">
       <h3 className="relative w-full text-3xl text-warning font-semibold sm:text-4xl lg:text-6xl sm:w-4/5 mx-auto after:absolute after:content-[''] after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:rounded-sm after:w-24 after:bg-black/80 text-center">
         Our <strong className="font-bold text-black">Strength</strong>
       </h3>

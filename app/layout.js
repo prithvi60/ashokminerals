@@ -5,6 +5,9 @@ import NavbarComponent from "@/components/Navbar";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Development from "@/components/Development";
+import Footer from "@/components/Footer";
+import { ContactForm } from "@/components/ContactForm";
+import FloatingButton from "@/components/FloatingButton";
 
 const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
@@ -27,6 +30,9 @@ export default function RootLayout({ children }) {
           <Development />
           <NavbarComponent />
           {children}
+          <ContactForm />
+          <Footer />
+          <FloatingButton />
         </Providers>
       </body>
     </html>

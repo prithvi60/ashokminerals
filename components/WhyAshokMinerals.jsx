@@ -6,28 +6,23 @@ const WhyAshokMinerals = () => {
       <div className="flex flex-col-reverse w-full h-full md:flex-row">
         <div className="px-8 space-y-4 sm:px-14 py-14 md:basis-1/2 bg-warning text-primary">
           <h3 className="text-lg font-light tracking-wide sm:text-xl lg:text-3xl">
-            Why{" "}
+            A Legacy of Excellence:{" "}
             <strong className="font-bold">
-              HiTech Minerals and Chemicals Group
+              Three Generations of Family Entrepreneurship
             </strong>
           </h3>
           <p className="text-sm font-normal tracking-normal sm:text-base ">
-            Our complete focus to satisfy our clients with high end products has
-            conferred upon us huge accolades and an extensive customer support
-            in market. HTMC has emerged as the leading industrial mineral
-            company,catering to diverse sectors with its extensive range of
-            products and unparalleled serviceThe whole range is manufactured at
-            our own production site with the incorporation of ultra modern
-            technology and incomparable skills of our team leading to the
-            development of outstanding range that fits to diverse needs of our
-            clients.
+            Welcome to our journey through time. We are proud to share the story
+            of our family-run business, now in its third generation, that has
+            evolved into a significant name in the mining and mineral industry
+            of South India.
           </p>
         </div>
         <div className="md:basis-1/2 relative w-full h-[60vh] md:h-[100vh]">
           <Image
             alt="image"
             fill
-            src={"/whyUs.jpg"}
+            src={"/factory.jpg"}
             className="object-cover object-center"
           />
         </div>
@@ -37,25 +32,21 @@ const WhyAshokMinerals = () => {
           <Image
             alt="image"
             fill
-            src={"/factory.jpg"}
+            src={"/whyUs.jpg"}
             className="object-cover object-center"
           />
         </div>
         <div className="px-8 space-y-4 text-black sm:px-14 py-14 md:basis-1/2 bg-secondary">
           <h3 className="text-lg font-light tracking-wide sm:text-xl lg:text-3xl">
-            Comprehensive {" "}
-            <strong className="font-bold">Mineral Solutions</strong>
+            Pioneering{" "}
+            <strong className="font-bold ms-1.5 mt--1">Calcium Carbonate Mining</strong>
           </h3>
           <p className="text-sm font-normal tracking-normal sm:text-base text-zinc-500">
-            Our complete focus to satisfy our clients with high end products has
-            conferred upon us huge accolades and an extensive customer support
-            in market. HTMC has emerged as the leading industrial mineral
-            company,catering to diverse sectors with its extensive range of
-            products and unparalleled serviceThe whole range is manufactured at
-            our own production site with the incorporation of ultra modern
-            technology and incomparable skills of our team leading to the
-            development of outstanding range that fits to diverse needs of our
-            clients.
+            The entrepreneurial spirit led us to explore new opportunities. We
+            ventured into owning and operating Calcium Carbonate Mines in the
+            Salem District of Tamil Nadu, India. This significant step not only
+            diversified our operations but also strengthened our presence in the
+            mineral sector.
           </p>
         </div>
       </div>
