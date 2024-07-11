@@ -24,7 +24,7 @@ const NavbarComponent = () => {
   const [isActiveState, setIsActiveState] = useState(null);
   const [selectedKeys, setSelectedKeys] = useState(new Set(["1"]));
   const router = useRouter();
-
+  // console.log("log", isActiveState);
   return (
     <Navbar
       position="sticky"
@@ -34,8 +34,10 @@ const NavbarComponent = () => {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
-        base: ["!z-[990] py-2.5 px-6 sm:px-10 lg:px-16 xl:px-40 h-auto top-8 sm:top-8 "],
-        wrapper:["!px-0"],
+        base: [
+          "!z-[990] py-2.5 px-6 sm:px-10 lg:px-16 xl:px-40 h-auto top-8 sm:top-8 ",
+        ],
+        wrapper: ["!px-0"],
         item: ["data-[active=true]:text-warning"],
       }}
     >
@@ -59,13 +61,14 @@ const NavbarComponent = () => {
         {navbarMenu.map((item, id) => (
           <NavbarItem
             key={id}
-            isActive={item.menu === isActiveState}
-            onClick={() => setIsActiveState(item.menu)}
+            // isActive={item.subMenu.map((t) => t.menuTitle) === isActiveState}
             className="relative group"
           >
-            <div className="flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear lg:text-lg hover:text-warning font-RobotoSlab">
+            <div
+              className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear lg:text-lg hover:text-warning font-RobotoSlab`}
+              // onClick={() => setIsActiveState(item.menu)}
+            >
               {item.menu}
-
               <TiArrowSortedDown
                 className={` ${
                   item.menu === "blog" ? "hidden" : "block"
@@ -80,10 +83,15 @@ const NavbarComponent = () => {
               >
                 {item?.subMenu?.map((l, index) => (
                   <Link
-                    // title={l.listMenu}
-                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-normal z-10 capitalize`}
+                    title={l.menuTitle}
+                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning active:text-warning transition-colors duration-500 ease-linear w-full h-full font-normal z-10 capitalize ${
+                      l.menuTitle === isActiveState
+                        ? "text-warning"
+                        : "text-black"
+                    }`}
                     key={index}
                     href={l.menuRef}
+                    onClick={() => setIsActiveState(l.menuTitle)}
                   >
                     <h4 className="w-full h-full mb-2.5">{l.menuTitle}</h4>
                   </Link>
@@ -188,6 +196,7 @@ const NavbarComponent = () => {
                 >
                   {item?.subMenu?.map((l, index) => (
                     <Link
+                      onClick={() => setIsMenuOpen(false)}
                       title={l.menuTitle}
                       className={`text-base font-normal capitalize font-RobotoSlab `}
                       key={index}
@@ -205,6 +214,7 @@ const NavbarComponent = () => {
           <Link
             className="font-normal text-black capitalize text-large hover:text-secondary font-RobotoSlab"
             href="/blog"
+            onClick={() => setIsMenuOpen(false)}
           >
             blog
           </Link>
@@ -216,6 +226,7 @@ const NavbarComponent = () => {
             href="#"
             variant="solid"
             className="mx-auto text-base font-semibold text-white font-RobotoSlab"
+            onClick={() => setIsMenuOpen(false)}
           >
             Contact
           </Button>

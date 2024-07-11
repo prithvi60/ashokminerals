@@ -33,7 +33,7 @@ const Blog = () => {
       {/* <h2 className="text-xl font-bold text-center md:text-5xl xl:text-7xl">
         Blogs
       </h2> */}
-      <div className="flex items-start w-full h-full gap-5">
+      <div className="flex flex-col items-start w-full h-full gap-5 md:flex-row">
         {data?.posts?.nodes?.map((post, idx) => (
           <Card
             className="h-auto max-w-sm pb-4 space-y-3 bg-secondary group"
