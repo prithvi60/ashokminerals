@@ -13,10 +13,12 @@ const Home = () => {
           {manufacturing.lists.map((list, idx) => (
             <li className="space-y-4" key={idx}>
               <div className="flex items-center gap-4 text-lg font-semibold tracking-wide capitalize md:gap-1 sm:text-xl">
-                <GiMinerals className="text-2xl sm:text-4xl text-warning" />
-                <h4 className="mt-1">{list.title}</h4>
+                <GiMinerals className="basis-[12%] md:basis-[6%] text-2xl sm:text-4xl text-warning" />
+                <h4 className="mt-1 basis-[88%] md:basis-[94%]">
+                  {list.title}
+                </h4>
               </div>
-              <p className="text-base font-normal sm:text-lg ms-14">
+              <p className="text-base font-normal sm:text-lg ms-12 lg:ms-20">
                 {list.desc}
               </p>
             </li>

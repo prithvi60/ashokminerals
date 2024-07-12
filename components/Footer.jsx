@@ -9,13 +9,23 @@ const Footer = () => {
   return (
     <footer className="w-full h-full px-6 py-10 mx-auto mt-10 sm:px-14 sm:py-14 lg:px-16 xl:px-40 font-RobotoSlab bg-black/90 ">
       <div className="flex flex-col items-center justify-center gap-8">
-        <div className="relative w-full h-16 overflow-hidden md:h-24">
-          <Image
-            alt="footer logo"
-            fill
-            src={"/Ashok-Minerals-Final-Logo.jpg"}
-            className="object-contain rounded-md"
-          />
+        <div className="flex items-center justify-center w-full h-full gap-4">
+          <div className="relative w-12 h-12 overflow-hidden md:h-16 md:w-16">
+            <Image
+              alt="footer logo"
+              fill
+              src={"/iso_logo.png"}
+              className="object-contain rounded-md"
+            />
+          </div>
+          <div className="relative w-12 h-12 overflow-hidden md:h-20 md:w-20">
+            <Image
+              alt="footer logo"
+              fill
+              src={"/logo.jpg"}
+              className="object-contain rounded-md"
+            />
+          </div>
         </div>
         <div className="flex flex-col items-start justify-center gap-2.5 sm:flex-row sm:gap-0 md:gap-3 ">
           {navbarMenu.map((item, id) => (

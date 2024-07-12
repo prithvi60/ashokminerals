@@ -191,7 +191,7 @@ const NavbarComponent = () => {
                     trigger: "justify-center py-0 ps-8",
                     titleWrapper: "!flex-none",
                     title: "!text-black !capitalize",
-                    indicator: "transition-all duration-300 ease-linear",
+                    indicator: "transition-all duration-300 ease-linear text-warning text-xl",
                   }}
                 >
                   {item?.subMenu?.map((l, index) => (
