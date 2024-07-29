@@ -1,43 +1,44 @@
 export const navbarMenu = [
   {
+    menu: "products",
+    ref: "/products",
+  },
+  {
+    menu: "markets",
+    ref: "/markets",
+  },
+  {
+    menu: "blog",
+    ref: "/blog",
+  },
+  {
     menu: "our company",
     ref: "",
     subMenu: [
-      // { menuTitle: "about us", menuRef: "/about_us" },
       { menuTitle: "Our History ", menuRef: "/our_history " },
       {
-        menuTitle: "Our Associations",
-        menuRef: "/our_associations",
+        menuTitle: "Our Associations & Certifications",
+        menuRef: "/our_associations&certifications",
       },
-      { menuTitle: "Our Certifications", menuRef: "/our_certifications" },
+      // { menuTitle: "Our ", menuRef: "/our_certifications" },
       {
         menuTitle: "Our International Ties",
         menuRef: "/our_international_ties",
       },
-      { menuTitle: "Leadership", menuRef: "/leadership" },
-      { menuTitle: "Our Team", menuRef: "/our_team" },
+      { menuTitle: "Leadership & Team", menuRef: "/leadership&team" },
+      // { menuTitle: "Our Team", menuRef: "/our_team" },
       {
         menuTitle: "Our Manufacturing Setup",
         menuRef: "/our_manufacturing_setup",
       },
     ],
   },
-  {
-    menu: "products & markets",
-    ref: "",
-    subMenu: [
-      { menuTitle: "products", menuRef: "/products" },
-      { menuTitle: "markets", menuRef: "/markets" },
-    ],
-  },
-  // {
-  //   menu: "blog",
-  //   ref: "/blog",
-  // },
-  //   {
-  //     menu: "contact",
-  //     ref: "/contact",
-  //   },
+];
+
+export const productSpecimen = [
+  { title: "BARITE", src: "/barite (1).png" },
+  { title: "HEMATITE", src: "/hematite (1).png" },
+  { title: "GRAPHITE", src: "/graphite (1).png" },
 ];
 
 export const products = [
@@ -89,17 +90,17 @@ export const strength = [
 
 export const testimonial = [
   {
-    reviewer: "- unilever -",
+    reviewer: "- unilever",
     review:
       "Very much satisfied with the service. Delivered on time and responded to request for modifications within few hours.",
   },
   {
-    reviewer: "- colgate -",
+    reviewer: "- colgate",
     review:
       "I’m very happy with the results! They went above and beyond for me and that is always appreciated! I would highly recommend SH to anybody!",
   },
   {
-    reviewer: "- unilever -",
+    reviewer: "- unilever",
     review:
       "Very much satisfied with the service. Delivered on time and responded to request for modifications within few hours.",
   },

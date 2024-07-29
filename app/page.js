@@ -12,8 +12,8 @@ export default function Home() {
       <WelcomeBoard />
       <WhyAshokMinerals />
       <OurProducts />
-      <OurStrength />
       <Testimonials />
+      <OurStrength />
     </main>
   );
 }

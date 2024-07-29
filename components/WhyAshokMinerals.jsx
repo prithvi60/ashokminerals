@@ -2,8 +2,32 @@ import Image from "next/image";
 
 const WhyAshokMinerals = () => {
   return (
-    <section className="w-full h-full py-10 sm:py-14 font-RobotoSlab">
-      <div className="flex flex-col-reverse w-full h-full md:flex-row">
+    <section className="flex flex-col items-center w-full h-full grid-cols-1 gap-2.5 px-6 py-10 md:grid font-RobotoSlab md:grid-cols-3 sm:px-10 lg:px-16 sm:py-12 lg:gap-6">
+      <div className="relative w-full row-span-2 lg:row-span-3 h-56 md:min-h-[550px] overflow-hidden order-1 md:order-none">
+        <Image
+          alt="image"
+          fill
+          src={"/factory.jpg"}
+          className="object-cover object-center transition-all duration-500 ease-in-out rounded-md hover:scale-110"
+        />
+      </div>
+      <div className="relative order-3 w-full h-56 overflow-hidden md:h-full lg:col-span-1 md:min-h-20 lg:min-h-60 md:order-none">
+        <Image
+          alt="image"
+          fill
+          src={"/whyUs.jpg"}
+          className="object-cover object-center transition-all duration-500 ease-in-out rounded-md hover:scale-110"
+        />
+      </div>
+      <h3 className="flex items-center justify-center order-4 w-full h-full p-4 text-lg font-light tracking-wide rounded-md lg:col-span-1 md:p-6 sm:text-xl bg-warning text-primary md:order-none">
+        Pioneering Calcium Carbonate Mining
+      </h3>
+
+      <h3 className="flex items-center justify-center order-2 w-full h-full col-span-2 p-4 text-lg font-light tracking-wide rounded-md lg:row-span-2 md:p-6 sm:text-xl bg-warning text-primary md:order-none">
+        A Legacy of Excellence: Three Generations of Family Entrepreneurship
+      </h3>
+
+      {/* <div className="flex flex-col-reverse w-full h-full md:flex-row">
         <div className="px-8 space-y-4 sm:px-14 py-14 md:basis-1/2 bg-warning text-primary">
           <h3 className="text-lg font-light tracking-wide sm:text-xl lg:text-3xl">
             A Legacy of Excellence:{" "}
@@ -26,8 +50,8 @@ const WhyAshokMinerals = () => {
             className="object-cover object-center"
           />
         </div>
-      </div>
-      <div className="flex flex-col w-full h-full md:flex-row">
+      </div> */}
+      {/* <div className="flex flex-col w-full h-full md:flex-row">
         <div className="md:basis-1/2 relative w-full h-[60vh] md:h-[100vh]">
           <Image
             alt="image"
@@ -39,7 +63,9 @@ const WhyAshokMinerals = () => {
         <div className="px-8 space-y-4 text-black sm:px-14 py-14 md:basis-1/2 bg-secondary">
           <h3 className="text-lg font-light tracking-wide sm:text-xl lg:text-3xl">
             Pioneering{" "}
-            <strong className="font-bold ms-1.5 mt--1">Calcium Carbonate Mining</strong>
+            <strong className="font-bold ms-1.5 mt--1">
+              Calcium Carbonate Mining
+            </strong>
           </h3>
           <p className="text-sm font-normal tracking-normal sm:text-base text-zinc-500">
             The entrepreneurial spirit led us to explore new opportunities. We
@@ -49,7 +75,7 @@ const WhyAshokMinerals = () => {
             mineral sector.
           </p>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

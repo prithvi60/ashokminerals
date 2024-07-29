@@ -113,9 +113,10 @@ const Banner = () => {
               loading="lazy"
               style={{ objectFit: "cover", objectPosition: "center" }}
               fill
+              className="brightness-50"
             />
             <div className="absolute w-full space-y-4 text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-RobotoSlab">
-              <h3 className="text-xl font-normal capitalize md:text-4xl text-primary">
+              <h3 className="text-xl font-normal capitalize md:text-3xl text-primary">
                 Ashok Minerals
               </h3>
               <h4 className="text-5xl font-bold capitalize md:text-8xl text-primary">
@@ -125,7 +126,7 @@ const Banner = () => {
                 Talc / Dolomite / IronOxide / Soon...
               </p>
               <div className="flex items-center justify-center w-full gap-5">
-                <Button
+                {/* <Button
                   as={Link}
                   color="primary"
                   href="#"
@@ -134,7 +135,7 @@ const Banner = () => {
                   className="text-lg font-semibold text-white capitalize font-RobotoSlab md:text-xl"
                 >
                   our products
-                </Button>
+                </Button> */}
                 <Button
                   as={Link}
                   color="warning"
@@ -143,7 +144,7 @@ const Banner = () => {
                   variant="solid"
                   className="text-base font-semibold text-white capitalize font-RobotoSlab md:text-xl"
                 >
-                  Contact
+                  know more
                 </Button>
               </div>
             </div>

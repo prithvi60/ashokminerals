@@ -1,15 +1,17 @@
-import { products } from "@/libs/data";
+import { products, productSpecimen } from "@/libs/data";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { LuArrowDownRightFromCircle } from "react-icons/lu";
 import Image from "next/image";
+import Link from "next/link";
 
 const OurProducts = () => {
   return (
-    <section className="w-full h-full px-6 py-10 space-y-10 sm:px-10 lg:px-16 xl:px-40 sm:py-14 font-RobotoSlab">
-      <h3 className="relative w-full text-3xl text-warning font-semibold sm:text-4xl lg:text-6xl sm:w-4/5 mx-auto after:absolute after:content-[''] after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:h-1 after:rounded-sm after:w-24 after:bg-black/80 text-center">
-        Our <strong className="font-bold text-black">Products</strong>
+    <section className="w-full h-full px-6 py-10 space-y-24 sm:px-10 lg:px-16 sm:py-12 font-RobotoSlab">
+      <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
+        Our Products
       </h3>
-      <div className="grid w-full h-full grid-cols-2 gap-5 md:gap-10 lg:gap-6 xl:gap-20 font-RobotoSlab md:grid-cols-3 lg:grid-cols-4 place-content-center">
-        {products.map((item, index) => (
+      <div className="grid w-full h-full grid-cols-1 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 md:gap-10 lg:gap-6 xl:gap-14 font-RobotoSlab place-content-center place-items-center">
+        {/* {products.map((item, index) => (
           <Card
             shadow="sm"
             key={index}
@@ -29,7 +31,37 @@ const OurProducts = () => {
               <h4 className="">{item.title}</h4>
             </CardFooter>
           </Card>
+        ))} */}
+        {productSpecimen.map((item, id) => (
+          <div
+            className="relative w-full rounded-md shadow-xl cursor-pointer sm:h-56 h-44 bg-black/5 group"
+            key={id}
+          >
+            <Image
+              height={220}
+              width={220}
+              alt={item.title}
+              className="absolute left-1/2 -translate-x-1/2 object-contain -top-12 drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)] group-hover:scale-110 transition-all duration-300 ease-linear"
+              src={item.src}
+              quality={100}
+            />
+            <div className="absolute text-lg font-semibold tracking-wider capitalize -translate-x-1/2 bottom-10 sm:text-xl lg:text-2xl left-1/2 group-hover:text-warning">
+              <h4 className="">{item.title}</h4>
+            </div>
+          </div>
         ))}
+      </div>
+      <div className="flex items-center justify-center w-full h-full mt-6 md:justify-end">
+        <Link
+          href={"./products"}
+          title="products"
+          className="flex items-center gap-2 text-lg transition-colors ease-linear w-max lg:text-xl hover:underline underline-offset-4 hover:text-warning duration-400"
+        >
+          <h4>view more products</h4>
+          <span>
+            <LuArrowDownRightFromCircle className="text-base -rotate-90 sm:text-lg lg:text-xl" />
+          </span>
+        </Link>
       </div>
     </section>
   );
