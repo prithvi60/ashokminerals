@@ -12,23 +12,42 @@ import {
 } from "@nextui-org/navbar";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isActiveState, setIsActiveState] = useState(null);
-  const [selectedKeys, setSelectedKeys] = useState(new Set(["1"]));
+  const [selectedKeys, setSelectedKeys] = useState(new Set(["3"]));
+  const [percent, setPercent] = useState(null);
   const router = useRouter();
+  const path = usePathname();
+
+  const handleScroll = () => {
+    const ele = document.body;
+    const scrollPosition = window.scrollY; // => scroll position
+    let percentage =
+      ((scrollPosition + window.innerHeight) / ele.clientHeight) * 100;
+    setPercent(Math.trunc(percentage));
+  };
+
+  // Scroll based color change side effect
+
+  useEffect(() => {
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [percent]);
 
   return (
     <Navbar
-      position="sticky"
       isBordered="false"
       isBlurred="false"
       maxWidth="full"
@@ -36,7 +55,11 @@ const NavbarComponent = () => {
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
         base: [
-          "!z-[990] py-2.5 px-6 sm:px-10 lg:px-16 h-auto top-8 sm:top-8 shadow-md",
+          `${
+            percent >= 0 && percent <= 25
+              ? "!bg-transparent shadow-none"
+              : "bg-primary shadow-md"
+          } fixed top-8 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-16 h-auto top-8 sm:top-8 transition-all duration-300 ease-linear`,
         ],
         wrapper: ["!px-0"],
         item: ["data-[active=true]:text-warning"],
@@ -58,11 +81,13 @@ const NavbarComponent = () => {
         </NavbarBrand>
       </NavbarContent>
       {/* Desktop menubar */}
-      <NavbarContent className="hidden md:gap-5 md:flex me-8" justify="end">
+      <NavbarContent className="hidden lg:gap-5 lg:flex me-8" justify="end">
         {navbarMenu.map((item, id) => (
           <NavbarItem key={id} className="relative group">
             <div
-              className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear lg:text-lg hover:text-warning font-RobotoSlab ${
+              className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear ${
+                percent >= 0 && percent <= 25 ? "text-primary" : "text-black"
+              } lg:text-lg hover:text-warning font-RobotoSlab ${
                 item.ref !== "" && "cursor-pointer"
               }`}
             >
@@ -71,15 +96,17 @@ const NavbarComponent = () => {
                 <TiArrowSortedDown
                   className={` ${
                     item.menu === "blog" ? "hidden" : "block"
-                  } text-base group-hover:rotate-180 transition-all duration-200 ease-linear text-black`}
+                  } text-base group-hover:rotate-180  ${
+                    percent >= 0 && percent <= 25
+                      ? "text-primary"
+                      : "text-black"
+                  } transition-all duration-200 ease-linear text-black`}
                 />
               )}
             </div>
             {item.subMenu && (
               <div
-                className={`absolute hidden top-20 -left-0 bg-primary p-4 shadow-md rounded-xl font-RobotoSlab group-hover:block border-2 border-warning ${
-                  item.menu === "our company" && ""
-                }`}
+                className={`absolute hidden top-[92px] right-5 p-4 shadow-md rounded-xl font-RobotoSlab bg-zinc-200 group-hover:block after:content-[''] after:w-5 after:h-5 after:rotate-45 after:bg-zinc-200 after:absolute after:right-6 after:-top-2 `}
               >
                 {item?.subMenu?.map((l, index) => (
                   <Link
@@ -120,7 +147,7 @@ const NavbarComponent = () => {
         </NavbarItem>
       </NavbarContent>
       {/* Hamburger Toggle button */}
-      <NavbarContent className="md:hidden !grow-0 !basis-0" justify="end">
+      <NavbarContent className="lg:hidden !grow-0 !basis-0" justify="end">
         {/* <NavbarMenuToggle
           className="!z-[1000]"
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -128,7 +155,9 @@ const NavbarComponent = () => {
         <NavbarItem>
           <GiHamburgerMenu
             onClick={() => setIsMenuOpen(true)}
-            className="text-4xl font-semibold cursor-pointer"
+            className={`text-4xl font-semibold cursor-pointer ${
+              percent >= 0 && percent <= 25 ? "text-primary" : "text-black"
+            }`}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             +
@@ -157,11 +186,11 @@ const NavbarComponent = () => {
           },
         }}
       >
-        <NavbarMenuItem className="flex items-center justify-end w-full mt-11 ms-0">
+        <NavbarMenuItem className="flex items-center justify-end w-full mt-11 sm:-ms-5 md:-ms-3">
           {/* mt-3 ms-2.5 */}
           <IoClose
             onClick={() => setIsMenuOpen(false)}
-            className="text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary"
+            className={`text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary `}
           />
         </NavbarMenuItem>
         <div className="mt-10 space-y-4 text-center">
@@ -182,10 +211,11 @@ const NavbarComponent = () => {
                   classNames={{
                     base: "text-black font-RobotoSlab font-normal",
                     trigger: "justify-center py-0 ps-8",
+                    heading: "transition-all duration-300 ease-linear",
                     titleWrapper: "!flex-none",
                     title: "!text-black !capitalize",
                     indicator:
-                      "transition-all duration-300 ease-linear text-warning text-xl",
+                      "transition-all duration-300 ease-linear text-warning text-xl rotate-0",
                   }}
                 >
                   {item?.subMenu?.map((l, index) => (
@@ -204,15 +234,6 @@ const NavbarComponent = () => {
             </NavbarMenuItem>
           ))}
         </div>
-        <NavbarMenuItem className="w-full text-center">
-          <Link
-            className="font-normal text-black capitalize text-large hover:text-secondary font-RobotoSlab"
-            href="/blog"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            blog
-          </Link>
-        </NavbarMenuItem>
         <NavbarMenuItem className="w-full mt-5 text-center">
           <Button
             as={Link}

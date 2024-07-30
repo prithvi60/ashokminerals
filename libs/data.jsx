@@ -110,7 +110,7 @@ export const strength = [
   {
     title: "PROCESSING",
     src: "/processing.svg",
-    styles: "col-span-2 md:col-span-1 bg-black/45",
+    styles: "col-span-2 md:col-span-1 bg-black/40",
   },
   {
     title: "QUALITY SERVICE",
@@ -130,7 +130,7 @@ export const strength = [
   {
     title: "LOGISTICS",
     src: "/logistic.svg",
-    styles: "col-span-2 md:col-span-1 bg-black/45",
+    styles: "col-span-2 md:col-span-1 bg-black/40",
   },
 ];
 
@@ -212,7 +212,7 @@ export const manufacturing = {
       desc: "Quality is not just a promise, but a practice at our manufacturing unit. Our state-of-the-art laboratory is dedicated to the rigorous testing of all incoming and finished goods. This ensures that every product that leaves our facility meets the highest standards of quality and reliability.",
     },
     {
-      title: "Future-Ready Expansion Plans**",
+      title: "Future-Ready Expansion Plans **",
       desc: "Looking towards the future, we are well-equipped and ready to expand our manufacturing capabilities. This foresight positions us to not only meet the growing demands of our clients but also to embrace new opportunities and challenges in the ever-evolving market.",
     },
     {
