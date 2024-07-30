@@ -20,16 +20,62 @@ export const navbarMenu = [
         menuTitle: "Our Associations & Certifications",
         menuRef: "/our_associations&certifications",
       },
-      // { menuTitle: "Our ", menuRef: "/our_certifications" },
       {
         menuTitle: "Our International Ties",
         menuRef: "/our_international_ties",
       },
       { menuTitle: "Leadership & Team", menuRef: "/leadership&team" },
-      // { menuTitle: "Our Team", menuRef: "/our_team" },
       {
         menuTitle: "Our Manufacturing Setup",
         menuRef: "/our_manufacturing_setup",
+      },
+    ],
+  },
+];
+
+export const footerMenuLinks = [
+  {
+    menu: "our company",
+    subMenu: [
+      { menuTitle: "Our History ", menuRef: "/our_history " },
+      {
+        menuTitle: "Our Associations ",
+        menuRef: "/our_associations&certifications",
+      },
+      {
+        menuTitle: "Our Certifications",
+        menuRef: "/our_associations&certifications",
+      },
+      {
+        menuTitle: "Our International Ties",
+        menuRef: "/our_international_ties",
+      },
+    ],
+  },
+  {
+    menu: "Leadership",
+    subMenu: [
+      { menuTitle: "Our Team", menuRef: "/leadership&team" },
+      {
+        menuTitle: "Manufacturing Setup",
+        menuRef: "/our_manufacturing_setup",
+      },
+    ],
+  },
+  {
+    menu: "Quick Links",
+    subMenu: [
+      {
+        menuTitle: "products",
+        menuRef: "/products",
+      },
+      {
+        menuTitle: "markets",
+        menuRef: "/markets",
+      },
+      {
+        menuTitle: "blog",
+        menuRef: "/blog",
       },
     ],
   },
@@ -59,32 +105,32 @@ export const strength = [
   {
     title: "MINING",
     src: "/mining.svg",
-    desc: "With our own and leased mineral reserves we are able to maintain consistent quality and timely deliveries and allows us the freedom to supply in Bulk without any dependency and feedstock constraints. Most of our active mines are CORE accredited to ensure Responsible extraction of Minerals while maintaining good ecological balance and social harmony. HTMC Group operates as a dynamic Minerals Trading Company,offering a one-stop solution for all industrial mineral requirements.",
+    styles: "col-span-4 md:row-span-2 md:col-auto bg-black/75",
   },
   {
     title: "PROCESSING",
     src: "/processing.svg",
-    desc: "We have Industry specific Processing Units with dedicated Product specific Production Lines. All Processing Units are equipped with Industry and Production specific Quality Lab and infrastructure. For Food and Pharma we have dedicated EXCiPACT and BRC Certified manufacturing Unit. We have strategically located PCC Plants in North and South of India to support JIT Bulk supplies to our Key Customers.Experience the difference with HTMC Group – where quality meets reliability, and excellence knows no bounds. Join hands with the top processors of minerals in India and unlock a world of possibilities for your business.",
+    styles: "col-span-2 md:col-span-1 bg-black/45",
   },
   {
     title: "QUALITY SERVICE",
     src: "/quality.svg",
-    desc: "In addition to On-site Unit and Product Specific Quality Labs, we have dedicated Central Quality and R&D Centre equipped with all equipment and instrumentation required for Mineral Testing, Validation, Application and Formulations.As trusted Mineral Suppliers in India, HTMC Group upholds stringent quality standards at every stage of production and distribution.",
+    styles: "col-span-2 md:col-span-1 bg-black/55",
   },
   {
-    title: "WAREHOUSING / JIT",
+    title: "WAREHOUSING",
     src: "/warehouse.svg",
-    desc: "Being the Key Supplier to many Industries we have strategically located Warehouses to ensure Just-in-Time and Uninterrupted Supplies to our Customers. Many warehouses are equipped to do last mile conversion, supply in Bulkers, supply and deliver premixes directly to the Production Line of the Customer and also preTest and Quality Clearance so that delivery is made directly to the Production Line saving warehousing and handling at the Customers’ end.",
+    styles: "col-span-4 md:row-span-2 md:col-auto bg-black/75",
   },
   {
-    title: "CUSTOMISATION",
-    src: "/customize.svg",
-    desc: "Bulk of our production is ‘Made to Order’ and tailored to specific Customer and / or end product requirements to enhance the use and value to the Customer and deliver enhanced ‘Quality’ specific to the Customers’ Product and / or production line.",
+    title: "CUSTOMIZATION",
+    src: "/custom.svg",
+    styles: "col-span-2 md:col-span-1 bg-black/55",
   },
   {
-    title: "LOGISTICS / JIT",
-    src: "/logistics.svg",
-    desc: "Logistics being the Key and Major contributor to the end delivered cost and effective Leadtime to the customer …. the Group has invested heavily in the inland Logistics and do not depend on procured transportation saving the vagaries of inconsistency of transportation and optimize the cost. The Group also utilized all optimal modes of carrying the crude or our finished product by Rail, Coastal Sea Mode and all other modes. For Bulk movements we also carry full rack loads by Train to optimize cost and delivery lead-times to the customer.",
+    title: "LOGISTICS",
+    src: "/logistic.svg",
+    styles: "col-span-2 md:col-span-1 bg-black/45",
   },
 ];
 

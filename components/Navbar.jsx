@@ -58,10 +58,7 @@ const NavbarComponent = () => {
         </NavbarBrand>
       </NavbarContent>
       {/* Desktop menubar */}
-      <NavbarContent
-        className="hidden md:gap-5 md:flex me-8"
-        justify="end"
-      >
+      <NavbarContent className="hidden md:gap-5 md:flex me-8" justify="end">
         {navbarMenu.map((item, id) => (
           <NavbarItem key={id} className="relative group">
             <div
@@ -116,7 +113,7 @@ const NavbarComponent = () => {
             className="text-base font-semibold text-white font-RobotoSlab ms-3 lg:text-lg"
           >
             <span>
-              <IoCall className="text-base text-primary"/>
+              <IoCall className="text-base text-primary" />
             </span>
             Contact
           </Button>

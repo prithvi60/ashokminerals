@@ -86,6 +86,7 @@ export const ContactForm = () => {
               Let’s Get in touch to Explore business opportunities
             </h3>
             <Select
+            aria-label="options"
               name="selecting options"
               isRequired
               size="lg"
