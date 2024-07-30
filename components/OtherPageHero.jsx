@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const OtherPageHero = ({ title, imgSrc, para }) => {
   return (
-    <section className="w-full h-full">
+    <section className="w-full h-full mt-28">
       <div className="relative w-full h-[45dvh]">
         <Image
           alt=""

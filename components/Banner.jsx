@@ -55,9 +55,9 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-full overflow-hidden slider-container">
+    <section className="relative w-full h-full overflow-hidden">
       {blur === true && (
-        <div className="absolute top-0 left-0 w-full h-[90dvh] mt-8">
+        <div className="absolute top-0 left-0 w-full h-[100dvh]">
           <Image
             priority
             loading={"eager"}
@@ -69,7 +69,7 @@ const Banner = () => {
           />
         </div>
       )}
-      <div className="w-full h-[90dvh] mt-8">
+      <div className="w-full h-[100dvh]">
         <video
           muted
           loop

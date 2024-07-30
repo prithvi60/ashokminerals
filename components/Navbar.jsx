@@ -33,7 +33,7 @@ const NavbarComponent = () => {
     const scrollPosition = window.scrollY; // => scroll position
     let percentage =
       ((scrollPosition + window.innerHeight) / ele.clientHeight) * 100;
-    setPercent(Math.trunc(percentage));
+    setPercent(() => Math.trunc(percentage));
   };
 
   // Scroll based color change side effect
@@ -56,7 +56,7 @@ const NavbarComponent = () => {
       classNames={{
         base: [
           `${
-            percent >= 0 && percent <= 25
+            percent <= 15 && path === "/"
               ? "!bg-transparent shadow-none"
               : "bg-primary shadow-md"
           } fixed top-8 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-16 h-auto top-8 sm:top-8 transition-all duration-300 ease-linear`,
@@ -86,18 +86,18 @@ const NavbarComponent = () => {
           <NavbarItem key={id} className="relative group">
             <div
               className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear ${
-                percent >= 0 && percent <= 25 ? "text-primary" : "text-black"
+                percent <= 15 && path === "/" ? "text-primary" : "text-black"
               } lg:text-lg hover:text-warning font-RobotoSlab ${
                 item.ref !== "" && "cursor-pointer"
               }`}
             >
-              {item.menu}
+              <Link href={item.ref}>{item.menu}</Link>
               {item.ref === "" && (
                 <TiArrowSortedDown
                   className={` ${
                     item.menu === "blog" ? "hidden" : "block"
                   } text-base group-hover:rotate-180  ${
-                    percent >= 0 && percent <= 25
+                    percent <= 15 && path === "/"
                       ? "text-primary"
                       : "text-black"
                   } transition-all duration-200 ease-linear text-black`}
@@ -156,7 +156,7 @@ const NavbarComponent = () => {
           <GiHamburgerMenu
             onClick={() => setIsMenuOpen(true)}
             className={`text-4xl font-semibold cursor-pointer ${
-              percent >= 0 && percent <= 25 ? "text-primary" : "text-black"
+              percent <= 15 && path === "/" ? "text-primary" : "text-black"
             }`}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
