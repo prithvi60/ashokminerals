@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <footer className="w-full h-full px-6 py-10 mt-10 space-y-5 sm:px-12 sm:py-12 lg:px-16 font-RobotoSlab bg-black/90">
       <div className="flex flex-col items-center justify-between gap-8 md:items-start md:flex-row">
-        <div className="block space-y-6 w-full md:w-1/5">
-          <div className="flex md:flex-col lg:flex-row gap-5 md:gap-2.5 lg:gap-5">
+        <div className="block w-full space-y-6 md:w-1/5">
+          <div className="flex md:flex-col lg:flex-row gap-5 md:gap-2.5 lg:gap-5 justify-center md:justify-start items-center">
             <div className="relative w-20 h-20 overflow-hidden md:-mt-2.5">
               <Image
                 alt="ashok minerals logo"
@@ -22,7 +22,7 @@ const Footer = () => {
               Ashok Minerals
             </h4>
           </div>
-          <div className="flex items-center w-full gap-5">
+          <div className="flex items-center justify-center w-full gap-5 md:justify-start">
             <Link
               href="https://wa.me/9840899343?text=Thank%20You%20For%20Connecting%20With%20Ashok%20Minerals%20Marketing%20Team,%20We%20Will%20Get%20In%20Touch%20With%20You%20As%20Soon%20As%20Possible."
               title="whatsapp logo"
@@ -46,10 +46,10 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col items-center sm:items-start justify-center gap-2.5 sm:flex-row sm:gap-14 xl:gap-20 md:gap-8 md:w-4/5">
+        <div className="flex flex-col items-center sm:items-start justify-center md:justify-end gap-2.5 sm:flex-row sm:gap-14 xl:gap-20 md:gap-8 md:w-4/5">
           {footerMenuLinks.map((item, id) => (
             <div
-              className="flex flex-col items-center justify-center sm:items-start sm:justify-start gap-3"
+              className="flex flex-col items-center justify-center gap-3 sm:items-start sm:justify-start"
               key={id}
             >
               <div
