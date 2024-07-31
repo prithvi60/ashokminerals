@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Slider from "react-slick";
-import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";

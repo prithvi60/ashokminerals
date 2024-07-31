@@ -110,7 +110,7 @@ export const strength = [
   {
     title: "PROCESSING",
     src: "/processing.svg",
-    styles: "col-span-2 md:col-span-1 bg-black/40",
+    styles: "col-span-2 md:col-span-1 bg-black/50",
   },
   {
     title: "QUALITY SERVICE",
@@ -130,7 +130,7 @@ export const strength = [
   {
     title: "LOGISTICS",
     src: "/logistic.svg",
-    styles: "col-span-2 md:col-span-1 bg-black/40",
+    styles: "col-span-2 md:col-span-1 bg-black/50",
   },
 ];
 

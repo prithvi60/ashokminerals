@@ -3,11 +3,11 @@ import Image from "next/image";
 
 const OurStrength = () => {
   return (
-    <section className="w-full h-full space-y-10 px-6 py-10 sm:px-10 lg:px-16 sm:py-12 font-RobotoSlab">
+    <section className="w-full h-full px-6 py-10 space-y-10 sm:px-10 lg:px-16 sm:py-12 font-RobotoSlab">
       <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
         Our Strength
       </h3>
-      <div className="grid grid-rows-4 md:grid-rows-none rounded-sm grid-cols-4 grid-flow-row-dense md:grid-flow-col-dense text-primary shadow-md">
+      <div className="grid grid-flow-row-dense grid-cols-4 grid-rows-4 rounded-sm shadow-md md:grid-rows-none md:grid-flow-col-dense text-primary">
         {/* {strength.map((list, idx) => (
           <div className="block space-y-3 md:min-h-[360px]" key={idx}>
             <div className="relative h-14 w-14 md:w-20 md:h-20">
@@ -37,12 +37,12 @@ const OurStrength = () => {
                 style={{ objectFit: "contain" }}
               />
             </div>
-            <h4 className="text-lg font-normal tracking-wide uppercase lg:text-xl">
+            <h4 className="text-lg font-normal tracking-wide text-center uppercase lg:text-xl">
               {item.title}
             </h4>
           </div>
         ))}
-        {/* <div className="flex flex-col gap-3 justify-center items-center bg-black/55 p-5 col-span-2 md:col-span-1">
+        {/* <div className="flex flex-col items-center justify-center col-span-2 gap-3 p-5 bg-black/55 md:col-span-1">
           <div className="relative h-14 w-14 md:w-16 md:h-16">
             <Image
               alt={"mining"}
@@ -55,7 +55,7 @@ const OurStrength = () => {
             PROCESSING
           </h4>
         </div>
-        <div className="flex flex-col gap-3 justify-center items-center bg-black/35 p-5 col-span-2 md:col-span-1">
+        <div className="flex flex-col items-center justify-center col-span-2 gap-3 p-5 bg-black/35 md:col-span-1">
           <div className="relative h-14 w-14 md:w-16 md:h-16">
             <Image
               alt={"mining"}
@@ -68,7 +68,7 @@ const OurStrength = () => {
             QUALITY SERVICE
           </h4>
         </div>
-        <div className="flex flex-col gap-3 justify-center items-center bg-black/75 p-5 col-span-4 md:row-span-2 md:col-auto">
+        <div className="flex flex-col items-center justify-center col-span-4 gap-3 p-5 bg-black/75 md:row-span-2 md:col-auto">
           <div className="relative h-14 w-14 md:w-16 md:h-16">
             <Image
               alt={"mining"}
@@ -81,7 +81,7 @@ const OurStrength = () => {
             WAREHOUSING / JIT
           </h4>
         </div>
-        <div className="flex flex-col gap-3 justify-center items-center bg-black/35 p-5 col-span-2 md:col-span-1">
+        <div className="flex flex-col items-center justify-center col-span-2 gap-3 p-5 bg-black/35 md:col-span-1">
           <div className="relative h-14 w-14 md:w-16 md:h-16">
             <Image
               alt={"mining"}
@@ -94,7 +94,7 @@ const OurStrength = () => {
             CUSTOMISATION
           </h4>
         </div>
-        <div className="flex flex-col gap-3 justify-center items-center bg-black/55 p-5 col-span-2 md:col-span-1">
+        <div className="flex flex-col items-center justify-center col-span-2 gap-3 p-5 bg-black/55 md:col-span-1">
           <div className="relative h-14 w-14 md:w-16 md:h-16">
             <Image
               alt={"mining"}
