@@ -55,7 +55,11 @@ const Banner = () => {
   return (
     <section className="relative w-full h-full overflow-hidden">
       {blur === true && (
-        <div className="absolute top-0 left-0 w-full h-[100dvh]">
+        <div
+          className={`absolute top-0 left-0 w-full h-[100dvh] ${
+            blur === true ? "block" : "hidden"
+          }`}
+        >
           <Image
             priority
             loading={"eager"}
@@ -74,7 +78,7 @@ const Banner = () => {
           autoPlay
           playsInline
           ref={loadingImage}
-          className={`w-full h-full object-cover translate-y-0 transition-all duration-700 ease-linear brightness-[0.75]`}
+          className={`w-full h-full object-cover object-left md:object-center translate-y-0 transition-all duration-700 ease-linear brightness-[0.75]`}
         >
           <source src={"/sample.mp4"} type="video/mp4" />
         </video>
