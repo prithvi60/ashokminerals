@@ -267,12 +267,12 @@ export const association = [
 
 export const certifications = [
   {
-    abbr: "International Organization for Standardization certification, ensuring our products and services meet international standards.",
+    abbr: "International Organization for Standardization (ISO)",
     imgSrc: "/iso_logo.png",
     altTxt: "ISO",
   },
   {
-    abbr: "Authorized Economic Operator status, recognizing our role in the international supply chain and our commitment to secure, efficient, and compliant operations.",
+    abbr: "Authorised Economic Operator (AEO) ",
     imgSrc: "/aeo_logo.png",
     altTxt: "AEO",
   },

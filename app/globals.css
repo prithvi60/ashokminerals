@@ -2,16 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-    .post_content p{
-        @apply py-4
-    }
+@layer utilities {
+  .post_content p {
+    @apply py-4;
+  }
 
-    .post_content p a{
-        @apply text-info font-medium underline underline-offset-4
-    }
+  .post_content p a {
+    @apply font-medium underline text-info underline-offset-4;
+  }
 
-    .post_content h5{
-        @apply py-3 font-semibold text-lg md:text-xl
-    }
+  .post_content h5 {
+    @apply py-3 text-lg font-semibold md:text-xl;
+  }
 }
+
+/* .hideScroll::-webkit-scrollbar {
+  display: none;
+} */
+
+/* width */
+.hideScroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  /* Track */
+  .hideScroll::-webkit-scrollbar-track {
+    background: #949494;
+    border-radius: 15px;
+  }
+  
+  /* Handle */
+  .hideScroll::-webkit-scrollbar-thumb {
+    background: #ea3c3c;
+    border-radius: 15px;
+  }
