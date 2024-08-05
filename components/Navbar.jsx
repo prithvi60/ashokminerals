@@ -24,16 +24,20 @@ const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isActiveState, setIsActiveState] = useState(null);
   const [selectedKeys, setSelectedKeys] = useState(new Set(["3"]));
-  const [percent, setPercent] = useState(null);
+  const [percent, setPercent] = useState(false);
   const router = useRouter();
   const path = usePathname();
 
   const handleScroll = () => {
-    const ele = document.body;
-    const scrollPosition = window.scrollY; // => scroll position
-    let percentage =
-      ((scrollPosition + window.innerHeight) / ele.clientHeight) * 100;
-    setPercent(() => Math.trunc(percentage));
+    const scrollPosition = window.scrollY;
+    const innerHeight = window.innerHeight;
+    const threshold = innerHeight * 0.2;
+
+    if (scrollPosition > threshold) {
+      setPercent(true); // white color
+    } else {
+      setPercent(false);
+    }
   };
 
   // Scroll based color change side effect
@@ -44,7 +48,7 @@ const NavbarComponent = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [percent]);
+  }, []);
 
   return (
     <Navbar
@@ -56,7 +60,7 @@ const NavbarComponent = () => {
       classNames={{
         base: [
           `${
-            percent <= 15 && path === "/"
+            !percent && path === "/"
               ? "!bg-transparent shadow-none"
               : "bg-primary shadow-md"
           } fixed top-8 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-16 h-auto top-8 sm:top-8 transition-all duration-300 ease-linear`,
@@ -75,7 +79,7 @@ const NavbarComponent = () => {
               alt="ashok minerals logo"
               fill
               style={{ objectFit: "contain", objectPosition: "center" }}
-              src={"/Ashok-Minerals-Final-Logo.jpg"}
+              src={"/ashok-minerals-logo2.svg"}
             />
           </div>
         </NavbarBrand>
@@ -86,7 +90,7 @@ const NavbarComponent = () => {
           <NavbarItem key={id} className="relative group">
             <div
               className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear ${
-                percent <= 15 && path === "/" ? "text-primary" : "text-black"
+                !percent && path === "/" ? "text-primary" : "text-black"
               } lg:text-lg hover:text-warning font-RobotoSlab ${
                 item.ref !== "" && "cursor-pointer"
               }`}
@@ -97,16 +101,14 @@ const NavbarComponent = () => {
                   className={` ${
                     item.menu === "blog" ? "hidden" : "block"
                   } text-base group-hover:rotate-180  ${
-                    percent <= 15 && path === "/"
-                      ? "text-primary"
-                      : "text-black"
+                    !percent && path === "/" ? "text-primary" : "text-black"
                   } transition-all duration-200 ease-linear text-black`}
                 />
               )}
             </div>
             {item.subMenu && (
               <div
-                className={`absolute hidden top-[92px] right-5 p-4 shadow-md rounded-xl font-RobotoSlab bg-zinc-200 group-hover:block after:content-[''] after:w-5 after:h-5 after:rotate-45 after:bg-zinc-200 after:absolute after:right-6 after:-top-2 `}
+                className={`absolute hidden top-[92px] right-5 p-4 shadow-md rounded-xl font-RobotoSlab bg-primary group-hover:block after:content-[''] after:w-5 after:h-5 after:rotate-45 after:bg-primary after:absolute after:right-6 after:-top-2 `}
               >
                 {item?.subMenu?.map((l, index) => (
                   <Link
@@ -153,31 +155,36 @@ const NavbarComponent = () => {
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         /> */}
         <NavbarItem>
-          <GiHamburgerMenu
-            onClick={() => setIsMenuOpen(true)}
-            className={`text-4xl font-semibold cursor-pointer ${
-              percent <= 15 && path === "/" ? "text-primary" : "text-black"
-            }`}
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          >
-            +
-          </GiHamburgerMenu>
+          {isMenuOpen ? (
+            <IoClose
+              onClick={() => setIsMenuOpen(false)}
+              className={`text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary transform transition-all duration-400 ease-out`}
+            />
+          ) : (
+            <GiHamburgerMenu
+              onClick={() => setIsMenuOpen(true)}
+              className={`text-4xl font-semibold cursor-pointer transition-all duration-400 ease-out ${
+                !percent && path === "/" ? "text-primary" : "text-black"
+              }`}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            />
+          )}
         </NavbarItem>
       </NavbarContent>
       {/* Mobile menu */}
       <NavbarMenu
-        className="!z-[995] top-0 bg-secondary/95"
+        className="!z-[995] top-[115px] bg-secondary/95 max-h-fit justify-end"
         motionProps={{
           variants: {
             enter: {
-              x: 0,
+              y: 0,
               transition: {
                 duration: 0.3,
                 ease: "easeIn",
               },
             },
             exit: {
-              x: -1000,
+              y: -600,
               transition: {
                 duration: 0.5,
                 ease: "easeOut",
@@ -186,15 +193,25 @@ const NavbarComponent = () => {
           },
         }}
       >
-        <NavbarMenuItem className="flex items-center justify-end w-full mt-11 sm:-ms-5 md:-ms-3">
-          {/* mt-3 ms-2.5 */}
+        {/* <NavbarMenuItem className="flex items-center justify-end w-full mt-11 sm:-ms-5 md:-ms-3">
           <IoClose
             onClick={() => setIsMenuOpen(false)}
             className={`text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary `}
           />
-        </NavbarMenuItem>
-        <div className="mt-10 space-y-4 text-center">
-          {navbarMenu.map((item, index) => (
+        </NavbarMenuItem> */}
+        <div className="mt-10 space-y-4">
+          <div className="flex flex-col items-end justify-center gap-4">
+            {navbarMenu.slice(0, 3).map((item, id) => (
+              <Link
+                href={item.ref}
+                className="text-lg font-medium capitalize me-12 font-RobotoSlab"
+                key={id}
+              >
+                {item.menu}
+              </Link>
+            ))}
+          </div>
+          {navbarMenu.slice(3, 4).map((item, index) => (
             <NavbarMenuItem key={index}>
               <Accordion
                 variant="light"
@@ -210,19 +227,19 @@ const NavbarComponent = () => {
                   }
                   classNames={{
                     base: "text-black font-RobotoSlab font-normal",
-                    trigger: "justify-center py-0 ps-8",
+                    trigger: "justify-end py-0 ps-8",
                     heading: "transition-all duration-300 ease-linear",
                     titleWrapper: "!flex-none",
                     title: "!text-black !capitalize",
                     indicator:
-                      "transition-all duration-300 ease-linear text-warning text-xl rotate-0",
+                      "transition-all duration-300 ease-linear text-warning text-xl !rotate-0",
                   }}
                 >
                   {item?.subMenu?.map((l, index) => (
                     <Link
                       onClick={() => setIsMenuOpen(false)}
                       title={l.menuTitle}
-                      className={`text-base font-normal capitalize font-RobotoSlab `}
+                      className={`text-base font-normal capitalize font-RobotoSlab text-end`}
                       key={index}
                       href={l.menuRef}
                     >
@@ -234,7 +251,7 @@ const NavbarComponent = () => {
             </NavbarMenuItem>
           ))}
         </div>
-        <NavbarMenuItem className="w-full mt-5 text-center">
+        <NavbarMenuItem className="w-full my-5 text-end">
           <Button
             as={Link}
             color="warning"

@@ -1,40 +1,32 @@
-import { products, productSpecimen } from "@/libs/data";
-import { Card, CardBody, CardFooter } from "@nextui-org/card";
+"use client";
+
 import { LuArrowDownRightFromCircle } from "react-icons/lu";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { productSpecimen } from "@/libs/data";
 
 const OurProducts = () => {
+  const [width, setWidth] = useState(0);
+  const [count, setCount] = useState(3);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
+    width >= 1560 ? setCount(4) : setCount(3);
+  }, [width]);
+
   return (
     <section className="w-full h-full px-6 py-10 space-y-24 sm:px-10 lg:px-16 sm:py-12 font-RobotoSlab">
       <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
         Our Products
       </h3>
-      <div className="grid w-full h-full grid-cols-1 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 md:gap-10 lg:gap-6 xl:gap-14 font-RobotoSlab place-content-center place-items-center">
-        {/* {products.map((item, index) => (
-          <Card
-            shadow="sm"
-            key={index}
-            className="hover:scale-110 md:min-w-64 max-w-80 sm:h-56 h-44"
-          >
-            <CardBody className="p-0 overflow-hidden">
-              <Image
-                height={480}
-                width={280}
-                alt={item.title}
-                className="w-full object-cover h-[180px] sm:h-[240px]"
-                src={item.src}
-                quality={90}
-              />
-            </CardBody>
-            <CardFooter className="font-semibold capitalize text-small bg-warning text-primary">
-              <h4 className="">{item.title}</h4>
-            </CardFooter>
-          </Card>
-        ))} */}
-        {productSpecimen.map((item, id) => (
+      <div className="grid w-full h-full grid-cols-1 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 md:gap-10 lg:gap-6 xl:gap-14 font-RobotoSlab place-content-center place-items-center">
+        {productSpecimen.slice(0, count).map((item, id) => (
           <div
-            className="relative w-full rounded-md shadow-xl cursor-pointer sm:h-56 h-44 bg-black/5 group"
+            className="relative w-full rounded-md shadow-xl cursor-pointer max-w-80 2xl:max-w-96 sm:h-56 h-44 bg-black/10 group"
             key={id}
           >
             <Image
@@ -45,7 +37,7 @@ const OurProducts = () => {
               src={item.src}
               quality={100}
             />
-            <div className="absolute text-lg font-semibold tracking-wider capitalize -translate-x-1/2 bottom-10 sm:text-xl lg:text-2xl left-1/2 group-hover:text-warning">
+            <div className="absolute text-lg font-semibold tracking-wider capitalize transition-all ease-linear -translate-x-1/2 bottom-10 sm:text-xl lg:text-2xl left-1/2 group-hover:text-warning duration-400">
               <h4 className="">{item.title}</h4>
             </div>
           </div>

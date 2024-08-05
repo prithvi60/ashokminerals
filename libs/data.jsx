@@ -85,6 +85,7 @@ export const productSpecimen = [
   { title: "BARITE", src: "/barite (1).png" },
   { title: "HEMATITE", src: "/hematite (1).png" },
   { title: "GRAPHITE", src: "/graphite (1).png" },
+  { title: "KAOLIN", src: "/kaolin.png" },
 ];
 
 export const products = [
@@ -105,32 +106,38 @@ export const strength = [
   {
     title: "MINING",
     src: "/mining.svg",
-    styles: "col-span-4 md:row-span-2 md:col-auto bg-black/75",
+    bgColor: "#3A3A3A",
+    styles: "col-span-2 row-span-2 md:col-auto",
   },
   {
     title: "PROCESSING",
     src: "/processing.svg",
-    styles: "col-span-2 md:col-span-1 bg-black/50",
+    bgColor: "#635F5F",
+    styles: "col-span-2 md:col-span-1",
   },
   {
     title: "QUALITY SERVICE",
     src: "/quality.svg",
-    styles: "col-span-2 md:col-span-1 bg-black/55",
+    bgColor: "#8B8989",
+    styles: "col-span-2 md:col-span-1",
   },
   {
     title: "WAREHOUSING",
     src: "/warehouse.svg",
-    styles: "col-span-4 md:row-span-2 md:col-auto bg-black/75",
+    bgColor: "#3A3A3A",
+    styles: "col-span-2 row-span-2 md:col-auto",
   },
   {
     title: "CUSTOMIZATION",
     src: "/custom.svg",
-    styles: "col-span-2 md:col-span-1 bg-black/55",
+    bgColor: "#635F5F",
+    styles: "col-span-2 md:col-span-1",
   },
   {
     title: "LOGISTICS",
     src: "/logistic.svg",
-    styles: "col-span-2 md:col-span-1 bg-black/50",
+    bgColor: "#8B8989",
+    styles: "col-span-2 md:col-span-1",
   },
 ];
 

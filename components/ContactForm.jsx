@@ -1,9 +1,5 @@
 "use client";
 import { Input, Textarea } from "@nextui-org/input";
-import { IoMailOutline } from "react-icons/io5";
-import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
-import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
-import { FaPhoneAlt } from "react-icons/fa";
 import { Button } from "@nextui-org/button";
 import { Select, SelectItem } from "@nextui-org/select";
 
@@ -47,7 +43,7 @@ export const ContactForm = () => {
                 concerns or queries you may have
               </p>
             </div>
-            <div className="block w-full space-y-4 xl:w-3/5">
+            {/* <div className="block w-full space-y-4 xl:w-3/5">
               <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl">
                 Feedback & Suggestions
               </h4>
@@ -56,7 +52,7 @@ export const ContactForm = () => {
                 Snappy. Your input is crucial in shaping the future of ashok
                 minerals.
               </p>
-            </div>
+            </div> */}
             <div className="block w-full space-y-4 xl:w-3/5">
               <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl">
                 Sales & other Enquiries
@@ -86,7 +82,7 @@ export const ContactForm = () => {
               Let’s Get in touch to Explore business opportunities
             </h3>
             <Select
-            aria-label="options"
+              aria-label="options"
               name="selecting options"
               isRequired
               size="lg"
@@ -283,9 +279,7 @@ export const ContactForm = () => {
             {/* <span className="font-semibold text-warning">Contact No - </span>
             +91-44-24512581/82/83
             <br /> */}
-            <span className="font-semibold">
-              GST : 33AAPB8321M1Z0
-            </span>
+            <span className="font-semibold">GST : 33AAPB8321M1Z0</span>
           </address>
         </div>
       </div>

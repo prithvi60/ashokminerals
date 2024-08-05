@@ -11,34 +11,34 @@ export const InternationalTies = ({ importCountries }) => {
       <div className="flex flex-wrap items-center gap-5">
         {/* {importCountries.logos.map((item, id) => ( */}
         {/* <div  className="block"> */}
-        <div className="relative w-[250px] h-24 overflow-hidden duration-300 lg:h-40">
+        <div className="relative w-full max-w-[300px] overflow-hidden duration-300 h-40">
           <Image
             alt={""}
-            src={"/flag/thailand.png"}
+            src={"/flag/uae1.png"}
             fill
-            className="object-contain"
+            className="object-cover"
             quality={100}
           />
         </div>
-        <div className="relative w-[250px] h-24 overflow-hidden duration-300 lg:h-40">
+        <div className="relative w-full max-w-[300px] overflow-hidden duration-300 h-40">
           <Image
             alt={""}
-            src={"/flag/vietnam.png"}
+            src={"/flag/uae1.png"}
             fill
-            className="object-contain object-center"
+            className="object-cover"
             quality={100}
           />
         </div>
-        <div className="relative w-[250px] h-24 overflow-hidden duration-300 lg:h-40">
+        <div className="relative w-full max-w-[300px] overflow-hidden duration-300 h-40">
           <Image
             alt={""}
-            src={"/flag/malaysia.png"}
+            src={"/flag/uae1.png"}
             fill
-            className="object-contain object-center"
+            className="object-cover"
             quality={100}
           />
         </div>
-        <h4 className="flex items-center justify-center h-24 text-base font-medium capitalize w-[250px] lg:h-40 sm:text-lg bg-black/10">
+        <h4 className="flex items-center justify-center text-base font-medium capitalize w-full max-w-[300px] h-40 sm:text-lg bg-black/10">
           {"view more countries"}
         </h4>
         
