@@ -15,7 +15,7 @@ export const navbarMenu = [
     menu: "our company",
     ref: "",
     subMenu: [
-      { menuTitle: "Our History ", menuRef: "/our_history " },
+      { menuTitle: "Our History ", menuRef: "/our_history" },
       {
         menuTitle: "Our Associations & Certifications",
         menuRef: "/our_associations&certifications",
@@ -24,7 +24,10 @@ export const navbarMenu = [
         menuTitle: "Our International Ties",
         menuRef: "/our_international_ties",
       },
-      { menuTitle: "Leadership & Team", menuRef: "/leadership&team" },
+      {
+        menuTitle: "Leadership & Team",
+        menuRef: "/leadership&team",
+      },
       {
         menuTitle: "Our Manufacturing Setup",
         menuRef: "/our_manufacturing_setup",
@@ -82,24 +85,10 @@ export const footerMenuLinks = [
 ];
 
 export const productSpecimen = [
-  { title: "BARITE", src: "/barite (1).png" },
-  { title: "HEMATITE", src: "/hematite (1).png" },
-  { title: "GRAPHITE", src: "/graphite (1).png" },
-  { title: "KAOLIN", src: "/kaolin.png" },
-];
-
-export const products = [
-  { title: "BARITE", src: "/barite.jpg" },
-  { title: "SILICA & QUARTZ", src: "/silica.jpg" },
-  { title: "HEMATITE", src: "/hematite.jpg" },
-  { title: "TALC", src: "/talc.jpg" },
-  { title: "FELDSPAR", src: "/feldspar.jpg" },
-  { title: "MICACEOUS IRON OXIDE (MIO)", src: "/mica.jpg" },
-  { title: "KAOLIN (CLAY)", src: "/kaolin.jpg" },
-  { title: "Dolomite ", src: "/dolomite.jpg" },
-  { title: "CALCIUM CARBONATE", src: "/calcium.jpg" },
-  { title: "ZEOLITE", src: "/zeolite.jpg" },
-  { title: "HSCAS", src: "/hscas.jpg" },
+  { title: "BARITE", src: "/product/barite.svg" },
+  { title: "HEMATITE", src: "/product/hematite.png" },
+  { title: "GRAPHITE", src: "/product/graphite.png" },
+  { title: "KAOLIN", src: "/product/Talc.svg" },
 ];
 
 export const strength = [
@@ -285,13 +274,12 @@ export const importCountries = {
   para2:
     "This extensive network ensures we can provide our customers with the best materials available globally.",
   logos: [
-    { countryName: "thailand", logo: "/thailand-logo.png" },
-    { countryName: "vietnam", logo: "/vietnam-logo.png" },
-    { countryName: "malaysia", logo: "/Malaysia-logo.png" },
-    { countryName: "egypt", logo: "/Egypt-logo.png" },
-    { countryName: "turkey", logo: "/Turkey-logo.png" },
-    { countryName: "oman", logo: "/Oman-logo.png" },
-    { countryName: "...other countries", logo: "/otherCountries-logo.png" },
+    { logo: "/flag/thailand.png" },
+    { logo: "/flag/vietnam.png" },
+    { logo: "/flag/malaysia.png" },
+    { logo: "/flag/eqypt.png" },
+    { logo: "/flag/turkey.png" },
+    { logo: "/flag/oman.png" },
   ],
 };
 
@@ -302,9 +290,110 @@ export const exportCountries = {
   para2:
     "We have achieved self-sealing status, which allows us to perform container stuffing at our own factory. This capability enables us to bypass the Container Freight Station (CFS), saving valuable time and effort for our clients, ensuring faster delivery and greater efficiency in our operations.",
   logos: [
-    { countryName: "UAE", logo: "/UAE-logo.png" },
-    { countryName: "saudi arabia", logo: "/Saudi-logo.png" },
-    { countryName: "bangladesh", logo: "/Bangladesh-logo.png" },
-    { countryName: "...more", logo: "/otherCountries-logo.png" },
+    { logo: "/flag/uae.png" },
+    { logo: "/flag/saudiarabia.png" },
+    { logo: "/flag/turkey.png" },
+    { logo: "/flag/bangladesh.jpeg" },
   ],
 };
+
+// all products
+
+export const allProducts = [
+  {
+    productName: "Barite",
+    shortNote:
+      "Barite is virtually the exclusive commercial source of barium. Barites is used in the manufacture of white paint and as drilling mud.",
+    cardImg: "/product/barite.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Silica & Quartz",
+    shortNote:
+      "Silica is the principle glass-forming oxide making up approximately 60% of soda-lime-silica glass batch.",
+    cardImg: "/product/silica.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Hematite",
+    shortNote:
+      "Red Iron Oxide, natural and synthetic is Hematite with composition of Iron Oxide, Iron, clay and sandy impurities.",
+    cardImg: "/product/hematite.png",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Talc",
+    shortNote:
+      "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease  and as an absorbent",
+    cardImg: "/product/Talc.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Feldspar",
+    shortNote:
+      "Feldspar are aluminosilicates with varying amounts of K, Na and Ca in a solid solution series.",
+    cardImg: "/product/feldspar.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "MIO",
+    shortNote:
+      "The protective properties of Micaceous Iron Oxide(MIO) derive from its flake-like particle structure and chemical inertness.",
+    cardImg: "/product/mica.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Kaolin",
+    shortNote:
+      "The name Kaolin is derived from the original Chinese name “Kauling” meaning high ride in the small village of Gaoling in Jinagzi province, China, where the white clay was mined.",
+    cardImg: "/product/Kaolinn.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Graphite",
+    shortNote:
+      "Graphite is a naturally-occurring form of crystalline carbon. It is a native element mineral found in metamorphic and igneous rocks.",
+    cardImg: "/product/graphite.png",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Dolomite",
+    shortNote:
+      "Dolomite is a natural stone with double carbonate of calcium and magnesium having composition (CaCO3. MgCO3).",
+    cardImg: "/product/Dolomite.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Calcium Carbonate",
+    shortNote:
+      "Natural calcium carbonate ores are high in chemical and mineralogical purity and are wet or dry, ground to a wide range of products.",
+    cardImg: "/product/calcium.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "Zeolite",
+    shortNote:
+      "Zeolites are crystalline, hydrated aluminosilicates that contain alkali and alkaline-earth metals.",
+    cardImg: "/product/zeolite.svg",
+    imgSrc: "",
+    desc: "",
+  },
+  {
+    productName: "HSCAS",
+    shortNote:
+      "HSCAS is an enterosorbent that binds to aflatoxins, molds, and bacteria in animal feed, reducing their presence through adsorption.",
+    cardImg: "/product/hscas.svg",
+    imgSrc: "",
+    desc: "",
+  },
+];

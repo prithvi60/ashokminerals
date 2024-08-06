@@ -7,7 +7,7 @@ const OurStrength = () => {
       <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
         Our Strength
       </h3>
-      <div className="grid h-full grid-flow-row-dense grid-cols-4 grid-rows-4 rounded-sm shadow-md md:grid-rows-none md:grid-flow-col-dense text-primary max-h-[550px] md:max-h-fit">
+      <div className="grid h-full grid-flow-row-dense grid-cols-4 grid-rows-4 rounded-sm shadow-md md:grid-rows-none md:grid-flow-col-dense text-primary max-h-[550px] ">
         {strength.map((item, id) => (
           <div
             style={{ backgroundColor: `${item.bgColor}` }}

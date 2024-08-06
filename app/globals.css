@@ -36,3 +36,24 @@
     background: #ea3c3c;
     border-radius: 15px;
   }
+
+
+  /* flip card css */
+
+  .card {
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+  }
+
+  .frontSideCard {
+    backface-visibility: visible;
+  }
+
+  .backSideCard {
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+
+  .flipCard:hover {
+    transform: rotateY(-180deg);
+  }

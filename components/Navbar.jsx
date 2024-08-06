@@ -79,7 +79,7 @@ const NavbarComponent = () => {
               alt="ashok minerals logo"
               fill
               style={{ objectFit: "contain", objectPosition: "center" }}
-              src={"/ashok-minerals-logo2.svg"}
+              src={"/ashok-minerals-logo.svg"}
             />
           </div>
         </NavbarBrand>
@@ -119,7 +119,7 @@ const NavbarComponent = () => {
                         : "text-black"
                     }`}
                     key={index}
-                    href={l.menuRef}
+                    href={`/our_company/${l.menuRef}`}
                     onClick={() => setIsActiveState(l.menuTitle)}
                   >
                     <h4 className="mb-2.5 ">{l.menuTitle}</h4>
