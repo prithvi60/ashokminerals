@@ -12,8 +12,9 @@ const lists = [
 
 export const ContactForm = () => {
   return (
-    <section className="relative w-full h-full space-y-10 md:h-auto font-RobotoSlab ">
-      <div className="flex flex-col justify-center h-full gap-6 px-6 py-10 lg:gap-12 md:flex-row bg-black/5 sm:py-12 sm:px-10 lg:px-16">
+    <section className="relative w-full h-full space-y-10 md:h-auto font-RobotoSlab" id="contact">
+      <div className="flex flex-col justify-center h-full gap-6 px-6 py-10 lg:gap-12 md:flex-row bg-secondary sm:py-12 sm:px-10 lg:px-16">
+        {/* contact details */}
         <div className="flex flex-col items-start justify-between w-full h-auto gap-5 mt-6 md:1/2 lg:w-3/5">
           <div className="block space-y-6">
             <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
@@ -43,16 +44,6 @@ export const ContactForm = () => {
                 concerns or queries you may have
               </p>
             </div>
-            {/* <div className="block w-full space-y-4 xl:w-3/5">
-              <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl">
-                Feedback & Suggestions
-              </h4>
-              <p className="text-base font-normal">
-                We value your feedback and are continuously working to improve
-                Snappy. Your input is crucial in shaping the future of ashok
-                minerals.
-              </p>
-            </div> */}
             <div className="block w-full space-y-4 xl:w-3/5">
               <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl">
                 Sales & other Enquiries
@@ -71,6 +62,7 @@ export const ContactForm = () => {
             </div>
           </div>
         </div>
+        {/* Form */}
         <div className="w-full h-auto px-4 space-y-5 rounded-md shadow-md bg-primary py-7 md:1/2 lg:w-2/5">
           <form
             // action="https://public.herotofu.com/v1/19317a90-2945-11ef-b910-172fda062bcc"
@@ -94,7 +86,7 @@ export const ContactForm = () => {
               className="mt-8 max-w-ful"
               classNames={{
                 label: "capitalize font-Poppins font-normal",
-                trigger: "bg-black/5",
+                trigger: "bg-secondary",
                 value: "capitalize",
               }}
             >
@@ -107,7 +99,7 @@ export const ContactForm = () => {
             <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2">
               <Input
                 classNames={{
-                  inputWrapper: "bg-black/5 font-RobotoSlab font-normal",
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
                 }}
                 name="firstName"
                 isRequired
@@ -124,7 +116,7 @@ export const ContactForm = () => {
               />
               <Input
                 classNames={{
-                  inputWrapper: "bg-black/5 font-RobotoSlab font-normal",
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
                 }}
                 name="lastName"
                 isRequired
@@ -142,7 +134,7 @@ export const ContactForm = () => {
               />
               <Input
                 classNames={{
-                  inputWrapper: "bg-black/5 font-RobotoSlab font-normal",
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
                 }}
                 name="email"
                 isRequired
@@ -160,7 +152,7 @@ export const ContactForm = () => {
               />
               <Input
                 classNames={{
-                  inputWrapper: "bg-black/5 font-RobotoSlab font-normal",
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
                 }}
                 name="phone number"
                 size="lg"
@@ -178,7 +170,7 @@ export const ContactForm = () => {
               />
               <Input
                 classNames={{
-                  inputWrapper: "bg-black/5 font-RobotoSlab font-normal",
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
                 }}
                 name="company"
                 isRequired
@@ -198,7 +190,7 @@ export const ContactForm = () => {
             </div>
             <Textarea
               classNames={{
-                inputWrapper: "bg-black/5 font-RobotoSlab font-normal",
+                inputWrapper: "bg-secondary font-RobotoSlab font-normal",
               }}
               name="comments"
               isRequired
@@ -247,6 +239,7 @@ export const ContactForm = () => {
           </div> */}
         </div>
       </div>
+      {/* location map */}
       <div className="flex flex-col w-full h-full gap-8 px-6 py-10 md:gap-6 xl:gap-10 sm:py-12 sm:px-10 lg:px-16 md:flex-row ">
         <div className="w-full h-[380px] md:h-[430px] lg:h-[480px] xl:h-[520px] md:w-3/5 lg:w-3/4">
           <iframe

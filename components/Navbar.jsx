@@ -136,7 +136,7 @@ const NavbarComponent = () => {
           <Button
             as={Link}
             color="warning"
-            href="#"
+            href="#contact"
             radius="sm"
             variant="solid"
             className="text-base font-semibold text-white font-RobotoSlab ms-3 lg:text-lg"
@@ -193,19 +193,14 @@ const NavbarComponent = () => {
           },
         }}
       >
-        {/* <NavbarMenuItem className="flex items-center justify-end w-full mt-11 sm:-ms-5 md:-ms-3">
-          <IoClose
-            onClick={() => setIsMenuOpen(false)}
-            className={`text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary `}
-          />
-        </NavbarMenuItem> */}
-        <div className="mt-10 space-y-4">
+        <div className="my-10 space-y-4">
           <div className="flex flex-col items-end justify-center gap-4">
             {navbarMenu.slice(0, 3).map((item, id) => (
               <Link
                 href={item.ref}
                 className="text-lg font-medium capitalize me-12 font-RobotoSlab"
                 key={id}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.menu}
               </Link>
@@ -251,18 +246,18 @@ const NavbarComponent = () => {
             </NavbarMenuItem>
           ))}
         </div>
-        <NavbarMenuItem className="w-full my-5 text-end">
+        {/* <NavbarMenuItem className="w-full my-5 text-end">
           <Button
             as={Link}
             color="warning"
-            href="#"
+            href="#contact"
             variant="solid"
             className="mx-auto text-base font-semibold text-white font-RobotoSlab"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
           </Button>
-        </NavbarMenuItem>
+        </NavbarMenuItem> */}
       </NavbarMenu>
     </Navbar>
   );

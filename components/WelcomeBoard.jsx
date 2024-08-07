@@ -18,7 +18,7 @@ const WelcomeBoard = () => {
         <Button
           as={Link}
           color="warning"
-          href="/about_us"
+          href="/our_associations&certifications"
           variant="solid"
           size="lg"
           className="text-base font-semibold text-white capitalize font-RobotoSlab"

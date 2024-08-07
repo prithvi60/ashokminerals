@@ -26,7 +26,7 @@ const OurProducts = () => {
       <div className="grid w-full h-full grid-cols-1 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 font-RobotoSlab place-content-center place-items-center">
         {productSpecimen.slice(0, count).map((item, id) => (
           <div
-            className="relative w-full rounded-md shadow-xl cursor-pointer max-w-80 2xl:max-w-96 sm:h-56 h-44 bg-black/10 group"
+            className="relative w-full rounded-md shadow-xl cursor-pointer max-w-80 2xl:max-w-96 sm:h-56 h-44 bg-secondary group"
             key={id}
           >
             <div className="absolute w-full h-full -translate-x-1/2 left-1/2 -top-12 max-w-56 max-h-44">

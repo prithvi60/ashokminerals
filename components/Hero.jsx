@@ -35,7 +35,7 @@ import Link from "next/link";
 //   );
 // }
 
-const Banner = () => {
+const Hero = () => {
   // const [isActive, setIsActive] = useState(0);
   const [blur, setBlur] = useState(true);
   const loadingImage = useRef();
@@ -90,13 +90,13 @@ const Banner = () => {
             Industrial minerals
           </h4>
           <p className="text-base tracking-wide uppercase md:text-xl text-primary">
-            Talc / Dolomite / IronOxide / Soon...
+            Talc / Dolomite / IronOxide
           </p>
           <div className="flex items-center justify-center w-full gap-5">
             <Button
               as={Link}
               color="warning"
-              href="#"
+              href="/our_history"
               radius="sm"
               variant="solid"
               className="text-base font-semibold text-white capitalize font-RobotoSlab md:text-xl"
@@ -110,4 +110,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Hero;

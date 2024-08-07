@@ -22,6 +22,7 @@ const Footer = () => {
               Ashok Minerals
             </h4>
           </div>
+          {/* social media links */}
           <div className="flex items-center justify-center w-full gap-5 md:justify-start">
             <Link
               href="https://wa.me/9840899343?text=Thank%20You%20For%20Connecting%20With%20Ashok%20Minerals%20Marketing%20Team,%20We%20Will%20Get%20In%20Touch%20With%20You%20As%20Soon%20As%20Possible."
@@ -46,6 +47,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+        {/* footer menubar links */}
         <div className="flex flex-col items-center sm:items-start justify-center md:justify-end gap-2.5 sm:flex-row sm:gap-14 xl:gap-20 md:gap-8 md:w-4/5">
           {footerMenuLinks.map((item, id) => (
             <div
@@ -67,7 +69,7 @@ const Footer = () => {
                     title={l.menuTitle}
                     className={`text-sm text-primary cursor-pointer lg:text-lg hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-normal z-10 capitalize space-y-5 text-center sm:text-left`}
                     key={index}
-                    href={l.menuRef}
+                    href={`/our_company/${l.menuRef}`}
                   >
                     <h4 className="w-full h-full mb-2">{l.menuTitle}</h4>
                   </Link>

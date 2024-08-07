@@ -66,6 +66,7 @@ const Testimonials = () => {
           </Slider>
         </div>
       </div>
+      {/* logo marquee */}
       <div className="w-full h-[20vh]] bg-secondary">
         <div className="w-full h-full px-6 py-6 sm:px-10 lg:px-16">
           <Marquee

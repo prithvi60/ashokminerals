@@ -2,7 +2,7 @@ import Image from "next/image";
 export const InternationalTies = ({ countries }) => {
   return (
     <div className="block space-y-7">
-      <div className="p-8 space-y-4 rounded-lg md:space-y-6 bg-black/10">
+      <div className="p-8 space-y-4 rounded-lg shadow-lg bg-secondary md:space-y-6 ">
         <h4 className="text-lg font-semibold tracking-wide sm:text-xl lg:text-2xl">
           {countries.mainTitle}
         </h4>

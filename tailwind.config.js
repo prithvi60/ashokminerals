@@ -29,7 +29,7 @@ module.exports = {
         light: {
           colors: {
             primary: "#FFFFFF", // Main Bg
-            secondary: "#f2f2f2", // section bg
+            secondary: "#E5E5E5", // section bg
             warning: "#BF0000", // hover effect & btn border
             info: "#660000",
           },

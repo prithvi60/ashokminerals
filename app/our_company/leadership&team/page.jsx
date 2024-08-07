@@ -5,7 +5,7 @@ const Home = () => {
     <section className="w-full h-full font-RobotoSlab">
       <OtherPageHero title={"Leadership"} imgSrc={"/hero_2.jpg"} para={""} />
       <div className="w-full px-6 py-10 space-y-12 sm:py-12 sm:px-10 lg:px-16 font-RobotoSlab">
-        <div className="p-4 space-y-6 bg-black/20 md:p-6">
+        <div className="p-4 space-y-6 rounded-lg shadow-lg bg-secondary md:p-6">
           <h4 className="w-full text-2xl font-semibold tracking-wide capitalize sm:text-3xl">
             Leadership
           </h4>
@@ -24,7 +24,7 @@ const Home = () => {
             the company.
           </p>
         </div>
-        <div className="p-4 space-y-6 bg-black/20 md:p-6">
+        <div className="p-4 space-y-6 rounded-lg shadow-lg bg-secondary md:p-6">
           <h4 className="w-full text-2xl font-semibold tracking-wide capitalize sm:text-3xl">
             Team
           </h4>

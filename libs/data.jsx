@@ -96,7 +96,7 @@ export const strength = [
     title: "MINING",
     src: "/mining.svg",
     bgColor: "#3A3A3A",
-    styles: "col-span-2 row-span-2 md:col-auto",
+    styles: "row-span-2",
   },
   {
     title: "PROCESSING",
@@ -114,7 +114,7 @@ export const strength = [
     title: "WAREHOUSING",
     src: "/warehouse.svg",
     bgColor: "#3A3A3A",
-    styles: "col-span-2 row-span-2 md:col-auto",
+    styles: "row-span-2",
   },
   {
     title: "CUSTOMIZATION",
