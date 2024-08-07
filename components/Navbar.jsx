@@ -236,7 +236,7 @@ const NavbarComponent = () => {
                       title={l.menuTitle}
                       className={`text-base font-normal capitalize font-RobotoSlab text-end`}
                       key={index}
-                      href={l.menuRef}
+                      href={`/our_company/${l.menuRef}`}
                     >
                       <h4 className="mb-2">{l.menuTitle}</h4>
                     </Link>
