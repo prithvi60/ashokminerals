@@ -9,7 +9,7 @@ export const FlipProductsCard = () => {
       <div className="grid w-full h-full grid-cols-1 mt-20 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 font-RobotoSlab place-content-center place-items-center">
         {allProducts.map((product, id) => (
           <div className="relative w-full h-full card flipCard" key={id}>
-            <div className="relative w-full rounded-md shadow-xl cursor-pointer max-w-80 2xl:max-w-96 sm:h-56 h-44 bg-secondary group frontSideCard">
+            <div className="relative w-full h-48 rounded-md shadow-xl cursor-pointer sm:max-w-80 2xl:max-w-96 sm:h-56 bg-secondary group frontSideCard">
               <div className="absolute w-full h-full -translate-x-1/2 left-1/2 -top-16 md:-top-12 max-w-56 max-h-44">
                 <Image
                   fill
@@ -23,7 +23,7 @@ export const FlipProductsCard = () => {
                 {product.productName}
               </h4>
             </div>
-            <div className="absolute top-0 left-0 flex flex-col items-start justify-between w-full gap-2 px-6 py-4 rounded-md shadow-xl max-w-80 2xl:max-w-96 sm:h-56 h-44 group bg-warning text-primary backSideCard">
+            <div className="absolute top-0 left-0 flex flex-col items-start justify-between w-full h-48 gap-2 px-6 py-4 rounded-md shadow-xl sm:max-w-80 2xl:max-w-96 sm:h-56 group bg-warning text-primary backSideCard">
               <div className="space-y-2">
                 <h4 className="text-lg font-semibold tracking-wider capitalize sm:text-xl lg:text-2xl">
                   {product.productName}
@@ -31,7 +31,7 @@ export const FlipProductsCard = () => {
                 <p className="text-sm font-normal line-clamp-4 sm:line-clamp-none">{product.shortNote}</p>
               </div>
               <Link
-                href={`/products/${product.productName}`}
+                href={`/products/${product.productName.replace(/\s/g,"_")}`}
                 className="flex items-center gap-3 text-xl font-semibold tracking-wider underline capitalize transition-all duration-300 ease-out text-primary underline-offset-4 hover:no-underline"
               >
                 Read more

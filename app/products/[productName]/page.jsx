@@ -1,12 +1,11 @@
 import OtherPageHero from "@/components/OtherPageHero";
+import { ProductSpecification } from "@/components/ProductSpecification";
 
 const Home = () => {
   return (
     <section>
-      <OtherPageHero title={"Products"} imgSrc={"/hero_2.jpg"} />
-      <div className="flex items-center text-xl justify-center w-full h-[30vh] font-semibold font-RobotoSlab">
-        product specifications
-      </div>
+      <OtherPageHero title={"Product Specification"} imgSrc={"/hero_2.jpg"} />
+      <ProductSpecification />
     </section>
   );
 };

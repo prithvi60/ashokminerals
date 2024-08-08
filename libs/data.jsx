@@ -305,95 +305,95 @@ export const allProducts = [
     shortNote:
       "Barite is virtually the exclusive commercial source of barium. Barites is used in the manufacture of white paint and as drilling mud.",
     cardImg: "/product/barite.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/barite-bg.jpg",
+    desc: "Barite is virtually the exclusive commercial source of barium. Barites is used in the manufacture of white paint and as drilling mud.",
   },
   {
-    productName: "Silica & Quartz",
+    productName: "Silica and Quartz",
     shortNote:
       "Silica is the principle glass-forming oxide making up approximately 60% of soda-lime-silica glass batch.",
     cardImg: "/product/silica.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/silica-bg.jpg",
+    desc: "Silica is the principle glass-forming oxide making up approximately 60% of soda-lime-silica glass batch. Silica sand/quartz is heat resistant to approx. 1470°C and is used as a foundry sand in the manufacture of molds and cores for casting metals.",
   },
   {
     productName: "Hematite",
     shortNote:
       "Red Iron Oxide, natural and synthetic is Hematite with composition of Iron Oxide, Iron, clay and sandy impurities.",
     cardImg: "/product/hematite.png",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/hematite-bg.jpg",
+    desc: "Red Iron Oxide, natural and synthetic is Hematite with composition of Iron Oxide, Iron, clay and sandy impurities.",
   },
   {
     productName: "Talc",
     shortNote:
       "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease  and as an absorbent",
     cardImg: "/product/Talc.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/talc-bg.jpg",
+    desc: "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease  and as an absorbent",
   },
   {
     productName: "Feldspar",
     shortNote:
       "Feldspar are aluminosilicates with varying amounts of K, Na and Ca in a solid solution series.",
     cardImg: "/product/feldspar.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/feldspar-bg.jpg",
+    desc: "Feldspar are aluminosilicates with varying amounts of K, Na and Ca in a solid solution series; the main commercial feldspars lie between the sodium(albite) and potash (Microcline) rich end members, and the sodium end of the sodium-calcium series (Oligoclase).",
   },
   {
     productName: "MIO",
     shortNote:
       "The protective properties of Micaceous Iron Oxide(MIO) derive from its flake-like particle structure and chemical inertness.",
     cardImg: "/product/mica.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/mio-bg.jpg",
+    desc: "Being a derivative of iron, it is red in color. The protective properties of Micaceous Iron Oxide(MIO) derive from its flake-like particle structure and chemical inertness. It is mainly used in marine paints and can be easily mixed with other colors.",
   },
   {
     productName: "Kaolin",
     shortNote:
       "The name Kaolin is derived from the original Chinese name “Kauling” meaning high ride in the small village of Gaoling in Jinagzi province, China, where the white clay was mined.",
     cardImg: "/product/Kaolinn.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/kalin-bg.jpg",
+    desc: "Ashok Mineral Enterprises is one of the major Manufacturers of Kaolin and the quality of Kaolin clay produced is top grade. Different grades of Kaolin (China clay) produced at Ashok Mineral Enterprises is given at the bottom.",
   },
   {
     productName: "Graphite",
     shortNote:
       "Graphite is a naturally-occurring form of crystalline carbon. It is a native element mineral found in metamorphic and igneous rocks.",
     cardImg: "/product/graphite.png",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/graphite-bg.jpg",
+    desc: "Graphite has been marketed as graphite, plumbago, or black lead. Industrial usage of such terms tends to be confusing to one not immersed in the industry. For example, the two main commercial categories of natural graphite are crystalline and amorphous; but all graphite is really crystalline and the commercial distinction is actually one of crystal size. Thus the term amorphous, although widely used, is a misnomer.",
   },
   {
     productName: "Dolomite",
     shortNote:
       "Dolomite is a natural stone with double carbonate of calcium and magnesium having composition (CaCO3. MgCO3).",
     cardImg: "/product/Dolomite.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/dolomine-bg.jpg",
+    desc: "Dolomite is named after the French mineralogist named Dolomieru. Dolomite is a natural stone with double carbonate of calcium and magnesium having composition (CaCO3. MgCO3).It is formed in nature by action of magnesium-bearing solution (sea water, underground water or hydrothermal solution) on calcite — the process being called dolomitization. Dolomite is a widely occurring mineral, generally mined from shallow depths.",
   },
   {
     productName: "Calcium Carbonate",
     shortNote:
       "Natural calcium carbonate ores are high in chemical and mineralogical purity and are wet or dry, ground to a wide range of products.",
     cardImg: "/product/calcium.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/calcium-bg.jpg",
+    desc: "Natural calcium carbonate ores are high in chemical and mineralogical purity and are wet or dry, ground to a wide range of products. Dry-ground calcium carbonates, comprising nominal 200 to 325 mesh products, are among the least pricey white fillers available. They are simply crushed from ore but may also be beneficiated by air separation. Wet-ground fine and ultra fine products are also sold in 75% solids slurry form for high volume paint and paper applications and in stearic acid- and stearate-treated forms for use in polymers.",
   },
   {
     productName: "Zeolite",
     shortNote:
       "Zeolites are crystalline, hydrated aluminosilicates that contain alkali and alkaline-earth metals.",
     cardImg: "/product/zeolite.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/zeolite-bg.jpg",
+    desc: "Zeolites are crystalline, hydrated aluminosilicates that contain alkali and alkaline-earth metals. Their crystal framework is based on a three-dimensional network of SiO4 tetrahedra with all four oxygens shared by adjacent tetrahedra. The alkali and alkaline earth cations are loosely bound within this structure and can be exchanged by other cations or molecular water. Most zeolites can be dehydrated and rehydrated without any change in volume. More than 48 natural zeolite minerals have been identified (Tschernich 1992), and more than 100 zeolites have been synthesized.",
   },
   {
     productName: "HSCAS",
     shortNote:
       "HSCAS is an enterosorbent that binds to aflatoxins, molds, and bacteria in animal feed, reducing their presence through adsorption.",
     cardImg: "/product/hscas.svg",
-    imgSrc: "",
-    desc: "",
+    imgSrc: "/product/hscas-bg.jpg",
+    desc: "When HSCAS is added in the animal food, the chemical compounds provide protection to the stomach (enterosorbent), which quickly via adsorption phenomenon binds to aflatoxins and the molds & bacterias releasing them, from the digestive tract and thus reduce their presence in the animal.",
   },
 ];
