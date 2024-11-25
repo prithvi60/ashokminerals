@@ -22,38 +22,37 @@
 
 /* width */
 .hideScroll::-webkit-scrollbar {
-    height: 8px;
-  }
-  
-  /* Track */
-  .hideScroll::-webkit-scrollbar-track {
-    background: #949494;
-    border-radius: 15px;
-  }
-  
-  /* Handle */
-  .hideScroll::-webkit-scrollbar-thumb {
-    background: #ea3c3c;
-    border-radius: 15px;
-  }
+  height: 8px;
+}
 
+/* Track */
+.hideScroll::-webkit-scrollbar-track {
+  background: #949494;
+  border-radius: 15px;
+}
 
-  /* flip card css */
+/* Handle */
+.hideScroll::-webkit-scrollbar-thumb {
+  background: #ea3c3c;
+  border-radius: 15px;
+}
 
-  .card {
-    transform-style: preserve-3d;
-    transition: all 1s ease;
-  }
+/* flip card css */
 
-  .frontSideCard {
-    backface-visibility: visible;
-  }
+.card {
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
 
-  .backSideCard {
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-  }
+.frontSideCard {
+  backface-visibility: visible;
+}
 
-  .flipCard:hover {
-    transform: rotateY(-180deg);
-  }
+.backSideCard {
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.flipCard:hover {
+  transform: rotateY(-180deg);
+}
