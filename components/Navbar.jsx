@@ -63,7 +63,7 @@ const NavbarComponent = () => {
             !percent && path === "/"
               ? "!bg-transparent shadow-none"
               : "bg-primary/80 "
-          } fixed top-8 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-64 h-auto top-8 sm:top-8 transition-all duration-300 ease-linear`,
+          } fixed top-8 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-16 h-auto top-8 sm:top-8 transition-all duration-300 ease-linear`,
         ],
         wrapper: ["!px-0"],
         item: ["data-[active=true]:text-warning"],
@@ -131,7 +131,7 @@ const NavbarComponent = () => {
         ))}
       </NavbarContent>
       {/* Contact button */}
-      <NavbarContent justify="end" className="!basis-0 !grow-0">
+      <NavbarContent justify="end" className="!basis-0 !grow-0 hidden md:block">
         <NavbarItem>
           <Button
             as={Link}
@@ -139,7 +139,7 @@ const NavbarComponent = () => {
             href="#contact"
           radius="none"
             variant="solid"
-            className="text-base uppercase font-semibold text-white font-RobotoSlab ms-3 lg:text-lg"
+            className="text-base uppercase font-semibold text-white font-RobotoSlab ms-3 lg:text-lg mt-4"
           >
         
             Contact
@@ -247,18 +247,19 @@ const NavbarComponent = () => {
             </NavbarMenuItem>
           ))}
         </div>
-        {/* <NavbarMenuItem className="w-full my-5 text-end">
+        <NavbarMenuItem className="w-full text-end mb-8">
           <Button
             as={Link}
             color="warning"
             href="#contact"
             variant="solid"
-            className="mx-auto text-base font-semibold text-white font-RobotoSlab"
+            radius="none"
+            className="mx-auto text-base font-semibold text-white font-RobotoSlab uppercase"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
           </Button>
-        </NavbarMenuItem> */}
+        </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>
   );

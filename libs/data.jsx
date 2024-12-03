@@ -80,6 +80,10 @@ export const footerMenuLinks = [
         menuTitle: "blog",
         menuRef: "/blog",
       },
+      {
+        menuTitle: "home",
+        menuRef: "/",
+      },
     ],
   },
 ];
@@ -307,6 +311,7 @@ export const allProducts = [
     cardImg: "/product/barite.svg",
     imgSrc: "/product/barite-bg.jpg",
     desc: "Barite is virtually the exclusive commercial source of barium. Barites is used in the manufacture of white paint and as drilling mud.",
+    market: ["Oil and Gas", "Paints and Coatings", "Chemical"],
   },
   {
     productName: "Silica and Quartz",
@@ -315,6 +320,7 @@ export const allProducts = [
     cardImg: "/product/silica.svg",
     imgSrc: "/product/silica-bg.jpg",
     desc: "Silica is the principle glass-forming oxide making up approximately 60% of soda-lime-silica glass batch. Silica sand/quartz is heat resistant to approx. 1470°C and is used as a foundry sand in the manufacture of molds and cores for casting metals.",
+    market: ["Glass Manufacturing", "Foundries", "Construction"],
   },
   {
     productName: "Hematite",
@@ -323,14 +329,16 @@ export const allProducts = [
     cardImg: "/product/hematite.png",
     imgSrc: "/product/hematite-bg.jpg",
     desc: "Red Iron Oxide, natural and synthetic is Hematite with composition of Iron Oxide, Iron, clay and sandy impurities.",
+    market: ["Steel Production", "Pigments", "Construction"],
   },
   {
     productName: "Talc",
     shortNote:
-      "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease  and as an absorbent",
+      "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease and as an absorbent.",
     cardImg: "/product/Talc.svg",
     imgSrc: "/product/talc-bg.jpg",
-    desc: "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease  and as an absorbent",
+    desc: "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease and as an absorbent.",
+    market: ["Paints and Coatings", "Cosmetics", "Pharmaceuticals"],
   },
   {
     productName: "Feldspar",
@@ -338,23 +346,26 @@ export const allProducts = [
       "Feldspar are aluminosilicates with varying amounts of K, Na and Ca in a solid solution series.",
     cardImg: "/product/feldspar.svg",
     imgSrc: "/product/feldspar-bg.jpg",
-    desc: "Feldspar are aluminosilicates with varying amounts of K, Na and Ca in a solid solution series; the main commercial feldspars lie between the sodium(albite) and potash (Microcline) rich end members, and the sodium end of the sodium-calcium series (Oligoclase).",
+    desc: "Feldspar are aluminosilicates with varying amounts of K, Na and Ca in a solid solution series; the main commercial feldspars lie between the sodium (albite) and potash (Microcline) rich end members, and the sodium end of the sodium-calcium series (Oligoclase).",
+    market: ["Ceramics", "Glass Manufacturing", "Construction"],
   },
   {
     productName: "MIO",
     shortNote:
-      "The protective properties of Micaceous Iron Oxide(MIO) derive from its flake-like particle structure and chemical inertness.",
+      "The protective properties of Micaceous Iron Oxide (MIO) derive from its flake-like particle structure and chemical inertness.",
     cardImg: "/product/mica.svg",
     imgSrc: "/product/mio-bg.jpg",
-    desc: "Being a derivative of iron, it is red in color. The protective properties of Micaceous Iron Oxide(MIO) derive from its flake-like particle structure and chemical inertness. It is mainly used in marine paints and can be easily mixed with other colors.",
+    desc: "Being a derivative of iron, it is red in color. The protective properties of Micaceous Iron Oxide (MIO) derive from its flake-like particle structure and chemical inertness. It is mainly used in marine paints and can be easily mixed with other colors.",
+    market: ["Marine Paints", "Construction", "Steel Coatings"],
   },
   {
     productName: "Kaolin",
     shortNote:
-      "The name Kaolin is derived from the original Chinese name “Kauling” meaning high ride in the small village of Gaoling in Jinagzi province, China, where the white clay was mined.",
+      "The name Kaolin is derived from the original Chinese name 'Kauling' meaning high ridge in the small village of Gaoling in Jiangxi province, China, where the white clay was mined.",
     cardImg: "/product/Kaolinn.svg",
     imgSrc: "/product/kalin-bg.jpg",
     desc: "Ashok Mineral Enterprises is one of the major Manufacturers of Kaolin and the quality of Kaolin clay produced is top grade. Different grades of Kaolin (China clay) produced at Ashok Mineral Enterprises is given at the bottom.",
+    market: ["Ceramics", "Paper", "Cosmetics"],
   },
   {
     productName: "Graphite",
@@ -363,6 +374,7 @@ export const allProducts = [
     cardImg: "/product/graphite.png",
     imgSrc: "/product/graphite-bg.jpg",
     desc: "Graphite has been marketed as graphite, plumbago, or black lead. Industrial usage of such terms tends to be confusing to one not immersed in the industry. For example, the two main commercial categories of natural graphite are crystalline and amorphous; but all graphite is really crystalline and the commercial distinction is actually one of crystal size. Thus the term amorphous, although widely used, is a misnomer.",
+    market: ["Electronics", "Batteries", "Refractories"],
   },
   {
     productName: "Dolomite",
@@ -371,6 +383,7 @@ export const allProducts = [
     cardImg: "/product/Dolomite.svg",
     imgSrc: "/product/dolomine-bg.jpg",
     desc: "Dolomite is named after the French mineralogist named Dolomieru. Dolomite is a natural stone with double carbonate of calcium and magnesium having composition (CaCO3. MgCO3).It is formed in nature by action of magnesium-bearing solution (sea water, underground water or hydrothermal solution) on calcite — the process being called dolomitization. Dolomite is a widely occurring mineral, generally mined from shallow depths.",
+    market: ["Construction", "Glass Manufacturing", "Agriculture"],
   },
   {
     productName: "Calcium Carbonate",
@@ -379,6 +392,7 @@ export const allProducts = [
     cardImg: "/product/calcium.svg",
     imgSrc: "/product/calcium-bg.jpg",
     desc: "Natural calcium carbonate ores are high in chemical and mineralogical purity and are wet or dry, ground to a wide range of products. Dry-ground calcium carbonates, comprising nominal 200 to 325 mesh products, are among the least pricey white fillers available. They are simply crushed from ore but may also be beneficiated by air separation. Wet-ground fine and ultra fine products are also sold in 75% solids slurry form for high volume paint and paper applications and in stearic acid- and stearate-treated forms for use in polymers.",
+    market: ["Paints and Coatings", "Plastics", "Paper"],
   },
   {
     productName: "Zeolite",
@@ -387,6 +401,7 @@ export const allProducts = [
     cardImg: "/product/zeolite.svg",
     imgSrc: "/product/zeolite-bg.jpg",
     desc: "Zeolites are crystalline, hydrated aluminosilicates that contain alkali and alkaline-earth metals. Their crystal framework is based on a three-dimensional network of SiO4 tetrahedra with all four oxygens shared by adjacent tetrahedra. The alkali and alkaline earth cations are loosely bound within this structure and can be exchanged by other cations or molecular water. Most zeolites can be dehydrated and rehydrated without any change in volume. More than 48 natural zeolite minerals have been identified (Tschernich 1992), and more than 100 zeolites have been synthesized.",
+    market: ["Water Filtration", "Detergents", "Agriculture"],
   },
   {
     productName: "HSCAS",
@@ -395,5 +410,30 @@ export const allProducts = [
     cardImg: "/product/hscas.svg",
     imgSrc: "/product/hscas-bg.jpg",
     desc: "When HSCAS is added in the animal food, the chemical compounds provide protection to the stomach (enterosorbent), which quickly via adsorption phenomenon binds to aflatoxins and the molds & bacterias releasing them, from the digestive tract and thus reduce their presence in the animal.",
+    market: ["Animal Feed", "Agriculture", "Pharmaceuticals"],
   },
+];
+export const markets = [
+  { "id": 1, "name": "Oil and Gas" },
+  { "id": 2, "name": "Paints and Coatings" },
+  { "id": 3, "name": "Chemical" },
+  { "id": 4, "name": "Glass Manufacturing" },
+  { "id": 5, "name": "Foundries" },
+  { "id": 6, "name": "Construction" },
+  { "id": 7, "name": "Steel Production" },
+  { "id": 8, "name": "Pigments" },
+  { "id": 9, "name": "Cosmetics" },
+  { "id": 10, "name": "Pharmaceuticals" },
+  { "id": 11, "name": "Ceramics" },
+  { "id": 12, "name": "Marine Paints" },
+  { "id": 13, "name": "Steel Coatings" },
+  { "id": 14, "name": "Paper" },
+  { "id": 15, "name": "Electronics" },
+  { "id": 16, "name": "Batteries" },
+  { "id": 17, "name": "Refractories" },
+  { "id": 18, "name": "Agriculture" },
+  { "id": 19, "name": "Plastics" },
+  { "id": 20, "name": "Water Filtration" },
+  { "id": 21, "name": "Detergents" },
+  { "id": 22, "name": "Animal Feed" }
 ];

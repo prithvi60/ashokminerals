@@ -69,7 +69,7 @@ const Footer = () => {
                     title={l.menuTitle}
                     className={`text-sm text-primary cursor-pointer lg:text-lg hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-normal z-10 capitalize space-y-5 text-center sm:text-left`}
                     key={index}
-                    href={`/our_company/${l.menuRef}`}
+                    href={item.menu != "Quick Links" ? `/our_company/${l.menuRef}`:`${l.menuRef}`}
                   >
                     <h4 className="w-full h-full mb-2">{l.menuTitle}</h4>
                   </Link>
