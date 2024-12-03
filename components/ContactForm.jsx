@@ -205,7 +205,7 @@ export const ContactForm = () => {
               <Button
                 color="warning"
                 size="lg"
-                radius="sm"
+              radius="none"
                 className="px-6 font-semibold w-max text-primary md:px-8"
                 role="button"
                 type="submit"

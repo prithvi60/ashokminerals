@@ -64,7 +64,7 @@ const Hero = () => {
             priority
             loading={"eager"}
             alt="bg image"
-            src={"/samplePic.png"}
+            src={"/samplePic2.png"}
             style={{ objectFit: "cover", objectPosition: "center" }}
             fill
             className="blur-sm"
@@ -78,14 +78,19 @@ const Hero = () => {
           autoPlay
           playsInline
           ref={loadingImage}
-          className={`w-full h-full object-cover object-left md:object-center translate-y-0 transition-all duration-700 ease-linear brightness-[0.75]`}
+          className={`w-full h-full object-cover object-left md:object-top translate-y-0 transition-all duration-700 ease-linear brightness-[0.85]`}
         >
-          <source src={"/sample.mp4"} type="video/mp4" />
+          <source src={"/sample2.mp4"} type="video/mp4" />
         </video>
-        <div className="absolute w-full space-y-4 text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-RobotoSlab">
-          <h3 className="text-xl font-normal capitalize md:text-3xl text-primary">
-            Ashok Minerals
-          </h3>
+        <div className="flex flex-col justify-center absolute w-full h-full items-center space-y-4 text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-RobotoSlab">
+          <Image
+            alt="ashok minerals logo"
+            width={250}
+            height={250}
+            style={{ objectFit: "contain", objectPosition: "center" }}
+            src={"/ashok-minerals-logo.svg"}
+            className=" z-10"
+          />
           <h4 className="text-5xl font-bold capitalize md:text-8xl text-primary">
             Industrial minerals
           </h4>
@@ -97,9 +102,9 @@ const Hero = () => {
               as={Link}
               color="warning"
               href="/our_history"
-              radius="sm"
+            radius="none"
               variant="solid"
-              className="text-base font-semibold text-white capitalize font-RobotoSlab md:text-xl"
+              className="text-base font-semibold text-white capitalize font-RobotoSlab md:text-xl mb-16"
             >
               know more
             </Button>

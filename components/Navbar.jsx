@@ -69,10 +69,10 @@ const NavbarComponent = () => {
         item: ["data-[active=true]:text-warning"],
       }}
     >
-      <NavbarContent className="pr-3" justify="start">
-        <NavbarBrand>
+      <NavbarContent className="pr-3" justify="center">
+        {/* <NavbarBrand>
           <div
-            className="relative w-20 h-20 overflow-hidden cursor-pointer"
+            className="relative w-40 h-40 overflow-hidden cursor-pointer"
             onClick={() => router.push("/")}
           >
             <Image
@@ -82,10 +82,10 @@ const NavbarComponent = () => {
               src={"/ashok-minerals-logo.svg"}
             />
           </div>
-        </NavbarBrand>
+        </NavbarBrand> */}
       </NavbarContent>
       {/* Desktop menubar */}
-      <NavbarContent className="hidden lg:gap-5 lg:flex me-8" justify="end">
+      <NavbarContent className="hidden lg:gap-5 lg:flex  ml-28" justify="center">
         {navbarMenu.map((item, id) => (
           <NavbarItem key={id} className="relative group">
             <div
@@ -137,7 +137,7 @@ const NavbarComponent = () => {
             as={Link}
             color="warning"
             href="#contact"
-            radius="sm"
+          radius="none"
             variant="solid"
             className="text-base font-semibold text-white font-RobotoSlab ms-3 lg:text-lg"
           >
