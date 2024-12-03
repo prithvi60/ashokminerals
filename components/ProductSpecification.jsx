@@ -11,7 +11,7 @@ export const ProductSpecification = () => {
   );
 
   return (
-    <section className="block px-6 py-10 space-y-6 sm:space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-16">
+    <section className="block px-6 py-10 space-y-6 sm:space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-64">
       <h3 className="text-2xl font-bold tracking-wider capitalize sm:text-3xl lg:text-4xl">
         {product[0].productName.replace(/_/g, " ")}
       </h3>

@@ -62,8 +62,8 @@ const NavbarComponent = () => {
           `${
             !percent && path === "/"
               ? "!bg-transparent shadow-none"
-              : "bg-primary shadow-md"
-          } fixed top-8 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-16 h-auto top-8 sm:top-8 transition-all duration-300 ease-linear`,
+              : "bg-primary/80 "
+          } fixed top-8 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-64 h-auto top-8 sm:top-8 transition-all duration-300 ease-linear`,
         ],
         wrapper: ["!px-0"],
         item: ["data-[active=true]:text-warning"],
@@ -91,7 +91,7 @@ const NavbarComponent = () => {
             <div
               className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear ${
                 !percent && path === "/" ? "text-primary" : "text-black"
-              } lg:text-lg hover:text-warning font-RobotoSlab ${
+              } lg:text-lg hover:underline hover:underline-offset-4 font-bold font-RobotoSlab  ${
                 item.ref !== "" && "cursor-pointer"
               }`}
             >
@@ -101,14 +101,14 @@ const NavbarComponent = () => {
                   className={` ${
                     item.menu === "blog" ? "hidden" : "block"
                   } text-base group-hover:rotate-180  ${
-                    !percent && path === "/" ? "text-primary" : "text-black"
+                    !percent && path === "/" ? "text-primary/80" : "text-black"
                   } transition-all duration-200 ease-linear text-black`}
                 />
               )}
             </div>
             {item.subMenu && (
               <div
-                className={`absolute hidden top-[92px] right-5 p-4 shadow-md rounded-xl font-RobotoSlab bg-primary group-hover:block after:content-[''] after:w-5 after:h-5 after:rotate-45 after:bg-primary after:absolute after:right-6 after:-top-2 `}
+                className={`absolute hidden top-[92px] right-5 p-4 shadow-md rounded-xl font-RobotoSlab bg-primary/90 group-hover:block after:content-[''] after:w-5 after:h-5 after:rotate-45 after:bg-primary/80 after:absolute after:right-6 after:-top-2 `}
               >
                 {item?.subMenu?.map((l, index) => (
                   <Link
@@ -139,12 +139,13 @@ const NavbarComponent = () => {
             href="#contact"
           radius="none"
             variant="solid"
-            className="text-base font-semibold text-white font-RobotoSlab ms-3 lg:text-lg"
+            className="text-base uppercase font-semibold text-white font-RobotoSlab ms-3 lg:text-lg"
           >
+        
+            Contact
             <span>
               <IoCall className="text-base text-primary" />
             </span>
-            Contact
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -158,7 +159,7 @@ const NavbarComponent = () => {
           {isMenuOpen ? (
             <IoClose
               onClick={() => setIsMenuOpen(false)}
-              className={`text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary transform transition-all duration-400 ease-out`}
+              className={`text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary/80 transform transition-all duration-400 ease-out`}
             />
           ) : (
             <GiHamburgerMenu

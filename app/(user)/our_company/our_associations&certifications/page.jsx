@@ -13,7 +13,7 @@ const Home = () => {
         }
       />
        {/* associations */}
-      <div className="px-6 py-10 space-y-5 sm:py-12 sm:px-10 lg:px-16">
+      <div className="px-6 py-10 space-y-5 sm:py-12 sm:px-10 lg:px-64">
         <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl lg:text-2xl">
           our Associations
         </h4>
@@ -39,7 +39,7 @@ const Home = () => {
         </div>
       </div>
        {/* certifications */}
-      <div className="px-6 py-10 space-y-5 sm:py-14 sm:px-10 lg:px-16">
+      <div className="px-6 py-10 space-y-5 sm:py-14 sm:px-10 lg:px-64">
         <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl lg:text-2xl">
           our certifications
         </h4>

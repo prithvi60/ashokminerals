@@ -13,7 +13,7 @@ const lists = [
 export const ContactForm = () => {
   return (
     <section className="relative w-full h-full space-y-10 md:h-auto font-RobotoSlab" id="contact">
-      <div className="flex flex-col justify-center h-full gap-6 px-6 py-10 lg:gap-12 md:flex-row bg-secondary sm:py-12 sm:px-10 lg:px-16">
+      <div className="flex flex-col justify-center h-full gap-6 px-6 py-10 lg:gap-12 md:flex-row bg-secondary sm:py-12 sm:px-10 lg:px-64">
         {/* contact details */}
         <div className="flex flex-col items-start justify-between w-full h-auto gap-5 mt-6 md:1/2 lg:w-3/5">
           <div className="block space-y-6">
@@ -240,7 +240,7 @@ export const ContactForm = () => {
         </div>
       </div>
       {/* location map */}
-      <div className="flex flex-col w-full h-full gap-8 px-6 py-10 md:gap-6 xl:gap-10 sm:py-12 sm:px-10 lg:px-16 md:flex-row ">
+      <div className="flex flex-col w-full h-full gap-8 px-6 py-10 md:gap-6 xl:gap-10 sm:py-12 sm:px-10 lg:px-64 md:flex-row ">
         <div className="w-full h-[380px] md:h-[430px] lg:h-[480px] xl:h-[520px] md:w-3/5 lg:w-3/4">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15551.882871157884!2d80.2585246!3d12.9737247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d43de4e88cb%3A0x987781b6095c4a43!2sAshok%20Mineral%20Enterprises!5e0!3m2!1sen!2sin!4v1720184013835!5m2!1sen!2sin"

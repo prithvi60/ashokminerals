@@ -5,7 +5,7 @@ import { BsArrowDownRightCircleFill } from "react-icons/bs";
 
 export const FlipProductsCard = () => {
   return (
-    <section className="block px-6 py-10 space-y-6 sm:space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-16">
+    <section className="block px-6 py-10 space-y-6 sm:space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-64">
       <div className="grid w-full h-full grid-cols-1 mt-20 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 font-RobotoSlab place-content-center place-items-center">
         {allProducts.map((product, id) => (
           <div className="relative w-full h-full card flipCard" key={id}>

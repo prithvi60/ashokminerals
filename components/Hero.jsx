@@ -78,35 +78,35 @@ const Hero = () => {
           autoPlay
           playsInline
           ref={loadingImage}
-          className={`w-full h-full object-cover object-left md:object-top translate-y-0 transition-all duration-700 ease-linear brightness-[0.85]`}
+          className={`w-full h-full object-cover object-left md:object-top translate-y-0 transition-all duration-700 ease-linear brightness-[0.75]`}
         >
           <source src={"/sample2.mp4"} type="video/mp4" />
         </video>
-        <div className="flex flex-col justify-center absolute w-full h-full items-center space-y-4 text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-RobotoSlab">
+        <div className="flex flex-col justify-center absolute w-full h-full items-center space-y-8 md:space-y-16 text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-RobotoSlab">
           <Image
             alt="ashok minerals logo"
             width={250}
             height={250}
             style={{ objectFit: "contain", objectPosition: "center" }}
             src={"/ashok-minerals-logo.svg"}
-            className=" z-10"
+            className="z-10"
           />
-          <h4 className="text-5xl font-bold capitalize md:text-8xl text-primary">
-            Industrial minerals
+          <h4 className="text-3xl capitalize font-semibold md:text-6xl text-primary px-16">
+            Processors of <br></br>
+          Industrial minerals since 1956  
           </h4>
-          <p className="text-base tracking-wide uppercase md:text-xl text-primary">
-            Talc / Dolomite / IronOxide
-          </p>
+  
           <div className="flex items-center justify-center w-full gap-5">
             <Button
               as={Link}
               color="warning"
-              href="/our_history"
+              href="/products"
             radius="none"
               variant="solid"
-              className="text-base font-semibold text-white capitalize font-RobotoSlab md:text-xl mb-16"
+              size="lg"
+              className="text-base font-semibold text-white font-RobotoSlab md:text-xl mb-16 uppercase"
             >
-              know more
+              Explore Products
             </Button>
           </div>
         </div>

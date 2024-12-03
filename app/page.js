@@ -8,6 +8,8 @@ import Testimonials from "@/components/Testimonials";
 import WelcomeBoard from "@/components/WelcomeBoard";
 import { Providers } from "./providers";
 import Development from "@/components/Development";
+import { ContactForm } from "@/components/ContactForm";
+import FloatingButton from "@/components/FloatingButton";
 
 export default function Home() {
   return (
@@ -21,7 +23,9 @@ export default function Home() {
         <OurProducts />
         <Testimonials />
         <OurStrength />
+        <ContactForm />
         <Footer />
+        <FloatingButton />
       </Providers>
     </main>
   );

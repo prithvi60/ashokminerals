@@ -10,7 +10,7 @@ import { PortableText } from "next-sanity";
 export const BlogSlug = ({ post }) => {
 
   return (
-    <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-16">
+    <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-64">
       {/* <h2 className="text-xl font-bold text-center md:text-5xl xl:text-7xl">
         Blog
       </h2> */}

@@ -12,10 +12,10 @@ const OtherPageHero = ({ title, imgSrc, para, para2 }) => {
           fill
           className="object-cover object-center brightness-[0.30]"
         />
-        <div className="absolute top-10 left-6 sm:left-10">
+        <div className="absolute top-10 left-6 sm:left-10  lg:px-64">
         <BreadCrumbs />
         </div>
-        <div className="absolute top-24 md:top-28 lg:top-32 font-RobotoSlab left-6 sm:left-10 lg:left-16 block space-y-4 w-[90%] lg:w-3/4">
+        <div className="absolute top-24 md:top-28 lg:top-32 font-RobotoSlab left-6 sm:left-10 lg:left-16 block space-y-4 w-[90%] lg:w-3/4  lg:px-64">
           <h3 className="text-2xl font-bold tracking-wider capitalize sm:text-3xl lg:text-4xl text-primary">
             {title}
           </h3>
