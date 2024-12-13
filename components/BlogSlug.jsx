@@ -11,29 +11,10 @@ export const BlogSlug = ({ post }) => {
 
   return (
     <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-64">
-      {/* <h2 className="text-xl font-bold text-center md:text-5xl xl:text-7xl">
-        Blog
-      </h2> */}
       <div className="relative w-full h-full p-5 space-y-5 rounded-md bg-secondary">
-        {/* <small className="text-sm font-normal text-zinc-500">
-          <Date dateString={data.post.modified} />
-        </small> */}
         <h3 className="text-xl font-bold tracking-wide md:text-4xl xl:text-5xl">
           {post.title}
         </h3>
-        {/* <div className="flex gap-3 text-base font-medium sm:text-lg">
-          <Image
-            width={30}
-            height={30}
-            alt={post.imageAlt}
-                        src={post.imageUrl}
-            className="object-cover rounded-full"
-          />
-          <h5>Posted By</h5> */}
-        {/* <h5 className="capitalize -ms-2 text-warning">
-            {data.post.featuredImage.node.author.node.name}
-          </h5> */}
-        {/* </div> */}
         <div className="flex flex-col items-start w-full h-full gap-5 md:flex-row place-items-start">
           <div className="relative w-full h-[320px] md:basis-1/2 ">
             <Image
@@ -46,7 +27,7 @@ export const BlogSlug = ({ post }) => {
               className="rounded-md"
             />
           </div>
-          <div>
+          <div className="max-w-7xl prose prose-blue mx-auto prose-h1:text-3.5xl prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:leading-relaxed prose-p:text-lg lg:prose-p:text-xl prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600">
             <PortableText value={post.body} components={customComponents} />
           </div>
         </div>

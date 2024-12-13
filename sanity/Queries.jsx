@@ -1,4 +1,6 @@
-export const POSTS_QUERY = `
+import { groq } from "next-sanity";
+
+export const POSTS_QUERY = groq`
 *[_type == "post"]|order(publishedAt desc)[0...12] {
   title,
   slug,
@@ -11,7 +13,7 @@ export const POSTS_QUERY = `
 }`;
 
 
-export const POST_QUERY = `
+export const POST_QUERY = groq`
 *[_type == "post" && slug.current == $slug][0] {
   title,
   "imageUrl": image.asset->url,
