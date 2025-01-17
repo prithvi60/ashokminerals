@@ -1,4 +1,4 @@
-import { allProducts,markets } from "@/libs/data";
+import { allProducts, markets } from "@/libs/data";
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowDownRightCircleFill } from "react-icons/bs";
@@ -8,10 +8,10 @@ export const MarketShowcase = () => {
     <section className="block px-6 py-10 space-y-8 md::space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-64">
       {markets.map((m) => (
         <div key={m.id}>
-             <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">{m.name}</h3>
-          <div className="grid w-full h-full grid-cols-1 mt-20 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 font-RobotoSlab place-content-center place-items-center mb-32">
+          <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">{m.name}</h3>
+          <div className="grid w-full h-full grid-cols-1 mt-20 mb-32 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 font-RobotoSlab place-content-center place-items-center">
             {allProducts
-              .filter(product => product.market.includes(m.name) )
+              .filter(product => product.market.includes(m.name))
               .map((product, id) => (
                 <div className="relative w-full h-full card flipCard" key={id}>
                   <div className="relative w-full h-48 rounded-md shadow-xl cursor-pointer sm:max-w-80 2xl:max-w-96 sm:h-56 bg-secondary group frontSideCard">
@@ -36,7 +36,7 @@ export const MarketShowcase = () => {
                       <p className="text-sm font-normal line-clamp-4 sm:line-clamp-none">{product.shortNote}</p>
                     </div>
                     <Link
-                      href={`/products/${product.productName.replace(/\s/g,"_")}`}
+                      href={`/products/${product.productName.replace(/\s/g, "_")}`}
                       className="flex items-center gap-3 text-xl font-semibold tracking-wider underline capitalize transition-all duration-300 ease-out text-primary underline-offset-4 hover:no-underline"
                     >
                       Read more

@@ -12,7 +12,7 @@ export const BreadCrumbs = () => {
 
   const handleClick = (ref) => {
     // console.log(ref);
-    
+
     if (ref === "/our_company") {
       router.push("");
     } else {
@@ -23,7 +23,7 @@ export const BreadCrumbs = () => {
     <Breadcrumbs
       underline="hover"
       classNames={{
-        list: "shadow-small lg:ms-5",
+        list: "shadow-small",
       }}
       itemClasses={{
         item: "text-primary/60 data-[current=true]:text-primary text-base sm:text-xl capitalize",

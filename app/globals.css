@@ -16,9 +16,18 @@
   }
 }
 
-/* .hideScroll::-webkit-scrollbar {
-  display: none;
+/* .custom-slider {
+  height: 525px !important;
 } */
+
+.custom-slider .slick-list {
+  height: 325px !important;
+  padding-top: 5rem;
+}
+
+.custom-slider .slick-slide div {
+  margin: 0px 5px;
+}
 
 /* width */
 .hideScroll::-webkit-scrollbar {

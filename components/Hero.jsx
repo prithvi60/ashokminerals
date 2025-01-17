@@ -43,12 +43,10 @@ const Hero = () => {
   useEffect(() => {
     if (loadingImage.current.complete) {
       setBlur(false);
-      console.log("after");
     }
 
     loadingImage.current.addEventListener("load", () => {
       setBlur(false);
-      console.log("before");
     });
   }, []);
 
@@ -56,9 +54,8 @@ const Hero = () => {
     <section className="relative w-full h-full overflow-hidden">
       {blur === true && (
         <div
-          className={`absolute top-0 left-0 w-full h-[100dvh] ${
-            blur === true ? "block" : "hidden"
-          }`}
+          className={`absolute top-0 left-0 w-full h-[100dvh] ${blur === true ? "block" : "hidden"
+            }`}
         >
           <Image
             priority
@@ -82,7 +79,7 @@ const Hero = () => {
         >
           <source src={"/sample2.mp4"} type="video/mp4" />
         </video>
-        <div className="flex flex-col justify-center absolute w-full h-full items-center space-y-8 md:space-y-16 text-center -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 font-RobotoSlab">
+        <div className="absolute flex flex-col items-center justify-center w-full h-full space-y-8 text-center -translate-x-1/2 -translate-y-1/2 md:space-y-16 top-1/2 left-1/2 font-RobotoSlab">
           <Image
             alt="ashok minerals logo"
             width={250}
@@ -91,20 +88,20 @@ const Hero = () => {
             src={"/ashok-minerals-logo.svg"}
             className="z-10"
           />
-          <h4 className="text-3xl capitalize font-semibold md:text-6xl text-primary px-16">
+          <h4 className="px-16 text-3xl font-semibold capitalize md:text-6xl text-primary">
             Processors of <br></br>
-          Industrial minerals since 1956  
+            Industrial minerals since 1956
           </h4>
-  
+
           <div className="flex items-center justify-center w-full gap-5">
             <Button
               as={Link}
               color="warning"
               href="/products"
-            radius="none"
+              radius="none"
               variant="solid"
               size="lg"
-              className="text-base font-semibold text-white font-RobotoSlab md:text-xl mb-16 uppercase"
+              className="mb-16 text-base font-semibold text-white uppercase font-RobotoSlab md:text-xl"
             >
               Explore Products
             </Button>

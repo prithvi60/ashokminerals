@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body>
         <Providers>
-          <Development />
+          {/* <Development /> */}
           <NavbarComponent />
           {children}
           <ContactForm />

@@ -59,11 +59,10 @@ const NavbarComponent = () => {
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
         base: [
-          `${
-            !percent && path === "/"
-              ? "!bg-transparent shadow-none"
-              : "bg-primary/80 "
-          } fixed top-8 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-16 h-auto top-8 sm:top-8 transition-all duration-300 ease-linear`,
+          `${!percent && path === "/"
+            ? "!bg-transparent shadow-none"
+            : "bg-primary/80"
+          } fixed top-0 left-0 !z-[990] py-2.5 px-6 sm:px-10 lg:px-16 h-auto top-0 sm:top-0 transition-all duration-300 ease-linear`,
         ],
         wrapper: ["!px-0"],
         item: ["data-[active=true]:text-warning"],
@@ -85,24 +84,20 @@ const NavbarComponent = () => {
         </NavbarBrand> */}
       </NavbarContent>
       {/* Desktop menubar */}
-      <NavbarContent className="hidden lg:gap-5 lg:flex  ml-28" justify="center">
+      <NavbarContent className="hidden lg:gap-5 lg:flex ml-28" justify="center">
         {navbarMenu.map((item, id) => (
           <NavbarItem key={id} className="relative group">
             <div
-              className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear ${
-                !percent && path === "/" ? "text-primary" : "text-black"
-              } lg:text-lg hover:underline hover:underline-offset-4 font-bold font-RobotoSlab  ${
-                item.ref !== "" && "cursor-pointer"
-              }`}
+              className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear ${!percent && path === "/" ? "text-primary" : "text-black"
+                } lg:text-lg hover:underline hover:underline-offset-4 font-bold font-RobotoSlab  ${item.ref !== "" && "cursor-pointer"
+                }`}
             >
               <Link href={item.ref}>{item.menu}</Link>
               {item.ref === "" && (
                 <TiArrowSortedDown
-                  className={` ${
-                    item.menu === "blog" ? "hidden" : "block"
-                  } text-base group-hover:rotate-180  ${
-                    !percent && path === "/" ? "text-primary/80" : "text-black"
-                  } transition-all duration-200 ease-linear text-black`}
+                  className={` ${item.menu === "blog" ? "hidden" : "block"
+                    } text-base group-hover:rotate-180  ${!percent && path === "/" ? "text-primary/80" : "text-black"
+                    } transition-all duration-200 ease-linear text-black`}
                 />
               )}
             </div>
@@ -113,11 +108,10 @@ const NavbarComponent = () => {
                 {item?.subMenu?.map((l, index) => (
                   <Link
                     title={l.menuTitle}
-                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning active:text-warning transition-colors duration-500 ease-linear block font-normal z-10 capitalize ${
-                      l.menuTitle === isActiveState
-                        ? "text-warning"
-                        : "text-black"
-                    }`}
+                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning active:text-warning transition-colors duration-500 ease-linear block font-normal z-10 capitalize ${l.menuTitle === isActiveState
+                      ? "text-warning"
+                      : "text-black"
+                      }`}
                     key={index}
                     href={`/our_company/${l.menuRef}`}
                     onClick={() => setIsActiveState(l.menuTitle)}
@@ -137,11 +131,11 @@ const NavbarComponent = () => {
             as={Link}
             color="warning"
             href="#contact"
-          radius="none"
+            radius="none"
             variant="solid"
-            className="text-base uppercase font-semibold text-white font-RobotoSlab ms-3 lg:text-lg mt-4"
+            className="mt-4 text-base font-semibold text-white uppercase font-RobotoSlab ms-3 lg:text-lg"
           >
-        
+
             Contact
             <span>
               <IoCall className="text-base text-primary" />
@@ -164,9 +158,8 @@ const NavbarComponent = () => {
           ) : (
             <GiHamburgerMenu
               onClick={() => setIsMenuOpen(true)}
-              className={`text-4xl font-semibold cursor-pointer transition-all duration-400 ease-out ${
-                !percent && path === "/" ? "text-primary" : "text-black"
-              }`}
+              className={`text-4xl font-semibold cursor-pointer transition-all duration-400 ease-out ${!percent && path === "/" ? "text-primary" : "text-black"
+                }`}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             />
           )}
@@ -247,14 +240,14 @@ const NavbarComponent = () => {
             </NavbarMenuItem>
           ))}
         </div>
-        <NavbarMenuItem className="w-full text-end mb-8">
+        <NavbarMenuItem className="w-full mb-8 text-end">
           <Button
             as={Link}
             color="warning"
             href="#contact"
             variant="solid"
             radius="none"
-            className="mx-auto text-base font-semibold text-white font-RobotoSlab uppercase"
+            className="mx-auto text-base font-semibold text-white uppercase font-RobotoSlab"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact

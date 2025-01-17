@@ -1,9 +1,11 @@
+import { DocumentTextIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
-export const postType = defineType({
-    name: "post",
-    title: "Post",
+export const ProductsType = defineType({
+    name: "products",
+    title: "Products",
     type: "document",
+    icon: DocumentTextIcon,
     fields: [
         defineField({
             name: "title",
@@ -19,13 +21,28 @@ export const postType = defineType({
             options: {
                 source: "title",
                 maxLength: 50,
-                slugify: (input) => input.toLowerCase().replace(/\s+/g, "-"),
+                slugify: (input) => input.toLowerCase().replace(/\s+/g, "_"),
             },
         }),
         defineField({
-            name: "blogShortRead",
+            name: "mainImage",
+            type: "image",
+            title: "Isometric View Image",
+            options: {
+                hotspot: true,
+            },
+            fields: [
+                {
+                    name: "alt",
+                    type: "string",
+                    title: "Alternative text",
+                },
+            ],
+        }),
+        defineField({
+            name: "summary",
             type: "text",
-            title: "Blog Short Read",
+            title: "Summary",
             validation: (rule) => rule.required(),
         }),
         defineField({
@@ -35,9 +52,12 @@ export const postType = defineType({
             validation: (rule) => rule.required(),
         }),
         defineField({
-            name: "image",
+            name: "productImage",
             type: "image",
-            title: "Blog Post Image",
+            title: "Product Image",
+            options: {
+                hotspot: true,
+            },
             fields: [
                 {
                     name: "alt",
@@ -45,18 +65,18 @@ export const postType = defineType({
                     title: "Alternative text",
                 },
             ],
-            options: {
-                hotspot: true,
-            },
         }),
         defineField({
-            name: "body",
+            title: "Block Content",
+            name: "blockContent",
             type: "array",
-            title: "Content",
             of: [
                 { type: "block" },
                 {
                     type: "image",
+                    options: {
+                        hotspot: true,
+                    },
                     fields: [
                         {
                             name: "alt",
@@ -64,11 +84,14 @@ export const postType = defineType({
                             title: "Alternative text",
                         },
                     ],
-                    options: {
-                        hotspot: true,
-                    },
                 },
             ],
+        }),
+        defineField({
+            name: "market",
+            type: "array",
+            title: "Market",
+            of: [{ type: "string" }]
         }),
     ],
 });

@@ -12,17 +12,19 @@ const lists = [
 
 export const ContactForm = () => {
   return (
-    <section className="relative w-full h-full space-y-10 md:h-auto font-RobotoSlab" id="contact">
+    <section
+      className="relative w-full h-full space-y-10 md:h-auto font-RobotoSlab"
+      id="contact"
+    >
       <div className="flex flex-col justify-center h-full gap-6 px-6 py-10 lg:gap-12 md:flex-row bg-secondary sm:py-12 sm:px-10 lg:px-64">
         {/* contact details */}
-        <div className="flex flex-col items-start justify-between w-full h-auto gap-5 mt-6 md:1/2 lg:w-3/5">
+        <div className="flex flex-col items-start w-full h-auto gap-10 mt-6 md:1/2 lg:w-3/5">
           <div className="block space-y-6">
             <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
               Contact us
             </h3>
             <p className="text-base font-normal">
-              Email, call or complete the form to learn how Ashok minerals
-              support you
+              Get in touch with us today through email, phone, or by filling out the form, and let us show you how Ashok Minerals can drive your success!
             </p>
             <p
               className="text-base font-medium underline underline-offset-4 hover:text-warning w-max"
@@ -34,14 +36,14 @@ export const ContactForm = () => {
               +91-44-24512581/82/83
             </p>
           </div>
-          <div className="flex flex-wrap items-start gap-8 xl:flex-nowrap">
+          <div className="block space-y-10">
             <div className="block w-full space-y-4 xl:w-3/5">
               <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl">
                 Customer Support
               </h4>
               <p className="text-base font-normal">
-                Our support team is available around the clock to address any
-                concerns or queries you may have
+                Our committed support team is available 24/7 to assist with any
+                questions or concerns.
               </p>
             </div>
             <div className="block w-full space-y-4 xl:w-3/5">
@@ -49,15 +51,17 @@ export const ContactForm = () => {
                 Sales & other Enquiries
               </h4>
               <p className="text-base font-normal">
-                For media-related questions or press inquiries, please contact
-                us at{" "}
+                For any media inquiries or press-related questions, we invite
+                you to reach out to us at{" "}
                 <span className="mx-1 font-semibold hover:text-warning">
-                  Vanessa@ashokminerals.com
+                  Vanessa@ashokminerals.com.
                 </span>{" "}
-                for marketing related inquiries, please contact us at
+                If you have marketing-related inquiries, please connect with us
+                at
                 <span className="mx-1 font-semibold hover:text-warning">
                   marketing@ashokminerals.com
-                </span>
+                </span>{" "}
+                We look forward to hearing from you!
               </p>
             </div>
           </div>
@@ -110,9 +114,9 @@ export const ContactForm = () => {
                 radius="full"
                 variant="faded"
                 placeholder="First Name"
-                // endContent={
-                //   <MdOutlineDriveFileRenameOutline className="flex-shrink-0 text-2xl opacity-50 text-black/80" />
-                // }
+              // endContent={
+              //   <MdOutlineDriveFileRenameOutline className="flex-shrink-0 text-2xl opacity-50 text-black/80" />
+              // }
               />
               <Input
                 classNames={{
@@ -128,9 +132,9 @@ export const ContactForm = () => {
                 radius="full"
                 // color="secondary"
                 variant="faded"
-                // endContent={
-                //   <MdOutlineDriveFileRenameOutline className="flex-shrink-0 text-2xl opacity-50 text-black/80" />
-                // }
+              // endContent={
+              //   <MdOutlineDriveFileRenameOutline className="flex-shrink-0 text-2xl opacity-50 text-black/80" />
+              // }
               />
               <Input
                 classNames={{
@@ -145,10 +149,10 @@ export const ContactForm = () => {
                 placeholder="Email"
                 radius="full"
                 variant="faded"
-                // color="secondary"
-                // endContent={
-                //   <IoMailOutline className="flex-shrink-0 text-lg opacity-50 text-black/80" />
-                // }
+              // color="secondary"
+              // endContent={
+              //   <IoMailOutline className="flex-shrink-0 text-lg opacity-50 text-black/80" />
+              // }
               />
               <Input
                 classNames={{
@@ -163,10 +167,10 @@ export const ContactForm = () => {
                 radius="full"
                 variant="faded"
                 isRequired
-                // color="secondary"
-                // endContent={
-                //   <FaPhoneAlt className="flex-shrink-0 text-lg opacity-50 text-black/80" />
-                // }
+              // color="secondary"
+              // endContent={
+              //   <FaPhoneAlt className="flex-shrink-0 text-lg opacity-50 text-black/80" />
+              // }
               />
               <Input
                 classNames={{
@@ -183,9 +187,9 @@ export const ContactForm = () => {
                 variant="faded"
                 // color="secondary"
                 className="md:col-span-2"
-                // endContent={
-                //   <HiOutlineBuildingOffice2 className="flex-shrink-0 text-lg opacity-50 text-black/80" />
-                // }
+              // endContent={
+              //   <HiOutlineBuildingOffice2 className="flex-shrink-0 text-lg opacity-50 text-black/80" />
+              // }
               />
             </div>
             <Textarea
@@ -205,7 +209,7 @@ export const ContactForm = () => {
               <Button
                 color="warning"
                 size="lg"
-              radius="none"
+                radius="none"
                 className="px-6 font-semibold w-max text-primary md:px-8"
                 role="button"
                 type="submit"

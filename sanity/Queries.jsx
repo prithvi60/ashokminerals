@@ -27,3 +27,31 @@ export const POST_QUERY = groq`
   }
 }
 `
+
+export const PRODUCTS_QUERY = groq`
+*[_type == "products"]|order(publishedAt asc)[0...12] {
+  title,
+  slug,
+  summary,
+  market,
+  publishedAt,
+  blockContent,
+  "imageUrl": mainImage.asset->url,
+  "imageAlt": mainImage.alt
+}`;
+
+export const PRODUCT_QUERY = groq`
+*[_type == "products" && slug.current == $productName][0] {
+  title,
+  market,
+  "imageUrl": productImage.asset->url,
+  "imageAlt": productImage.alt,
+  blockContent[]{
+    ...,
+    _type == "image" => {
+      "imageUrl": asset->url,
+      alt
+    }
+  }
+}
+`

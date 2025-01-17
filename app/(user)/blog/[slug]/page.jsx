@@ -18,6 +18,7 @@ export default async function Home({ params }) {
       },
     }
   );
+
   return (
     <section>
       <OtherPageHero title={"Blog Details"} imgSrc={"/hero_1.jpg"} para={""} />
