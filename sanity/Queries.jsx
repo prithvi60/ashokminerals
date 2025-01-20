@@ -33,7 +33,10 @@ export const PRODUCTS_QUERY = groq`
   title,
   slug,
   summary,
-  market,
+  market[]->|order(title asc){
+    _id,
+    title
+  },
   publishedAt,
   blockContent,
   "imageUrl": mainImage.asset->url,
@@ -55,3 +58,9 @@ export const PRODUCT_QUERY = groq`
   }
 }
 `
+
+export const MARKETS_QUERY = groq`
+*[_type == "market"]|order(title asc) {
+  _id,
+  title,
+}`;

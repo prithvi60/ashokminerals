@@ -1,3 +1,4 @@
+import MarketCheckboxInput from "@/components/MarketCheckboxInput";
 import { DocumentTextIcon } from "@sanity/icons";
 import { defineField, defineType } from "sanity";
 
@@ -90,8 +91,29 @@ export const ProductsType = defineType({
         defineField({
             name: "market",
             type: "array",
-            title: "Market",
-            of: [{ type: "string" }]
+            title: "Markets",
+            description: "Select applicable markets for this product",
+            of: [{
+                type: "reference",
+                to: [{ type: "market" }]
+            }],
+            components: {
+                input: MarketCheckboxInput
+            },
+            validation: (Rule) => Rule.required().min(1).error('Select at least one market')
         }),
     ],
+    preview: {
+        select: {
+            title: 'title',
+            markets: 'market'
+        },
+        prepare(selection) {
+            const { title, markets = [] } = selection;
+            return {
+                title: title,
+                subtitle: `Markets: ${markets.length}`
+            };
+        }
+    }
 });

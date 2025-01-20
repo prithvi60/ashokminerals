@@ -23,34 +23,34 @@ export const ContactForm = () => {
             <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
               Contact us
             </h3>
-            <p className="text-base font-normal">
+            <p className="text-lg font-normal md:text-xl">
               Get in touch with us today through email, phone, or by filling out the form, and let us show you how Ashok Minerals can drive your success!
             </p>
             <p
-              className="text-base font-medium underline underline-offset-4 hover:text-warning w-max"
+              className="text-lg font-normal underline md:text-xl underline-offset-4 hover:text-warning w-max"
               onClick={() => console.log("logged")}
             >
               contact@ashokminerals.com
             </p>
-            <p className="text-base font-medium hover:text-warning w-max">
+            <p className="text-lg font-normal md:text-xl hover:text-warning w-max">
               +91-44-24512581/82/83
             </p>
           </div>
           <div className="block space-y-10">
-            <div className="block w-full space-y-4 xl:w-3/5">
-              <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl">
+            <div className="block w-full space-y-4">
+              <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
                 Customer Support
               </h4>
-              <p className="text-base font-normal">
+              <p className="text-lg font-normal md:text-xl">
                 Our committed support team is available 24/7 to assist with any
                 questions or concerns.
               </p>
             </div>
-            <div className="block w-full space-y-4 xl:w-3/5">
-              <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl">
+            <div className="block w-full space-y-4">
+              <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
                 Sales & other Enquiries
               </h4>
-              <p className="text-base font-normal">
+              <p className="text-lg font-normal md:text-xl">
                 For any media inquiries or press-related questions, we invite
                 you to reach out to us at{" "}
                 <span className="mx-1 font-semibold hover:text-warning">
@@ -61,7 +61,7 @@ export const ContactForm = () => {
                 <span className="mx-1 font-semibold hover:text-warning">
                   marketing@ashokminerals.com
                 </span>{" "}
-                We look forward to hearing from you!
+                . We look forward to hearing from you!
               </p>
             </div>
           </div>

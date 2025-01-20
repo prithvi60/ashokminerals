@@ -1,9 +1,7 @@
-import { FlipProductsCard } from "@/components/FlipProductsCard";
 import { MarketShowcase } from "@/components/MarketShowcase";
 import OtherPageHero from "@/components/OtherPageHero";
-import { markets } from "@/libs/data";
 import { client } from "@/sanity/client";
-import { PRODUCTS_QUERY } from "@/sanity/Queries";
+import { MARKETS_QUERY, PRODUCTS_QUERY } from "@/sanity/Queries";
 
 const Home = async () => {
   const products = await client.fetch(
@@ -16,16 +14,31 @@ const Home = async () => {
       },
     }
   );
-  const market = products.map(market => market.market)
-  // const m = markets.map(val => val.name)
-  // console.log(m);
-  // const filtered = products.filter(val => val.market.includes(m))
-  // console.log(filtered);
+  // console.log(products.map(val => val.market));
+
+  const markets = await client.fetch(
+    MARKETS_QUERY,
+    {},
+    {
+      cache: "no-cache",
+      next: {
+        tags: ["market"],
+      },
+    }
+  );
+  console.log(products);
+
+  const market = markets.flatMap(val => val.title)
+  const prod = products.filter(product =>
+    product.market.some(m => market.includes(m.title))
+  );
+  console.log(markets);
+
 
   return (
     <section>
       <OtherPageHero title={"Market"} imgSrc={"/hero_1.jpg"} />
-      <MarketShowcase products={products} market={market} />
+      <MarketShowcase products={products} markets={markets} />
     </section>
   );
 };

@@ -1,6 +1,6 @@
 "use client";
 
-import { LuArrowDownRightFromCircle } from "react-icons/lu";
+import { BsArrowDownRightCircle } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 import { productSpecimen } from "@/libs/data";
@@ -80,7 +80,7 @@ const OurProducts = ({ products }) => {
           >
             <h4>view more products</h4>
             <span>
-              <LuArrowDownRightFromCircle className="text-base -rotate-90 sm:text-lg lg:text-xl" />
+              <BsArrowDownRightCircle className="text-base -rotate-90 sm:text-lg lg:text-xl" />
             </span>
           </Link>
         </div>

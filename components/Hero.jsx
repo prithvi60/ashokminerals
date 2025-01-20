@@ -5,38 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
 
-// const imagSrc = ["/bg_1.jpg", "/bg_2.jpg", "/bg_3.jpg"];
-
-// function NextArrow(props) {
-//   const { onClick } = props;
-//   return (
-//     <div
-//       className={
-//         "absolute top-1/2 -translate-y-1/2 right-4 lg:right-4 cursor-pointer z-20 bg-black/50 rounded-md"
-//       }
-//       onClick={onClick}
-//     >
-//       <RiArrowRightSLine className="text-4xl font-semibold sm:text-5xl text-secondary" />
-//     </div>
-//   );
-// }
-
-// function PrevArrow(props) {
-//   const { onClick } = props;
-//   return (
-//     <div
-//       className={
-//         "absolute top-1/2 -translate-y-1/2 left-4 lg:left-4 cursor-pointer z-20 bg-black/50 rounded-md"
-//       }
-//       onClick={onClick}
-//     >
-//       <RiArrowLeftSLine className="text-4xl font-semibold sm:text-5xl text-secondary" />
-//     </div>
-//   );
-// }
-
 const Hero = () => {
-  // const [isActive, setIsActive] = useState(0);
   const [blur, setBlur] = useState(true);
   const loadingImage = useRef();
 
