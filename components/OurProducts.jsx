@@ -78,7 +78,7 @@ const OurProducts = ({ products }) => {
             title="products"
             className="flex items-center gap-2 text-lg transition-colors ease-linear w-max lg:text-xl hover:underline underline-offset-4 hover:text-warning duration-400"
           >
-            <h4>view more products</h4>
+            <h4>View more products</h4>
             <span>
               <BsArrowDownRightCircle className="text-base -rotate-90 sm:text-lg lg:text-xl" />
             </span>

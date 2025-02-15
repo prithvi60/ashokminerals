@@ -53,15 +53,15 @@ export const ContactForm = () => {
               <p className="text-lg font-normal md:text-xl">
                 For any media inquiries or press-related questions, we invite
                 you to reach out to us at{" "}
-                <span className="mx-1 font-semibold hover:text-warning">
-                  Vanessa@ashokminerals.com.
-                </span>{" "}
+                <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
+                  vanessa@ashokminerals.com.
+                </a>{" "}
                 If you have marketing-related inquiries, please connect with us
                 at
-                <span className="mx-1 font-semibold hover:text-warning">
+                <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
                   marketing@ashokminerals.com
-                </span>{" "}
-                . We look forward to hearing from you!
+                </a>
+                . <br/>We look forward to hearing from you!
               </p>
             </div>
           </div>

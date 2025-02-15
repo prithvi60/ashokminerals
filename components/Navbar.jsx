@@ -113,7 +113,7 @@ const NavbarComponent = () => {
                       : "text-black"
                       }`}
                     key={index}
-                    href={`/our_company/${l.menuRef}`}
+                    href={`/our-company/${l.menuRef}`}
                     onClick={() => setIsActiveState(l.menuTitle)}
                   >
                     <h4 className="mb-2.5 ">{l.menuTitle}</h4>
@@ -136,7 +136,7 @@ const NavbarComponent = () => {
             className="mt-4 text-base font-semibold text-white uppercase font-RobotoSlab ms-3 lg:text-lg"
           >
 
-            Contact
+            Contact Us
             <span>
               <IoCall className="text-base text-primary" />
             </span>
@@ -230,7 +230,7 @@ const NavbarComponent = () => {
                       title={l.menuTitle}
                       className={`text-base font-normal capitalize font-RobotoSlab text-end`}
                       key={index}
-                      href={`/our_company/${l.menuRef}`}
+                      href={`/our-company/${l.menuRef}`}
                     >
                       <h4 className="mb-2">{l.menuTitle}</h4>
                     </Link>
@@ -250,7 +250,7 @@ const NavbarComponent = () => {
             className="mx-auto text-base font-semibold text-white uppercase font-RobotoSlab"
             onClick={() => setIsMenuOpen(false)}
           >
-            Contact
+            Contact Us
           </Button>
         </NavbarMenuItem>
       </NavbarMenu>

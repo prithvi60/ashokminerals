@@ -24,7 +24,7 @@ const WelcomeBoard = () => {
           radius="none"
           className="text-base font-semibold text-white capitalize font-RobotoSlab"
         >
-          Learn More
+          Know More
           <BsArrowDownRightCircle className="text-base -rotate-90 sm:text-lg lg:text-xl" />
         </Button>
       </div>

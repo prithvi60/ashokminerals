@@ -13,7 +13,7 @@ export const BreadCrumbs = () => {
   const handleClick = (ref) => {
     // console.log(ref);
 
-    if (ref === "/our_company") {
+    if (ref === "/our-company") {
       router.push("");
     } else {
       router.push(ref);

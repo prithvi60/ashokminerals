@@ -13,7 +13,7 @@ const Home = () => {
            <AccordionComponent list={list} key={idx} idx={idx} />
           ))}
         </div>
-        <p className="text-base font-normal sm:text-lg">{history.para}</p>
+        <a href="#contact" className="mt-2 text-base text-warning font-normal sm:text-lg">{history.para}</a>
       </div>
     </section>
   );

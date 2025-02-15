@@ -15,14 +15,14 @@ export const navbarMenu = [
     menu: "our company",
     ref: "",
     subMenu: [
-      { menuTitle: "Our History ", menuRef: "/our_history" },
+      { menuTitle: "Our History ", menuRef: "/our-history" },
       {
         menuTitle: "Our Associations & Certifications",
-        menuRef: "/our_associations&certifications",
+        menuRef: "/our-associations&certifications",
       },
       {
         menuTitle: "Our International Ties",
-        menuRef: "/our_international_ties",
+        menuRef: "/our-international_ties",
       },
       {
         menuTitle: "Leadership & Team",
@@ -30,7 +30,7 @@ export const navbarMenu = [
       },
       {
         menuTitle: "Our Manufacturing Setup",
-        menuRef: "/our_manufacturing_setup",
+        menuRef: "/our-manufacturing-setup",
       },
     ],
   },
@@ -40,18 +40,18 @@ export const footerMenuLinks = [
   {
     menu: "our company",
     subMenu: [
-      { menuTitle: "Our History ", menuRef: "/our_history " },
+      { menuTitle: "Our History ", menuRef: "/our-history " },
       {
         menuTitle: "Our Associations ",
-        menuRef: "/our_associations&certifications",
+        menuRef: "/our-associations&certifications",
       },
       {
         menuTitle: "Our Certifications",
-        menuRef: "/our_associations&certifications",
+        menuRef: "/our-associations&certifications",
       },
       {
         menuTitle: "Our International Ties",
-        menuRef: "/our_international_ties",
+        menuRef: "/our-international-ties",
       },
     ],
   },
@@ -61,7 +61,7 @@ export const footerMenuLinks = [
       { menuTitle: "Our Team", menuRef: "/leadership&team" },
       {
         menuTitle: "Manufacturing Setup",
-        menuRef: "/our_manufacturing_setup",
+        menuRef: "/our-manufacturing-setup",
       },
     ],
   },
@@ -163,7 +163,7 @@ export const marqueeEffect = [
 
 export const history = {
   note: "Founded in 1956 - 68 years of Credibility",
-  para: "Join us as we continue to write new chapters in our illustrious history.",
+  para: ` Join us as we continue to write new chapters in our illustrious history.`,
   lists: [
     {
       title:
@@ -172,15 +172,15 @@ export const history = {
     },
     {
       title: "Roots in Ore Sourcing",
-      desc: "Ashok Minerals story began with a focus on the sourcing of iron and manganese ores. In those early days, we established a strong relationship with Japanese trading houses, laying the foundation for our future growth and success. Our expertise in sourcing these vital ores marked the first chapter in our long and storied history.",
+      desc: "Ashok Minerals' journey began with a strong focus on sourcing high-quality iron and manganese ores. In the early days, we built trusted partnerships with Japanese trading houses, establishing a solid foundation for future growth. Our expertise in sourcing and supplying essential minerals marked the first chapter of our legacy, driving us toward industry leadership and long-term success.",
     },
     {
       title: "Pioneering Calcium Carbonate Mining",
-      desc: "The entrepreneurial spirit led us to explore new opportunities. We ventured into owning and operating Calcium Carbonate Mines in the Salem District of Tamil Nadu, India. This significant step not only diversified our operations but also strengthened our presence in the mineral sector.",
+      desc: "Driven by an entrepreneurial spirit, we seized new opportunities by acquiring and operating Calcium Carbonate mines in the Salem District, Tamil Nadu, India. This strategic expansion diversified our portfolio and reinforced our position in the global mineral industry, enabling us to deliver high-quality mineral solutions with greater efficiency and reliability.",
     },
     {
       title: "Leading in Barite Exports",
-      desc: "Our reputation grew further as we became a forefront player in the export of Barite, particularly to the Middle East, and more specifically, Saudi Arabia. Our South Indian Mines became synonymous with quality and reliability, helping us to cement our position as a key player in the global mineral export market.",
+      desc: "Our reputation grew as a leading exporter of Barite, especially to the Middle East, including Saudi Arabia. Our South Indian mines became known for quality and reliability, establishing us as a trusted name in the global mineral export market.",
     },
     {
       title: "Expansion and Diversification",
@@ -189,7 +189,7 @@ export const history = {
     {
       title:
         "Our Present Focus: Sourcing & Processing of Diverse Industrial Minerals",
-      desc: "Today, we stand at the forefront of sourcing and processing a diverse offering of industrial & speciality minerals. With a deep understanding of the market and a commitment to excellence, we continue to uphold the values of our founders while embracing modern technologies and practices. We are dedicated to sustaining our legacy of quality, reliability, and innovation for many more generations to come.",
+      desc: "We lead the way in sourcing and processing high-quality industrial and specialty minerals, delivering reliable and innovative mineral solutions worldwide. With deep market expertise and a commitment to excellence, we uphold our founding values while integrating cutting-edge technologies and sustainable practices. Our mission is to provide superior minerals with unmatched quality and consistency, ensuring long-term success for industries that rely on premium mineral resources.",
     },
   ],
 };
@@ -307,133 +307,132 @@ export const allProducts = [
   {
     productName: "Barite",
     shortNote:
-      "Barite is virtually the exclusive commercial source of barium. Barites is used in the manufacture of white paint and as drilling mud.",
+      "Barite is virtually the exclusive commercial source of barium. It is used in drilling mud and white paint manufacturing.",
     cardImg: "/product/barite.svg",
     imgSrc: "/product/barite-bg.jpg",
-    desc: "Barite is virtually the exclusive commercial source of barium. Barites is used in the manufacture of white paint and as drilling mud.",
-    market: ["Oil and Gas", "Paints and Coatings", "Chemical"],
+    desc: "Barite is virtually the exclusive commercial source of barium. It is used in drilling mud and white paint manufacturing.",
+    market: ["Oil Drilling", "Paint & Coating", "Chemical"],
   },
   {
     productName: "Silica and Quartz",
     shortNote:
-      "Silica is the principle glass-forming oxide making up approximately 60% of soda-lime-silica glass batch.",
+      "Silica is the primary glass-forming oxide used in glass, foundry molds, and construction materials.",
     cardImg: "/product/silica.svg",
     imgSrc: "/product/silica-bg.jpg",
-    desc: "Silica is the principle glass-forming oxide making up approximately 60% of soda-lime-silica glass batch. Silica sand/quartz is heat resistant to approx. 1470°C and is used as a foundry sand in the manufacture of molds and cores for casting metals.",
-    market: ["Glass Manufacturing", "Foundries", "Construction"],
+    desc: "Silica is the primary glass-forming oxide used in glass, foundry molds, and construction materials.",
+    market: ["Glass Manufacturing", "Foundry", "Construction"],
   },
   {
     productName: "Hematite",
     shortNote:
-      "Red Iron Oxide, natural and synthetic is Hematite with composition of Iron Oxide, Iron, clay and sandy impurities.",
+      "Red Iron Oxide (Hematite) is used in steel production, pigments, and construction materials.",
     cardImg: "/product/hematite.png",
     imgSrc: "/product/hematite-bg.jpg",
-    desc: "Red Iron Oxide, natural and synthetic is Hematite with composition of Iron Oxide, Iron, clay and sandy impurities.",
-    market: ["Steel Production", "Pigments", "Construction"],
+    desc: "Red Iron Oxide (Hematite) is used in steel production, pigments, and construction materials.",
+    market: ["Steel Production", "Ink & Pigments", "Construction"],
   },
   {
     productName: "Talc",
     shortNote:
-      "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease and as an absorbent.",
+      "Talc is used in paints, cosmetics, and pharmaceuticals as a filler, absorbent, and lubricant.",
     cardImg: "/product/Talc.svg",
     imgSrc: "/product/talc-bg.jpg",
-    desc: "Steatite, Soapstone is a massive variety of talc, mostly white, or grey of various shades. Talc is used as fillers in the paint industry, for removing grease and as an absorbent.",
-    market: ["Paints and Coatings", "Cosmetics", "Pharmaceuticals"],
+    desc: "Talc is used in paints, cosmetics, and pharmaceuticals as a filler, absorbent, and lubricant.",
+    market: ["Paint & Coating", "Cosmetics", "Pharmaceuticals"],
   },
   {
     productName: "Feldspar",
     shortNote:
-      "Feldspar are aluminosilicates with varying amounts of K, Na and Ca in a solid solution series.",
+      "Feldspar is widely used in ceramics, glassmaking, and as a flux in construction applications.",
     cardImg: "/product/feldspar.svg",
     imgSrc: "/product/feldspar-bg.jpg",
-    desc: "Feldspar are aluminosilicates with varying amounts of K, Na and Ca in a solid solution series; the main commercial feldspars lie between the sodium (albite) and potash (Microcline) rich end members, and the sodium end of the sodium-calcium series (Oligoclase).",
+    desc: "Feldspar is widely used in ceramics, glassmaking, and as a flux in construction applications.",
     market: ["Ceramics", "Glass Manufacturing", "Construction"],
   },
   {
-    productName: "MIO",
+    productName: "MIO (Micaceous Iron Oxide)",
     shortNote:
-      "The protective properties of Micaceous Iron Oxide (MIO) derive from its flake-like particle structure and chemical inertness.",
+      "Micaceous Iron Oxide (MIO) provides corrosion resistance in marine paints, steel coatings, and construction materials.",
     cardImg: "/product/mica.svg",
     imgSrc: "/product/mio-bg.jpg",
-    desc: "Being a derivative of iron, it is red in color. The protective properties of Micaceous Iron Oxide (MIO) derive from its flake-like particle structure and chemical inertness. It is mainly used in marine paints and can be easily mixed with other colors.",
-    market: ["Marine Paints", "Construction", "Steel Coatings"],
+    desc: "Micaceous Iron Oxide (MIO) provides corrosion resistance in marine paints, steel coatings, and construction materials.",
+    market: ["Marine Paints", "Steel Coatings", "Construction"],
   },
   {
     productName: "Kaolin",
     shortNote:
-      "The name Kaolin is derived from the original Chinese name 'Kauling' meaning high ridge in the small village of Gaoling in Jiangxi province, China, where the white clay was mined.",
+      "Kaolin, also known as China clay, is used in ceramics, paper, and cosmetics due to its fine particle size and white color.",
     cardImg: "/product/Kaolinn.svg",
     imgSrc: "/product/kalin-bg.jpg",
-    desc: "Ashok Mineral Enterprises is one of the major Manufacturers of Kaolin and the quality of Kaolin clay produced is top grade. Different grades of Kaolin (China clay) produced at Ashok Mineral Enterprises is given at the bottom.",
+    desc: "Kaolin, also known as China clay, is used in ceramics, paper, and cosmetics due to its fine particle size and white color.",
     market: ["Ceramics", "Paper", "Cosmetics"],
   },
   {
     productName: "Graphite",
     shortNote:
-      "Graphite is a naturally-occurring form of crystalline carbon. It is a native element mineral found in metamorphic and igneous rocks.",
+      "Graphite is used in batteries, refractories, and electronics due to its high conductivity and heat resistance.",
     cardImg: "/product/graphite.png",
     imgSrc: "/product/graphite-bg.jpg",
-    desc: "Graphite has been marketed as graphite, plumbago, or black lead. Industrial usage of such terms tends to be confusing to one not immersed in the industry. For example, the two main commercial categories of natural graphite are crystalline and amorphous; but all graphite is really crystalline and the commercial distinction is actually one of crystal size. Thus the term amorphous, although widely used, is a misnomer.",
-    market: ["Electronics", "Batteries", "Refractories"],
+    desc: "Graphite is used in batteries, refractories, and electronics due to its high conductivity and heat resistance.",
+    market: ["Batteries", "Refractories", "Electronics"],
   },
   {
     productName: "Dolomite",
     shortNote:
-      "Dolomite is a natural stone with double carbonate of calcium and magnesium having composition (CaCO3. MgCO3).",
+      "Dolomite is used in construction, glass manufacturing, and agriculture as a soil conditioner and flux material.",
     cardImg: "/product/Dolomite.svg",
     imgSrc: "/product/dolomine-bg.jpg",
-    desc: "Dolomite is named after the French mineralogist named Dolomieru. Dolomite is a natural stone with double carbonate of calcium and magnesium having composition (CaCO3. MgCO3).It is formed in nature by action of magnesium-bearing solution (sea water, underground water or hydrothermal solution) on calcite — the process being called dolomitization. Dolomite is a widely occurring mineral, generally mined from shallow depths.",
+    desc: "Dolomite is used in construction, glass manufacturing, and agriculture as a soil conditioner and flux material.",
     market: ["Construction", "Glass Manufacturing", "Agriculture"],
   },
   {
     productName: "Calcium Carbonate",
     shortNote:
-      "Natural calcium carbonate ores are high in chemical and mineralogical purity and are wet or dry, ground to a wide range of products.",
+      "Calcium Carbonate is widely used in paints, plastics, and paper industries as a filler and coating material.",
     cardImg: "/product/calcium.svg",
     imgSrc: "/product/calcium-bg.jpg",
-    desc: "Natural calcium carbonate ores are high in chemical and mineralogical purity and are wet or dry, ground to a wide range of products. Dry-ground calcium carbonates, comprising nominal 200 to 325 mesh products, are among the least pricey white fillers available. They are simply crushed from ore but may also be beneficiated by air separation. Wet-ground fine and ultra fine products are also sold in 75% solids slurry form for high volume paint and paper applications and in stearic acid- and stearate-treated forms for use in polymers.",
-    market: ["Paints and Coatings", "Plastics", "Paper"],
+    desc: "Calcium Carbonate is widely used in paints, plastics, and paper industries as a filler and coating material.",
+    market: ["Paint & Coating", "Plastic & Polymer", "Paper"],
   },
   {
     productName: "Zeolite",
     shortNote:
-      "Zeolites are crystalline, hydrated aluminosilicates that contain alkali and alkaline-earth metals.",
+      "Zeolite is used in water filtration, detergents, and agriculture due to its high ion-exchange capacity.",
     cardImg: "/product/zeolite.svg",
     imgSrc: "/product/zeolite-bg.jpg",
-    desc: "Zeolites are crystalline, hydrated aluminosilicates that contain alkali and alkaline-earth metals. Their crystal framework is based on a three-dimensional network of SiO4 tetrahedra with all four oxygens shared by adjacent tetrahedra. The alkali and alkaline earth cations are loosely bound within this structure and can be exchanged by other cations or molecular water. Most zeolites can be dehydrated and rehydrated without any change in volume. More than 48 natural zeolite minerals have been identified (Tschernich 1992), and more than 100 zeolites have been synthesized.",
-    market: ["Water Filtration", "Detergents", "Agriculture"],
+    desc: "Zeolite is used in water filtration, detergents, and agriculture due to its high ion-exchange capacity.",
+    market: ["Filtration", "Soap & Detergent", "Agriculture"],
   },
   {
     productName: "HSCAS",
     shortNote:
-      "HSCAS is an enterosorbent that binds to aflatoxins, molds, and bacteria in animal feed, reducing their presence through adsorption.",
+      "HSCAS is an absorbent used in animal feed, pharmaceuticals, and agriculture to prevent toxin exposure.",
     cardImg: "/product/hscas.svg",
     imgSrc: "/product/hscas-bg.jpg",
-    desc: "When HSCAS is added in the animal food, the chemical compounds provide protection to the stomach (enterosorbent), which quickly via adsorption phenomenon binds to aflatoxins and the molds & bacterias releasing them, from the digestive tract and thus reduce their presence in the animal.",
-    market: ["Animal Feed", "Agriculture", "Pharmaceuticals"],
+    desc: "HSCAS is an absorbent used in animal feed, pharmaceuticals, and agriculture to prevent toxin exposure.",
+    market: ["Animal Feed", "Pharmaceuticals", "Agriculture"],
   },
 ];
 export const markets = [
-  { "id": 1, "name": "Oil and Gas" },
-  { "id": 2, "name": "Paints and Coatings" },
-  { "id": 3, "name": "Chemical" },
-  { "id": 4, "name": "Glass Manufacturing" },
-  { "id": 5, "name": "Foundries" },
-  { "id": 6, "name": "Construction" },
-  { "id": 7, "name": "Steel Production" },
-  { "id": 8, "name": "Pigments" },
-  { "id": 9, "name": "Cosmetics" },
-  { "id": 10, "name": "Pharmaceuticals" },
-  { "id": 11, "name": "Ceramics" },
-  { "id": 12, "name": "Marine Paints" },
-  { "id": 13, "name": "Steel Coatings" },
-  { "id": 14, "name": "Paper" },
-  { "id": 15, "name": "Electronics" },
-  { "id": 16, "name": "Batteries" },
-  { "id": 17, "name": "Refractories" },
-  { "id": 18, "name": "Agriculture" },
-  { "id": 19, "name": "Plastics" },
-  { "id": 20, "name": "Water Filtration" },
-  { "id": 21, "name": "Detergents" },
-  { "id": 22, "name": "Animal Feed" }
+  { "id": 1, "name": "Paint & Coating" },
+  { "id": 2, "name": "Ink & Pigments" },
+  { "id": 3, "name": "Plastic & Polymer" },
+  { "id": 4, "name": "Rubber, Tyre & Flame Retardants" },
+  { "id": 5, "name": "Friction & Automotive" },
+  { "id": 6, "name": "Welding Electrodes" },
+  { "id": 7, "name": "Paper" },
+  { "id": 8, "name": "Foundry" },
+  { "id": 9, "name": "Refractories" },
+  { "id": 10, "name": "Ceramics" },
+  { "id": 11, "name": "Animal Feed" },
+  { "id": 12, "name": "Soap & Detergent" },
+  { "id": 13, "name": "Pharmaceuticals" },
+  { "id": 14, "name": "Cosmetics" },
+  { "id": 15, "name": "Agro Chemicals" },
+  { "id": 16, "name": "Construction" },
+  { "id": 17, "name": "Oil Drilling" },
+  { "id": 18, "name": "Wire & Cables" },
+  { "id": 19, "name": "Filtration" },
+  { "id": 20, "name": "Adhesive & Sealants" },
+  { "id": 21, "name": "Leather" }
 ];

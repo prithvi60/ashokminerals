@@ -72,7 +72,7 @@ const Hero = () => {
               size="lg"
               className="mb-16 text-base font-semibold text-white uppercase font-RobotoSlab md:text-xl"
             >
-              Explore Products
+              Explore Our Products
             </Button>
           </div>
         </div>
