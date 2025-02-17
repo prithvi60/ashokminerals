@@ -26,13 +26,13 @@ const Home = async () => {
       },
     }
   );
-  console.log(products);
+  // console.log(products);
 
   const market = markets.flatMap(val => val.title)
   const prod = products.filter(product =>
     product.market.some(m => market.includes(m.title))
   );
-  console.log(markets);
+  // console.log(markets);
 
 
   return (

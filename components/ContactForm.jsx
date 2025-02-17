@@ -28,7 +28,7 @@ export const ContactForm = () => {
             </p>
             <p
               className="text-lg font-normal underline md:text-xl underline-offset-4 hover:text-warning w-max"
-              onClick={() => console.log("logged")}
+            // onClick={() => console.log("logged")}
             >
               contact@ashokminerals.com
             </p>
@@ -61,7 +61,7 @@ export const ContactForm = () => {
                 <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
                   marketing@ashokminerals.com
                 </a>
-                . <br/>We look forward to hearing from you!
+                . <br />We look forward to hearing from you!
               </p>
             </div>
           </div>
