@@ -42,11 +42,7 @@ export const footerMenuLinks = [
     subMenu: [
       { menuTitle: "Our History ", menuRef: "/our-history " },
       {
-        menuTitle: "Our Associations ",
-        menuRef: "/our-associations&certifications",
-      },
-      {
-        menuTitle: "Our Certifications",
+        menuTitle: "Our Associations& Certifications ",
         menuRef: "/our-associations&certifications",
       },
       {
@@ -56,11 +52,11 @@ export const footerMenuLinks = [
     ],
   },
   {
-    menu: "Leadership",
+    menu: "our company",
     subMenu: [
       { menuTitle: "Our Team", menuRef: "/leadership&team" },
       {
-        menuTitle: "Manufacturing Setup",
+        menuTitle: "Our Manufacturing Setup",
         menuRef: "/our-manufacturing-setup",
       },
     ],

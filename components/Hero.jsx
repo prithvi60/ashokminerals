@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import Link from "next/link";
 
 const Hero = () => {
@@ -48,11 +48,11 @@ const Hero = () => {
         >
           <source src={"/sample2.mp4"} type="video/mp4" />
         </video>
-        <div className="absolute flex flex-col items-center justify-center w-full h-full space-y-8 text-center -translate-x-1/2 -translate-y-1/2 md:space-y-16 top-1/2 left-1/2 font-RobotoSlab">
+        <div className="absolute flex flex-col items-center justify-center w-full h-full space-y-8 text-center -translate-x-1/2 -translate-y-1/2 md:space-y-12 top-1/2 left-1/2 font-RobotoSlab">
           <Image
             alt="ashok minerals logo"
-            width={250}
-            height={250}
+            width={200}
+            height={200}
             style={{ objectFit: "contain", objectPosition: "center" }}
             src={"/ashok-minerals-logo.svg"}
             className="z-10"

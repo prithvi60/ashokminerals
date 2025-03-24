@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import Link from "next/link";
 import React from "react";
 import { BsArrowDownRightCircle } from "react-icons/bs";
@@ -18,7 +18,7 @@ const WelcomeBoard = () => {
         <Button
           as={Link}
           color="warning"
-          href="/our_associations&certifications"
+          href="/our-company/our-associations&certifications"
           variant="solid"
           size="lg"
           radius="none"

@@ -32,7 +32,7 @@ export const FlipProductsCard = ({ data }) => {
                 <h4 className="text-lg font-semibold tracking-wider capitalize sm:text-xl lg:text-2xl">
                   {product.title}
                 </h4>
-                <p className="text-sm font-normal line-clamp-4 sm:line-clamp-none">
+                <p className="text-sm font-normal line-clamp-4 sm:line-clamp-5">
                   {product.summary}
                 </p>
               </div>

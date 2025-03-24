@@ -9,7 +9,7 @@ const Home = () => {
       <div className="block px-6 py-10 space-y-6 sm:space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-64">
         <div>
           {manufacturing.lists.map((list, idx) => (
-           <AccordionComponent list={list} key={idx} idx={idx} />
+            <AccordionComponent list={list} key={idx} idx={idx} />
           ))}
         </div>
         <p className="text-base font-normal sm:text-lg">

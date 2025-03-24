@@ -4,16 +4,21 @@ import { client } from "@/sanity/lib/client";
 import { PRODUCTS_QUERY } from "@/sanity/Queries";
 
 const Home = async () => {
-  const products = await client.fetch(
-    PRODUCTS_QUERY,
-    {},
-    {
-      cache: "no-cache",
-      next: {
-        tags: ["products"],
-      },
-    }
-  );
+  let products = [];
+  try {
+    products = await client.fetch(
+      PRODUCTS_QUERY,
+      {},
+      {
+        cache: "no-cache",
+        next: {
+          tags: ["products", "post"],
+        },
+      }
+    );
+  } catch (error) {
+    console.error("Failed to fetch products:", error);
+  }
 
   return (
     <section>

@@ -1,7 +1,9 @@
 "use client";
-import { Input, Textarea } from "@nextui-org/input";
-import { Button } from "@nextui-org/button";
-import { Select, SelectItem } from "@nextui-org/select";
+import { Input, Textarea } from "@heroui/input";
+import { Button } from "@heroui/button";
+import { Select, SelectItem } from "@heroui/select";
+import { useState } from "react";
+import Loader from "./Loader";
 
 const lists = [
   "sample interest",
@@ -9,8 +11,71 @@ const lists = [
   "supplier",
   "product of interest",
 ];
+const initialFormData = {
+  firstName: "",
+  lastName: "",
+  detailFor: "",
+  phoneNo: "",
+  userEmail: "",
+  companyName: "",
+  message: "",
+};
 
 export const ContactForm = () => {
+  const [formData, setFormData] = useState(initialFormData);
+  const [status, setStatus] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus(true);
+
+    const emailFormData = {
+      userName: formData.firstName + " " + formData.lastName,
+      detailFor: formData.designation,
+      userEmail: formData.userEmail,
+      phone: formData.phoneNo,
+      companyName: formData.companyName,
+      message: formData.message,
+    };
+
+    try {
+      const emailResponse = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailFormData),
+      });
+
+      if (!emailResponse.ok) {
+        const errorData = await emailResponse.text();
+        throw new Error(
+          `Email API Error: ${emailResponse.status} ${errorData}`
+        );
+      }
+      const emailDataResult = await emailResponse.json();
+
+      if (emailDataResult.success) {
+        setStatus(false);
+        setFormData(initialFormData);
+        (e.target).reset();
+        window.location.href = "/thankyou";
+      } else {
+        throw new Error("operations failed.");
+      }
+    } catch (error) {
+      console.error("Error sending emails:", error);
+      setStatus(false);
+    }
+  };
   return (
     <section
       className="relative w-full h-full space-y-10 md:h-auto font-RobotoSlab"
@@ -69,21 +134,18 @@ export const ContactForm = () => {
         {/* Form */}
         <div className="w-full h-auto px-4 space-y-5 rounded-md shadow-md bg-primary py-7 md:1/2 lg:w-2/5">
           <form
-            // action="https://public.herotofu.com/v1/19317a90-2945-11ef-b910-172fda062bcc"
-            method="post"
-            acceptCharset="UTF-8"
-            className="w-full h-auto space-y-8"
+            className="w-full h-auto space-y-8" onSubmit={handleSubmit}
           >
             <h3 className="mb-12 text-lg font-semibold tracking-wide font-RobotoSlab md:text-xl xl:text-2xl">
               Let’s Get in touch to Explore business opportunities
             </h3>
             <Select
               aria-label="options"
-              name="selecting options"
+              name="detailFor"
+              value={formData.detailFor || ""}
+              onChange={handleChange}
               isRequired
               size="lg"
-              // label="How Can I Help You ?"
-              // labelPlacement={"outside"}
               placeholder="How Can I Help You ?"
               radius="full"
               variant="faded"
@@ -109,14 +171,11 @@ export const ContactForm = () => {
                 isRequired
                 size="lg"
                 type="firstName"
-                // label="First Name"
-                // labelPlacement={"outside"}
+                value={formData.firstName || ""}
+                onChange={handleChange}
                 radius="full"
                 variant="faded"
                 placeholder="First Name"
-              // endContent={
-              //   <MdOutlineDriveFileRenameOutline className="flex-shrink-0 text-2xl opacity-50 text-black/80" />
-              // }
               />
               <Input
                 classNames={{
@@ -126,80 +185,64 @@ export const ContactForm = () => {
                 isRequired
                 size="lg"
                 type="lastName"
-                // label="Last Name"
-                // labelPlacement={"outside"}
+                value={formData.lastName || ""}
+                onChange={handleChange}
                 placeholder="Last Name"
                 radius="full"
-                // color="secondary"
                 variant="faded"
-              // endContent={
-              //   <MdOutlineDriveFileRenameOutline className="flex-shrink-0 text-2xl opacity-50 text-black/80" />
-              // }
               />
               <Input
                 classNames={{
                   inputWrapper: "bg-secondary font-RobotoSlab font-normal",
                 }}
-                name="email"
-                isRequired
-                size="lg"
-                type="email"
-                // label="Email"
-                // labelPlacement={"outside"}
-                placeholder="Email"
-                radius="full"
-                variant="faded"
-              // color="secondary"
-              // endContent={
-              //   <IoMailOutline className="flex-shrink-0 text-lg opacity-50 text-black/80" />
-              // }
-              />
-              <Input
-                classNames={{
-                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
-                }}
-                name="phone number"
-                size="lg"
-                type="text"
-                // label="Phone Number"
-                // labelPlacement={"outside"}
-                placeholder="Phone No."
-                radius="full"
-                variant="faded"
-                isRequired
-              // color="secondary"
-              // endContent={
-              //   <FaPhoneAlt className="flex-shrink-0 text-lg opacity-50 text-black/80" />
-              // }
-              />
-              <Input
-                classNames={{
-                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
-                }}
-                name="company"
+                name="companyName"
                 isRequired
                 size="lg"
                 type="text"
-                // label="Company"
-                // labelPlacement={"outside"}
+                value={formData.companyName || ""}
+                onChange={handleChange}
                 placeholder="Company Information"
                 radius="full"
                 variant="faded"
-                // color="secondary"
                 className="md:col-span-2"
-              // endContent={
-              //   <HiOutlineBuildingOffice2 className="flex-shrink-0 text-lg opacity-50 text-black/80" />
-              // }
               />
             </div>
+            <Input
+              classNames={{
+                inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+              }}
+              name="userEmail"
+              isRequired
+              size="lg"
+              type="email"
+              placeholder="Email"
+              radius="full"
+              variant="faded"
+              value={formData.userEmail || ""}
+              onChange={handleChange}
+            />
+            <Input
+              classNames={{
+                inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+              }}
+              name="phoneNo"
+              size="lg"
+              type="text"
+              placeholder="Phone No."
+              radius="full"
+              variant="faded"
+              isRequired
+              value={formData.phoneNo || ""}
+              onChange={handleChange}
+            />
             <Textarea
               classNames={{
                 inputWrapper: "bg-secondary font-RobotoSlab font-normal",
               }}
-              name="comments"
+              name="message"
               isRequired
-              // label="Comments"
-              // labelPlacement="outside"
+              value={formData.message || ""}
+              onChange={handleChange}
               placeholder="Comments Please..."
               className="max-w-full"
               variant="faded"
@@ -214,33 +257,10 @@ export const ContactForm = () => {
                 role="button"
                 type="submit"
               >
-                Submit
+                {status ? <Loader /> : "Submit"}
               </Button>
             </div>
           </form>
-          {/* <div className="space-y-1.5 text-center font-RobotoSlab">
-            <h4 className="p-1 mx-auto text-sm font-semibold border-2 rounded-full w-max border-warning text-warning">
-              OR
-            </h4>
-            <p className="text-base font-normal text-warning md:text-lg">
-              Email Us:{" "}
-              <span className="font-normal text-black">
-                contact@ashokminerals.com
-              </span>
-            </p>
-            <p className="text-base font-normal text-warning md:text-lg">
-              Marketing :{" "}
-              <span className="font-normal text-black">
-                marketing@ashokminerals.com
-              </span>
-            </p>
-            <p className="text-base font-normal text-warning md:text-lg">
-              Sales & Other Enquiries :{" "}
-              <span className="italic font-normal text-black">
-                Vanessa@ashokminerals.com
-              </span>
-            </p>
-          </div> */}
         </div>
       </div>
       {/* location map */}
@@ -266,6 +286,7 @@ export const ContactForm = () => {
           <address className="text-base font-normal font-RobotoSlab">
             Ashok Mineral Enterprises
             <br />
+            <br />
             <span className="font-semibold text-warning">
               {" "}
               Primary Manufacturing Unit & Warehouse :
@@ -273,9 +294,17 @@ export const ContactForm = () => {
             <br /> F 15 & F86, Sipcot industrial complex,
             <br /> Gummidipoondi - 601201.
             <br />
-            {/* <span className="font-semibold text-warning">Contact No - </span>
-            +91-44-24512581/82/83
-            <br /> */}
+          </address>
+          <address className="text-base font-normal font-RobotoSlab">
+            <span className="font-semibold text-warning">
+              {" "}
+              Office:
+            </span>
+            <br /> 2A, first street, Karpagambal nagar,
+            <br /> Kottivakkam,
+            <br /> Chennai - 600041.
+            <br />
+            <br />
             <span className="font-semibold">GST : 33AAPB8321M1Z0</span>
           </address>
         </div>

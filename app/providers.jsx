@@ -1,6 +1,6 @@
 "use client";
 
-import { NextUIProvider } from "@nextui-org/system";
+import { HeroUIProvider } from "@heroui/system";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 export function Providers({ children }) {
@@ -11,7 +11,7 @@ export function Providers({ children }) {
   });
   return (
     <ApolloProvider client={client}>
-      <NextUIProvider>{children}</NextUIProvider>
+      <HeroUIProvider>{children}</HeroUIProvider>
     </ApolloProvider>
   );
 }

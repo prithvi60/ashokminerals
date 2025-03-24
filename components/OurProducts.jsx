@@ -7,8 +7,7 @@ import { productSpecimen } from "@/libs/data";
 import Slider from "react-slick";
 
 const OurProducts = ({ products }) => {
-  // const [width, setWidth] = useState(0);
-  // const [count, setCount] = useState(3);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -35,16 +34,8 @@ const OurProducts = ({ products }) => {
     pauseOnHover: true
   };
 
-  // useEffect(() => {
-  //   setWidth(window.innerWidth);
-  // }, []);
-
-  // useEffect(() => {
-  //   width >= 1560 ? setCount(4) : setCount(3);
-  // }, [width]);
-
   return (
-    <section className="w-full h-full space-y-24 s font-RobotoSlab">
+    <section className="w-full h-full space-y-5 font-RobotoSlab">
       <h3 className="relative w-full px-6 pt-10 text-2xl font-semibold m:px-10 lg:px-64 sm:pt-12 sm:text-3xl lg:text-5xl">
         Our Products
       </h3>

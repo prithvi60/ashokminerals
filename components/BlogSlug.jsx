@@ -1,10 +1,7 @@
 "use client";
-import { getPost } from "@/libs/query";
-import { useQuery } from "@apollo/client";
+
 import React from "react";
-import { Loader } from "./Loader";
 import Image from "next/image";
-import { Date } from "./Date";
 import { PortableText } from "next-sanity";
 
 export const BlogSlug = ({ post }) => {
@@ -15,19 +12,21 @@ export const BlogSlug = ({ post }) => {
         <h3 className="text-xl font-bold tracking-wide md:text-4xl xl:text-5xl">
           {post.title}
         </h3>
-        <div className="flex flex-col items-start w-full h-full gap-5 md:flex-row place-items-start">
-          <div className="relative w-full h-[320px] md:basis-1/2 ">
-            <Image
-              alt={post.imageAlt}
-              src={post.imageUrl}
-              fill
-              style={{ objectFit: "cover", objectPosition: "center" }}
-              quality={100}
-              priority
-              className="rounded-md"
-            />
+        <div className="relative flex flex-col items-start w-full h-full gap-5 md:flex-row place-items-start">
+          <div className="w-full h-full md:w-1/2 md:sticky md:top-28">
+            <div className="relative w-full h-[320px]">
+              <Image
+                alt={post.imageAlt}
+                src={post.imageUrl}
+                fill
+                style={{ objectFit: "cover", objectPosition: "center" }}
+                quality={100}
+                priority
+                className="rounded-md"
+              />
+            </div>
           </div>
-          <div className="max-w-7xl prose prose-blue mx-auto prose-h1:text-3.5xl prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:leading-relaxed prose-p:text-lg lg:prose-p:text-xl prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600">
+          <div className="max-w-7xl w-full md:w-1/2 prose prose-blue mx-auto prose-h1:text-3.5xl prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:leading-relaxed prose-p:text-lg lg:prose-p:text-xl prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600">
             <PortableText value={post.body} components={customComponents} />
           </div>
         </div>

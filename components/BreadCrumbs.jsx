@@ -1,5 +1,5 @@
 "use client";
-import { BreadcrumbItem, Breadcrumbs } from "@nextui-org/breadcrumbs";
+import { BreadcrumbItem, Breadcrumbs } from "@heroui/breadcrumbs";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import React from "react";
@@ -20,7 +20,7 @@ export const BreadCrumbs = () => {
     }
   };
   return (
-    <Breadcrumbs
+    (<Breadcrumbs
       underline="hover"
       classNames={{
         list: "shadow-small",
@@ -45,6 +45,6 @@ export const BreadCrumbs = () => {
         </BreadcrumbItem>
       ))}
       {/* <BreadcrumbItem>Artist</BreadcrumbItem> */}
-    </Breadcrumbs>
+    </Breadcrumbs>)
   );
 };

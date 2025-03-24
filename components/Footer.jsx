@@ -51,7 +51,7 @@ const Footer = () => {
         <div className="flex flex-col items-center sm:items-start justify-center md:justify-end gap-2.5 sm:flex-row sm:gap-14 xl:gap-20 md:gap-8 md:w-4/5">
           {footerMenuLinks.map((item, id) => (
             <div
-              className="flex flex-col items-center justify-center gap-3 sm:items-start sm:justify-start"
+              className="flex flex-col items-center justify-center gap-3 sm:max-w-[200px] sm:items-start sm:justify-start"
               key={id}
             >
               <div

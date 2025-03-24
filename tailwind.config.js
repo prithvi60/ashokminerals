@@ -1,11 +1,11 @@
-const { nextui } = require("@nextui-org/theme");
+const { heroui } = require("@heroui/theme");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/(accordion|breadcrumbs|button|card|input|navbar|select|divider|ripple|spinner|listbox|popover|scroll-shadow).js",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@heroui/theme/dist/components/(accordion|breadcrumbs|button|card|input|navbar|select|divider|ripple|spinner|listbox|popover|scroll-shadow).js",
   ],
   theme: {
     extend: {
@@ -25,7 +25,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
-    nextui({
+    heroui({
       themes: {
         light: {
           colors: {

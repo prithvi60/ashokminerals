@@ -1,6 +1,6 @@
 "use client";
 import { navbarMenu } from "@/libs/data";
-import { Button } from "@nextui-org/button";
+import { Button } from "@heroui/button";
 import { IoCall } from "react-icons/io5";
 import {
   Navbar,
@@ -9,14 +9,14 @@ import {
   NavbarItem,
   NavbarMenu,
   NavbarMenuItem,
-} from "@nextui-org/navbar";
+} from "@heroui/navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -25,7 +25,6 @@ const NavbarComponent = () => {
   const [isActiveState, setIsActiveState] = useState(null);
   const [selectedKeys, setSelectedKeys] = useState(new Set(["3"]));
   const [percent, setPercent] = useState(false);
-  const router = useRouter();
   const path = usePathname();
 
   const handleScroll = () => {
@@ -69,19 +68,20 @@ const NavbarComponent = () => {
       }}
     >
       <NavbarContent className="pr-3" justify="center">
-        {/* <NavbarBrand>
-          <div
-            className="relative w-40 h-40 overflow-hidden cursor-pointer"
-            onClick={() => router.push("/")}
-          >
-            <Image
-              alt="ashok minerals logo"
-              fill
-              style={{ objectFit: "contain", objectPosition: "center" }}
-              src={"/ashok-minerals-logo.svg"}
-            />
-          </div>
-        </NavbarBrand> */}
+        {path !== "/" && (
+          <NavbarBrand>
+            <Link href={"/"}
+              className="relative overflow-hidden cursor-pointer size-16 md:size-20"
+            >
+              <Image
+                alt="ashok minerals logo"
+                fill
+                style={{ objectFit: "contain", objectPosition: "center" }}
+                src={"/ashok-minerals-logo2.svg"}
+              />
+            </Link>
+          </NavbarBrand>
+        )}
       </NavbarContent>
       {/* Desktop menubar */}
       <NavbarContent className="hidden lg:gap-5 lg:flex ml-28" justify="center">
@@ -135,7 +135,6 @@ const NavbarComponent = () => {
             variant="solid"
             className="mt-4 text-base font-semibold text-white uppercase font-RobotoSlab ms-3 lg:text-lg"
           >
-
             Contact Us
             <span>
               <IoCall className="text-base text-primary" />

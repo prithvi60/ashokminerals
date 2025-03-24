@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { Card } from "@nextui-org/card";
+import { Card } from "@heroui/card";
 import { useEffect, useState } from "react";
 import { Stack, Box, Flex, Label, Switch } from '@sanity/ui';
 import { client } from "@/sanity/lib/client";
@@ -12,7 +12,7 @@ const MarketCheckboxInput = (props) => {
     const [loading, setLoading] = useState(true);
 
     // Create a Set of selected market IDs
-    const selectedRefs = new Set(value.map(ref => ref._ref));
+    const selectedRefs = useMemo(() => new Set(value.map(ref => ref._ref)), [value]);
 
     useEffect(() => {
         const fetchMarkets = async () => {

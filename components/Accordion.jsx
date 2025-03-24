@@ -1,14 +1,18 @@
 "use client";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { Accordion, AccordionItem } from "@heroui/accordion";
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-export const AccordionComponent = ({ list,idx }) => {
-  const [selectedKeys, setSelectedKeys] = useState(new Set(["0"]));
+export const AccordionComponent = ({ list, idx, data }) => {
+  // const [selectedKeys, setSelectedKeys] = useState(new Set(["0"]));
+  const [selectedKeys, setSelectedKeys] = useState(
+    new Set(data ? data.map((_, idx) => idx.toString()) : ["0"])
+  );
+
   return (
     <Accordion
       variant="light"
-    //   defaultExpandedKeys={["0"]}
+      //   defaultExpandedKeys={["0"]}
       selectedKeys={selectedKeys}
       onSelectionChange={setSelectedKeys}
     >

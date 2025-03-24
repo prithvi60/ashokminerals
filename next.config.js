@@ -7,8 +7,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "cdn.sanity.io",
       },
+      {
+        protocol: "https",
+        hostname: "ik.imagekit.io",
+        pathname: "/**",
+      },
     ],
   },
+  productionBrowserSourceMaps: false,
 };
 
 export default nextConfig;
