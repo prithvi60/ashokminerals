@@ -6,7 +6,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 export const AccordionComponent = ({ list, idx, data }) => {
   // const [selectedKeys, setSelectedKeys] = useState(new Set(["0"]));
   const [selectedKeys, setSelectedKeys] = useState(
-    new Set(data ? data.map((_, idx) => idx.toString()) : ["0"])
+    new Set(data.map((_, idx) => idx.toString()))
   );
 
   return (

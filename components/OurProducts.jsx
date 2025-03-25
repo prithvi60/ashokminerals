@@ -44,8 +44,8 @@ const OurProducts = ({ products }) => {
       <div className="w-full px-6 pb-10 md:px-10 lg:px-52 sm:pb-12 font-RobotoSlab slider-container">
         <Slider {...settings} className="relative custom-slider">
           {products.map((product, id) => (
-            <div
-              // href={`/products/${product.slug.current}`}
+            <Link
+              href={`/products/${product.slug.current}`}
               className="relative w-full h-full card flipCard"
               key={id}
             >
@@ -68,7 +68,7 @@ const OurProducts = ({ products }) => {
                   <h4 className="text-lg font-semibold tracking-wider capitalize sm:text-xl lg:text-2xl">
                     {product.title}
                   </h4>
-                  <p className="text-sm font-normal line-clamp-4 sm:line-clamp-5">
+                  <p className="text-sm font-normal line-clamp-3">
                     {product.summary}
                   </p>
                 </div>
@@ -79,7 +79,7 @@ const OurProducts = ({ products }) => {
                   </span>
                 </h4>
               </div>
-            </div>
+            </Link>
           ))}
         </Slider>
         <div className="flex items-center justify-center w-full h-full mt-6 md:justify-end">

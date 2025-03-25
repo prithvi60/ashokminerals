@@ -1,5 +1,5 @@
 import { defineField, defineType } from "sanity";
-
+import { LinkIcon } from "@sanity/icons";
 export const MarketListType = defineType({
     name: "markets",
     title: "Markets",
@@ -29,6 +29,21 @@ export const MarketListType = defineType({
             validation: (rule) => rule.required(),
         }),
         defineField({
+            name: "isometricImage",
+            type: "image",
+            title: "Market Main Product Image",
+            fields: [
+                {
+                    name: "alt",
+                    type: "string",
+                    title: "Product or Alternative text",
+                },
+            ],
+            options: {
+                hotspot: true,
+            },
+        }),
+        defineField({
             name: "image",
             type: "image",
             title: "Market Product Image",
@@ -56,6 +71,7 @@ export const MarketListType = defineType({
                                 name: "productLink",
                                 title: "Product Link",
                                 type: "object",
+                                icon: LinkIcon,
                                 fields: [
                                     {
                                         name: "product",

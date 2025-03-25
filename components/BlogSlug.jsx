@@ -9,7 +9,7 @@ export const BlogSlug = ({ post }) => {
 
   return (
     <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-64">
-      <div className="relative w-full h-full p-5 space-y-5 rounded-md bg-secondary">
+      <div className="relative w-full h-full p-5 space-y-5 rounded-md">
         <h3 className="text-xl font-bold tracking-wide md:text-4xl xl:text-5xl">
           {post.title}
         </h3>

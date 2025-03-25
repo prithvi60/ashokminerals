@@ -7,7 +7,7 @@ import { FlipProductsCard } from "./FlipProductsCard";
 
 const Blog = async ({ posts }) => {
   return (
-    <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-10 lg:px-64 ">
+    <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab sm:px-10 lg:px-64 ">
       {posts.length > 0 && (
         <div className="w-full h-full">
           <FlipProductsCard data={posts} type={"blog"} />

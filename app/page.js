@@ -26,13 +26,11 @@ export default async function Home() {
   return (
     <main>
       <Providers>
-        {/* <Development /> */}
         <NavbarComponent />
         <Hero />
         <WelcomeBoard />
         <BentoGrid />
         <OurProducts products={products} />
-        {/* <Testimonials /> */}
         <OurStrength />
         <ContactForm />
         <Footer />

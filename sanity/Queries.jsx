@@ -77,8 +77,8 @@ export const MARKETLIST_QUERY = groq`
   slug,
   publishedAt,
   body,
-  "imageUrl": image.asset->url,
-  "imageAlt": image.alt,
+  "imageUrl": isometricImage.asset->url,
+  "imageAlt": isometricImage.alt,
   "plainBody": body[].children[].text
 }`;
 

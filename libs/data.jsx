@@ -95,7 +95,7 @@ export const navbarMenu = [
       },
       {
         menuTitle: "Our International Ties",
-        menuRef: "/our-international_ties",
+        menuRef: "/our-international-ties",
       },
       {
         menuTitle: "Leadership & Team",
