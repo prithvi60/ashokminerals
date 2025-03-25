@@ -3,15 +3,14 @@ import { Card, CardHeader, CardBody, CardFooter } from "@heroui/card";
 import Image from "next/image";
 import { Button } from "@heroui/button";
 import { FaRegClock } from "react-icons/fa6";
+import { FlipProductsCard } from "./FlipProductsCard";
 
 const Blog = async ({ posts }) => {
   return (
     <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-10 lg:px-64 ">
       {posts.length > 0 && (
-        <div className="flex flex-col items-start w-full h-full gap-5 md:flex-row">
-          {posts.map((post, idx) => (
-            <BlogCard key={idx} post={post} />
-          ))}
+        <div className="w-full h-full">
+          <FlipProductsCard data={posts} type={"blog"} />
         </div>
       )}
     </section>

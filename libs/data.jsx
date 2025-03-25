@@ -1,3 +1,76 @@
+import { client } from "@/sanity/lib/client";
+import { PRODUCTS_QUERY } from "@/sanity/Queries";
+
+// // Async function to fetch products
+// export async function getProducts() {
+//   try {
+//     const products = await client.fetch(
+//       PRODUCTS_QUERY,
+//       {},
+//       {
+//         cache: "no-cache",
+//         next: {
+//           tags: ["products", "post"],
+//         },
+//       }
+//     );
+//     return products;
+//   } catch (error) {
+//     console.error("Error fetching products:", error);
+//     return [];
+//   }
+// }
+
+// // Function to generate navbarMenu with dynamic products submenu
+// export async function getNavbarMenu() {
+//   const products = await getProducts();
+
+//   const productsSubMenu = products.map(product => ({
+//     menuTitle: product.title,
+//     menuRef: `/products/${product.slug.current}`
+//   }));
+
+//   return [
+//     {
+//       menu: "products",
+//       ref: "/products",
+//       subMenu: productsSubMenu
+//     },
+//     {
+//       menu: "markets",
+//       ref: "/markets",
+//     },
+//     {
+//       menu: "blog",
+//       ref: "/blog",
+//     },
+//     {
+//       menu: "our company",
+//       ref: "",
+//       subMenu: [
+//         { menuTitle: "Our History", menuRef: "/our-history" },
+//         {
+//           menuTitle: "Our Associations & Certifications",
+//           menuRef: "/our-associations&certifications",
+//         },
+//         {
+//           menuTitle: "Our International Ties",
+//           menuRef: "/our-international_ties",
+//         },
+//         {
+//           menuTitle: "Leadership & Team",
+//           menuRef: "/leadership&team",
+//         },
+//         {
+//           menuTitle: "Our Manufacturing Setup",
+//           menuRef: "/our-manufacturing-setup",
+//         },
+//       ],
+//     },
+//   ];
+// }
+
+
 export const navbarMenu = [
   {
     menu: "products",

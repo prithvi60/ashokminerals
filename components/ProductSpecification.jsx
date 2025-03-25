@@ -3,6 +3,7 @@ import { PortableText } from "next-sanity";
 import Image from "next/image";
 
 export const ProductSpecification = ({ product }) => {
+  console.log(product);
 
   return (
     <section className="block px-6 py-10 space-y-6 sm:space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-64">

@@ -1,13 +1,16 @@
 "use client"
 
-import Image from "next/image";
-import Link from "next/link";
-import { BsArrowDownRightCircleFill } from "react-icons/bs";
+import { FlipProductsCard } from "./FlipProductsCard";
 
-export const MarketShowcase = ({ markets, products }) => {
+export const MarketShowcase = ({ markets }) => {
   return (
     <section className="block px-6 py-10 space-y-8 md::space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-64">
-      {markets.map((m) => (
+      {markets.length > 0 && (
+        <div className="w-full h-full">
+          <FlipProductsCard data={markets} type={"markets"} />
+        </div>
+      )}
+      {/* {markets.map((m) => (
         <div key={m.id}>
           <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">{m.title}</h3>
           <div className="grid w-full h-full grid-cols-1 mt-20 mb-32 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 font-RobotoSlab place-content-center place-items-center">
@@ -50,7 +53,7 @@ export const MarketShowcase = ({ markets, products }) => {
               ))}
           </div>
         </div>
-      ))}
+      ))} */}
     </section>
   );
 };

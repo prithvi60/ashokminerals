@@ -1,5 +1,5 @@
 "use client";
-import { navbarMenu } from "@/libs/data";
+
 import { Button } from "@heroui/button";
 import { IoCall } from "react-icons/io5";
 import {
@@ -18,7 +18,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { Accordion, AccordionItem } from "@heroui/accordion";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { navbarMenu } from "@/libs/data";
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,6 @@ const NavbarComponent = () => {
   const [selectedKeys, setSelectedKeys] = useState(new Set(["3"]));
   const [percent, setPercent] = useState(false);
   const path = usePathname();
-
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const innerHeight = window.innerHeight;
@@ -49,13 +49,17 @@ const NavbarComponent = () => {
     };
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
   return (
     <Navbar
       isBordered="false"
       isBlurred="false"
       maxWidth="full"
       isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
+      // onMenuOpenChange={setIsMenuOpen}
       classNames={{
         base: [
           `${!percent && path === "/"
@@ -70,7 +74,8 @@ const NavbarComponent = () => {
       <NavbarContent className="pr-3" justify="center">
         {path !== "/" && (
           <NavbarBrand>
-            <Link href={"/"}
+            <Link
+              href={"/"}
               className="relative overflow-hidden cursor-pointer size-16 md:size-20"
             >
               <Image
@@ -85,7 +90,7 @@ const NavbarComponent = () => {
       </NavbarContent>
       {/* Desktop menubar */}
       <NavbarContent className="hidden lg:gap-5 lg:flex ml-28" justify="center">
-        {navbarMenu.map((item, id) => (
+        {navbarMenu?.map((item, id) => (
           <NavbarItem key={id} className="relative group">
             <div
               className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear ${!percent && path === "/" ? "text-primary" : "text-black"
@@ -125,7 +130,7 @@ const NavbarComponent = () => {
         ))}
       </NavbarContent>
       {/* Contact button */}
-      <NavbarContent justify="end" className="!basis-0 !grow-0 hidden md:block">
+      <NavbarContent justify="end" className="!basis-0 !grow-0 hidden lg:block">
         <NavbarItem>
           <Button
             as={Link}
@@ -144,29 +149,18 @@ const NavbarComponent = () => {
       </NavbarContent>
       {/* Hamburger Toggle button */}
       <NavbarContent className="lg:hidden !grow-0 !basis-0" justify="end">
-        {/* <NavbarMenuToggle
-          className="!z-[1000]"
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        /> */}
         <NavbarItem>
-          {isMenuOpen ? (
-            <IoClose
-              onClick={() => setIsMenuOpen(false)}
-              className={`text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary/80 transform transition-all duration-400 ease-out`}
-            />
-          ) : (
-            <GiHamburgerMenu
-              onClick={() => setIsMenuOpen(true)}
-              className={`text-4xl font-semibold cursor-pointer transition-all duration-400 ease-out ${!percent && path === "/" ? "text-primary" : "text-black"
-                }`}
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            />
-          )}
+          <GiHamburgerMenu
+            onClick={toggleMenu}
+            className={`text-4xl font-semibold cursor-pointer transition-all duration-400 ease-out ${!percent && path === "/" ? "text-primary" : "text-black"
+              }`}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          />
         </NavbarItem>
       </NavbarContent>
       {/* Mobile menu */}
       <NavbarMenu
-        className="!z-[995] top-[115px] bg-secondary/95 max-h-fit justify-end"
+        className="!z-[995] top-[0px] bg-secondary bg-opacity-95 h-full"
         motionProps={{
           variants: {
             enter: {
@@ -186,9 +180,15 @@ const NavbarComponent = () => {
           },
         }}
       >
+        <div className="flex justify-end px-1 py-4 sm:px-3.5">
+          <IoClose
+            onClick={() => setIsMenuOpen(false)}
+            className={`text-4xl text-red-500 rounded-full shadow-lg cursor-pointer bg-primary/80 transform transition-all duration-400 ease-out`}
+          />
+        </div>
         <div className="my-10 space-y-4">
           <div className="flex flex-col items-end justify-center gap-4">
-            {navbarMenu.slice(0, 3).map((item, id) => (
+            {navbarMenu?.slice(0, 3).map((item, id) => (
               <Link
                 href={item.ref}
                 className="text-lg font-medium capitalize me-12 font-RobotoSlab"
@@ -199,7 +199,7 @@ const NavbarComponent = () => {
               </Link>
             ))}
           </div>
-          {navbarMenu.slice(3, 4).map((item, index) => (
+          {navbarMenu?.slice(3, 4).map((item, index) => (
             <NavbarMenuItem key={index}>
               <Accordion
                 variant="light"
@@ -214,11 +214,11 @@ const NavbarComponent = () => {
                     isOpen ? <FaCaretUp /> : <FaCaretDown />
                   }
                   classNames={{
-                    base: "text-black font-RobotoSlab font-normal",
+                    base: "text-black font-RobotoSlab",
                     trigger: "justify-end py-0 ps-8",
                     heading: "transition-all duration-300 ease-linear",
                     titleWrapper: "!flex-none",
-                    title: "!text-black !capitalize",
+                    title: "!text-black !capitalize text-lg font-medium",
                     indicator:
                       "transition-all duration-300 ease-linear text-warning text-xl !rotate-0",
                   }}
@@ -227,7 +227,7 @@ const NavbarComponent = () => {
                     <Link
                       onClick={() => setIsMenuOpen(false)}
                       title={l.menuTitle}
-                      className={`text-base font-normal capitalize font-RobotoSlab text-end`}
+                      className={`text-lg font-medium capitalize font-RobotoSlab text-end`}
                       key={index}
                       href={`/our-company/${l.menuRef}`}
                     >

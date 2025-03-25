@@ -38,10 +38,10 @@ export const BreadCrumbs = () => {
           key={id}
           onClick={
             id !== pathNames.length - 1 &&
-            (() => handleClick(`/${path.replace(/\s/g, "_")}`))
+            (() => handleClick(`/${path.replace(/\s/g, "-")}`))
           }
         >
-          {path.replace(/_/g, " ")}
+          {path.replace(/-/g, " ")}
         </BreadcrumbItem>
       ))}
       {/* <BreadcrumbItem>Artist</BreadcrumbItem> */}

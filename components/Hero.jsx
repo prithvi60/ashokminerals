@@ -55,7 +55,7 @@ const Hero = () => {
             height={200}
             style={{ objectFit: "contain", objectPosition: "center" }}
             src={"/ashok-minerals-logo.svg"}
-            className="z-10"
+            className="z-10 w-36 h-36 md:w-60 md:h-60"
           />
           <h4 className="px-16 text-3xl font-semibold capitalize md:text-6xl text-primary">
             Processors of <br></br>

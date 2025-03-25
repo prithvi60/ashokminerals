@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
-export const postType = defineType({
-    name: "post",
-    title: "Post",
+export const MarketListType = defineType({
+    name: "markets",
+    title: "Markets",
     type: "document",
     fields: [
         defineField({
@@ -23,12 +23,6 @@ export const postType = defineType({
             },
         }),
         defineField({
-            name: "blogShortRead",
-            type: "text",
-            title: "Blog Short Read",
-            validation: (rule) => rule.required(),
-        }),
-        defineField({
             name: "publishedAt",
             type: "datetime",
             initialValue: () => new Date().toISOString(),
@@ -37,12 +31,12 @@ export const postType = defineType({
         defineField({
             name: "image",
             type: "image",
-            title: "Blog Post Image",
+            title: "Market Product Image",
             fields: [
                 {
                     name: "alt",
                     type: "string",
-                    title: "Alternative text",
+                    title: "Product or Alternative text",
                 },
             ],
             options: {
@@ -59,15 +53,15 @@ export const postType = defineType({
                     marks: {
                         annotations: [
                             {
-                                name: 'productLink',
-                                title: 'Product Link',
-                                type: 'object',
+                                name: "productLink",
+                                title: "Product Link",
+                                type: "object",
                                 fields: [
                                     {
-                                        name: 'product',
-                                        title: 'Product',
-                                        type: 'reference',
-                                        to: [{ type: 'products' }],
+                                        name: "product",
+                                        title: "Product",
+                                        type: "reference",
+                                        to: [{ type: "products" }],
                                     },
                                 ],
                             },
@@ -80,7 +74,7 @@ export const postType = defineType({
                         {
                             name: "alt",
                             type: "string",
-                            title: "Alternative text",
+                            title: "Product or Alternative text",
                         },
                     ],
                     options: {

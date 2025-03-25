@@ -6,8 +6,12 @@ import NavbarComponent from "@/components/Navbar";
 import { ContactForm } from "@/components/ContactForm";
 import Footer from "@/components/Footer";
 import FloatingButton from "@/components/FloatingButton";
+import { getNavbarMenu } from "@/libs/data";
 
-export default function UserLayout({ children }) {
+export default async function UserLayout({ children }) {
+  // const navbarMenu = await getNavbarMenu();
+  // console.log(navbarMenu);
+
   return (
     <html lang="en" className="scroll-smooth">
       <body>

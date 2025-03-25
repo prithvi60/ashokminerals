@@ -1,15 +1,16 @@
-import { allProducts } from "@/libs/data";
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowDownRightCircleFill } from "react-icons/bs";
 
-export const FlipProductsCard = ({ data }) => {
+export const FlipProductsCard = ({ data, type }) => {
   return (
-    <section className="block px-6 py-10 space-y-6 sm:space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-64">
+    <section
+      className={`${type === "blog" || type === "markets" ? "" : "px-6 py-10 sm:py-12 sm:px-10 lg:px-64"} block space-y-6 sm:space-y-10 font-RobotoSlab`}
+    >
       <div className="grid w-full h-full grid-cols-1 mt-20 gap-x-10 gap-y-24 sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 font-RobotoSlab place-content-center place-items-center">
         {data.map((product, id) => (
           <Link
-            href={`/products/${product.slug.current}`}
+            href={`${type === "blog" ? "/blog/" : type === "markets" ? "/markets/" : "/products/"}${product.slug.current}`}
             className="relative w-full h-full card flipCard"
             key={id}
           >
@@ -32,9 +33,15 @@ export const FlipProductsCard = ({ data }) => {
                 <h4 className="text-lg font-semibold tracking-wider capitalize sm:text-xl lg:text-2xl">
                   {product.title}
                 </h4>
-                <p className="text-sm font-normal line-clamp-4 sm:line-clamp-5">
-                  {product.summary}
-                </p>
+                {type ? (
+                  <p className="text-sm font-normal line-clamp-2">
+                    {product.blogShortRead}
+                  </p>
+                ) : (
+                  <p className="text-sm font-normal line-clamp-4 sm:line-clamp-5">
+                    {product.summary}
+                  </p>
+                )}
               </div>
               <h4 className="flex items-center gap-3 text-xl font-semibold tracking-wider underline capitalize transition-all duration-300 ease-out text-primary underline-offset-4 hover:no-underline">
                 Read more

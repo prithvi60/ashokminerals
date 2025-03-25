@@ -12,7 +12,7 @@ export default async function Home() {
       {
         cache: "no-cache",
         next: {
-          tags: ["post", "products"],
+          tags: ["post", "markets", "products"],
         },
       }
     );

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { PortableText } from "next-sanity";
+import Link from "next/link";
 
 export const BlogSlug = ({ post }) => {
 
@@ -46,6 +47,18 @@ const customComponents = {
       />
     ),
   },
+  marks: {
+    productLink: ({ value, children }) => {
+      const slug = value?.slug;
+
+      const href = slug ? `/products/${slug}` : "#";
+      return (
+        <Link href={href} className="text-blue-600 hover:underline">
+          {children}
+        </Link>
+      );
+    },
+  }
 };
 
 // const customComponents = {

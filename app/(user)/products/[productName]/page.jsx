@@ -12,7 +12,7 @@ const Home = async ({ params }) => {
     {
       cache: "no-cache",
       next: {
-        tags: ["products"],
+        tags: ["post", "markets", "products"],
       },
     }
   );

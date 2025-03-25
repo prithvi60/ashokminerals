@@ -23,10 +23,16 @@ export const POST_QUERY = groq`
     _type == "image" => {
       "imageUrl": asset->url,
       alt
+    },
+    markDefs[] {
+      ...,
+      _type == "productLink" => {
+        "slug": product->slug.current
+      }
     }
   }
 }
-`
+`;
 
 export const PRODUCTS_QUERY = groq`
 *[_type == "products"]|order(publishedAt asc) {
@@ -64,3 +70,36 @@ export const MARKETS_QUERY = groq`
   _id,
   title,
 }`;
+
+export const MARKETLIST_QUERY = groq`
+*[_type == "markets"]|order(publishedAt desc) {
+  title,
+  slug,
+  publishedAt,
+  body,
+  "imageUrl": image.asset->url,
+  "imageAlt": image.alt,
+  "plainBody": body[].children[].text
+}`;
+
+
+export const MARKET_QUERY = groq`
+*[_type == "markets" && slug.current == $slug][0] {
+  title,
+  "imageUrl": image.asset->url,
+  "imageAlt": image.alt,
+  body[]{
+    ...,
+    _type == "image" => {
+      "imageUrl": asset->url,
+      alt
+    },
+    markDefs[] {
+      ...,
+      _type == "productLink" => {
+        "slug": product->slug.current
+      }
+    }
+  }
+}
+`;
