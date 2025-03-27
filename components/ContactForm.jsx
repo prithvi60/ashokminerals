@@ -81,186 +81,191 @@ export const ContactForm = () => {
       className="relative w-full h-full space-y-10 md:h-auto font-RobotoSlab"
       id="contact"
     >
-      <div className="flex flex-col justify-center h-full gap-6 px-6 py-10 lg:gap-12 md:flex-row bg-secondary sm:py-12 sm:px-10 lg:px-64">
-        {/* contact details */}
-        <div className="flex flex-col items-start w-full h-auto gap-10 mt-6 md:1/2 lg:w-3/5">
-          <div className="block space-y-6">
-            <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
-              Contact us
-            </h3>
-            <p className="text-lg font-normal md:text-xl">
-              Get in touch with us today through email, phone, or by filling out the form, and let us show you how Ashok Minerals can drive your success!
-            </p>
-            <p
-              className="text-lg font-normal underline md:text-xl underline-offset-4 hover:text-warning w-max"
-            // onClick={() => console.log("logged")}
-            >
-              contact@ashokminerals.com
-            </p>
-            <p className="text-lg font-normal md:text-xl hover:text-warning w-max">
-              +91-44-24512581/82/83
-            </p>
-          </div>
-          <div className="block space-y-10">
-            <div className="block w-full space-y-4">
-              <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
-                Customer Support
-              </h4>
+      <div className="h-full px-6 py-10 space-y-10 bg-secondary sm:py-12 sm:px-10 lg:px-64 md:space-y-0">
+        <h3 className="relative block w-full text-2xl font-semibold md:hidden sm:text-3xl lg:text-5xl">
+          Contact us
+        </h3>
+        <div className="flex flex-col-reverse justify-center gap-6 lg:gap-12 md:flex-row">
+          {/* contact details */}
+          <div className="flex flex-col items-start w-full h-auto gap-10 mt-6 md:1/2 lg:w-3/5">
+            <div className="block space-y-6">
+              <h3 className="relative hidden w-full text-2xl font-semibold sm:text-3xl lg:text-5xl md:block">
+                Contact us
+              </h3>
               <p className="text-lg font-normal md:text-xl">
-                Our committed support team is available 24/7 to assist with any
-                questions or concerns.
+                Get in touch with us today through email, phone, or by filling out the form, and let us show you how Ashok Minerals can drive your success!
+              </p>
+              <p
+                className="text-lg font-normal underline md:text-xl underline-offset-4 hover:text-warning w-max"
+              // onClick={() => console.log("logged")}
+              >
+                contact@ashokminerals.com
+              </p>
+              <p className="text-lg font-normal md:text-xl hover:text-warning w-max">
+                +91-44-24512581/82/83
               </p>
             </div>
-            <div className="block w-full space-y-4">
-              <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
-                Sales & other Enquiries
-              </h4>
-              <p className="text-lg font-normal md:text-xl">
-                For any media inquiries or press-related questions, we invite
-                you to reach out to us at{" "}
-                <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
-                  vanessa@ashokminerals.com.
-                </a>{" "}
-                If you have marketing-related inquiries, please connect with us
-                at
-                <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
-                  marketing@ashokminerals.com
-                </a>
-                . <br />We look forward to hearing from you!
-              </p>
+            <div className="block space-y-10">
+              <div className="block w-full space-y-4">
+                <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
+                  Customer Support
+                </h4>
+                <p className="text-lg font-normal md:text-xl">
+                  Our committed support team is available 24/7 to assist with any
+                  questions or concerns.
+                </p>
+              </div>
+              <div className="block w-full space-y-4">
+                <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
+                  Sales & other Enquiries
+                </h4>
+                <p className="text-lg font-normal md:text-xl">
+                  For any media inquiries or press-related questions, we invite
+                  you to reach out to us at{" "}
+                  <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
+                    vanessa@ashokminerals.com.
+                  </a>{" "}
+                  If you have marketing-related inquiries, please connect with us
+                  at
+                  <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
+                    marketing@ashokminerals.com
+                  </a>
+                  . <br />We look forward to hearing from you!
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        {/* Form */}
-        <div className="w-full h-auto px-4 space-y-5 rounded-md shadow-md bg-primary py-7 md:1/2 lg:w-2/5">
-          <form
-            className="w-full h-auto space-y-8" onSubmit={handleSubmit}
-          >
-            <h3 className="mb-12 text-lg font-semibold tracking-wide font-RobotoSlab md:text-xl xl:text-2xl">
-              Let’s Get in touch to Explore business opportunities
-            </h3>
-            <Select
-              aria-label="options"
-              name="detailFor"
-              value={formData.detailFor || ""}
-              onChange={handleChange}
-              isRequired
-              size="lg"
-              placeholder="How Can I Help You ?"
-              radius="full"
-              variant="faded"
-              className="mt-8 max-w-ful"
-              classNames={{
-                label: "capitalize font-Poppins font-normal",
-                trigger: "bg-secondary",
-                value: "capitalize",
-              }}
+          {/* Form */}
+          <div className="w-full h-auto px-4 space-y-5 rounded-md shadow-md bg-primary py-7 md:1/2 lg:w-2/5">
+            <form
+              className="w-full h-auto space-y-8" onSubmit={handleSubmit}
             >
-              {lists.map((list, idx) => (
-                <SelectItem classNames={{ base: "capitalize" }} key={idx}>
-                  {list}
-                </SelectItem>
-              ))}
-            </Select>
-            <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2">
+              <h3 className="mb-12 text-lg font-semibold tracking-wide font-RobotoSlab md:text-xl xl:text-2xl">
+                Let’s Get in touch to Explore business opportunities
+              </h3>
+              <Select
+                aria-label="options"
+                name="detailFor"
+                value={formData.detailFor || ""}
+                onChange={handleChange}
+                isRequired
+                size="lg"
+                placeholder="How Can I Help You ?"
+                radius="full"
+                variant="faded"
+                className="mt-8 max-w-ful"
+                classNames={{
+                  label: "capitalize font-Poppins font-normal",
+                  trigger: "bg-secondary",
+                  value: "capitalize",
+                }}
+              >
+                {lists.map((list, idx) => (
+                  <SelectItem classNames={{ base: "capitalize" }} key={idx}>
+                    {list}
+                  </SelectItem>
+                ))}
+              </Select>
+              <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2">
+                <Input
+                  classNames={{
+                    inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                  }}
+                  name="firstName"
+                  isRequired
+                  size="lg"
+                  type="firstName"
+                  value={formData.firstName || ""}
+                  onChange={handleChange}
+                  radius="full"
+                  variant="faded"
+                  placeholder="First Name"
+                />
+                <Input
+                  classNames={{
+                    inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                  }}
+                  name="lastName"
+                  isRequired
+                  size="lg"
+                  type="lastName"
+                  value={formData.lastName || ""}
+                  onChange={handleChange}
+                  placeholder="Last Name"
+                  radius="full"
+                  variant="faded"
+                />
+                <Input
+                  classNames={{
+                    inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                  }}
+                  name="companyName"
+                  isRequired
+                  size="lg"
+                  type="text"
+                  value={formData.companyName || ""}
+                  onChange={handleChange}
+                  placeholder="Company Information"
+                  radius="full"
+                  variant="faded"
+                  className="md:col-span-2"
+                />
+              </div>
               <Input
                 classNames={{
                   inputWrapper: "bg-secondary font-RobotoSlab font-normal",
                 }}
-                name="firstName"
+                name="userEmail"
                 isRequired
                 size="lg"
-                type="firstName"
-                value={formData.firstName || ""}
-                onChange={handleChange}
+                type="email"
+                placeholder="Email"
                 radius="full"
                 variant="faded"
-                placeholder="First Name"
+                value={formData.userEmail || ""}
+                onChange={handleChange}
               />
               <Input
                 classNames={{
                   inputWrapper: "bg-secondary font-RobotoSlab font-normal",
                 }}
-                name="lastName"
-                isRequired
-                size="lg"
-                type="lastName"
-                value={formData.lastName || ""}
-                onChange={handleChange}
-                placeholder="Last Name"
-                radius="full"
-                variant="faded"
-              />
-              <Input
-                classNames={{
-                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
-                }}
-                name="companyName"
-                isRequired
+                name="phoneNo"
                 size="lg"
                 type="text"
-                value={formData.companyName || ""}
-                onChange={handleChange}
-                placeholder="Company Information"
+                placeholder="Phone No."
                 radius="full"
                 variant="faded"
-                className="md:col-span-2"
+                isRequired
+                value={formData.phoneNo || ""}
+                onChange={handleChange}
               />
-            </div>
-            <Input
-              classNames={{
-                inputWrapper: "bg-secondary font-RobotoSlab font-normal",
-              }}
-              name="userEmail"
-              isRequired
-              size="lg"
-              type="email"
-              placeholder="Email"
-              radius="full"
-              variant="faded"
-              value={formData.userEmail || ""}
-              onChange={handleChange}
-            />
-            <Input
-              classNames={{
-                inputWrapper: "bg-secondary font-RobotoSlab font-normal",
-              }}
-              name="phoneNo"
-              size="lg"
-              type="text"
-              placeholder="Phone No."
-              radius="full"
-              variant="faded"
-              isRequired
-              value={formData.phoneNo || ""}
-              onChange={handleChange}
-            />
-            <Textarea
-              classNames={{
-                inputWrapper: "bg-secondary font-RobotoSlab font-normal",
-              }}
-              name="message"
-              isRequired
-              value={formData.message || ""}
-              onChange={handleChange}
-              placeholder="Comments Please..."
-              className="max-w-full"
-              variant="faded"
-              size="lg"
-            />
-            <div className="w-full h-full text-center">
-              <Button
-                color="warning"
+              <Textarea
+                classNames={{
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                }}
+                name="message"
+                isRequired
+                value={formData.message || ""}
+                onChange={handleChange}
+                placeholder="Comments Please..."
+                className="max-w-full"
+                variant="faded"
                 size="lg"
-                radius="none"
-                className="px-6 font-semibold w-max text-primary md:px-8"
-                role="button"
-                type="submit"
-              >
-                {status ? <Loader /> : "Submit"}
-              </Button>
-            </div>
-          </form>
+              />
+              <div className="w-full h-full text-center">
+                <Button
+                  color="warning"
+                  size="lg"
+                  radius="none"
+                  className="px-6 font-semibold w-max text-primary md:px-8"
+                  role="button"
+                  type="submit"
+                >
+                  {status ? <Loader /> : "Submit"}
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       {/* location map */}

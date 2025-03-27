@@ -20,6 +20,7 @@ import { Accordion, AccordionItem } from "@heroui/accordion";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { navbarMenu } from "@/libs/data";
+import { IoInformationCircle } from "react-icons/io5";
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,6 +73,21 @@ const NavbarComponent = () => {
       }}
     >
       <NavbarContent className="pr-3" justify="center">
+        <NavbarBrand
+          className={`${!percent && path === "/" ? "opacity-0" : "opacity-100"} ${path === "/" ? "flex" : "hidden"}`}
+        >
+          <Link
+            href={"/"}
+            className="relative overflow-hidden cursor-pointer size-16 md:size-20"
+          >
+            <Image
+              alt="ashok minerals logo"
+              fill
+              style={{ objectFit: "contain", objectPosition: "center" }}
+              src={"/ashok-minerals-logo3.svg"}
+            />
+          </Link>
+        </NavbarBrand>
         {path !== "/" && (
           <NavbarBrand>
             <Link
@@ -82,7 +98,7 @@ const NavbarComponent = () => {
                 alt="ashok minerals logo"
                 fill
                 style={{ objectFit: "contain", objectPosition: "center" }}
-                src={"/ashok-minerals-logo2.svg"}
+                src={"/ashok-minerals-logo3.svg"}
               />
             </Link>
           </NavbarBrand>
@@ -98,7 +114,7 @@ const NavbarComponent = () => {
                 }`}
             >
               <Link href={item.ref}>{item.menu}</Link>
-              {item.ref === "" && (
+              {item.menu !== "blog" && (
                 <TiArrowSortedDown
                   className={` ${item.menu === "blog" ? "hidden" : "block"
                     } text-base group-hover:rotate-180  ${!percent && path === "/" ? "text-primary/80" : "text-black"
@@ -108,7 +124,7 @@ const NavbarComponent = () => {
             </div>
             {item.subMenu && (
               <div
-                className={`absolute hidden top-[92px] right-5 p-4 shadow-md rounded-xl font-RobotoSlab bg-primary/90 group-hover:block after:content-[''] after:w-5 after:h-5 after:rotate-45 after:bg-primary/80 after:absolute after:right-6 after:-top-2 `}
+                className={`absolute hidden top-[85px] left-0 p-4 shadow-md rounded-xl font-RobotoSlab bg-primary/90 group-hover:block`}
               >
                 {item?.subMenu?.map((l, index) => (
                   <Link
@@ -118,12 +134,20 @@ const NavbarComponent = () => {
                       : "text-black"
                       }`}
                     key={index}
-                    href={`/our-company/${l.menuRef}`}
+                    href={`${l.menuRef}`}
                     onClick={() => setIsActiveState(l.menuTitle)}
                   >
-                    <h4 className="mb-2.5 ">{l.menuTitle}</h4>
+                    <h4 className="mb-2.5">{l.menuTitle}</h4>
                   </Link>
                 ))}
+                {item.menu !== "our company" && (<Link
+                  href={`${item.menu === "products" ? "/products" : "/markets"}`}
+                  className="absolute flex items-center gap-1 text-warning bottom-2 right-2.5"
+                >
+                  <IoInformationCircle className="text-warning" />
+                  <h5>{`more...`}</h5>
+                </Link>)}
+
               </div>
             )}
           </NavbarItem>
@@ -138,11 +162,11 @@ const NavbarComponent = () => {
             href="#contact"
             radius="none"
             variant="solid"
-            className="mt-4 text-base font-semibold text-white uppercase font-RobotoSlab ms-3 lg:text-lg"
+            className="mt-4 text-base font-semibold text-white uppercase duration-500 font-RobotoSlab ms-3 lg:text-lg hover:animate-pulse group"
           >
             Contact Us
-            <span>
-              <IoCall className="text-base text-primary" />
+            <span className="inline-block group-hover:animate-shake">
+              <IoCall className="text-base transition-all duration-500 text-primary group-hover:scale-125" />
             </span>
           </Button>
         </NavbarItem>

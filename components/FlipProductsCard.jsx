@@ -24,8 +24,8 @@ export const FlipProductsCard = ({ data, type }) => {
                   quality={100}
                 />
               </div>
-              <h4 className="absolute text-base font-semibold tracking-wider capitalize transition-all ease-linear -translate-x-1/2 bottom-8 md:bottom-5 sm:text-lg lg:text-xl left-1/2 group-hover:text-warning duration-400">
-                {product.title}
+              <h4 className="absolute text-base font-semibold tracking-wider !capitalize transition-all ease-linear -translate-x-1/2 bottom-8 md:bottom-5 sm:text-lg lg:text-xl left-1/2 group-hover:text-warning duration-400">
+                {product.title.toLowerCase()}
               </h4>
             </div>
             <div className="absolute top-0 left-0 flex flex-col items-start justify-between w-full h-48 gap-2 px-6 py-4 rounded-md shadow-xl sm:max-w-80 2xl:max-w-96 sm:h-56 group bg-warning text-primary backSideCard">

@@ -70,7 +70,7 @@ const Hero = () => {
               radius="none"
               variant="solid"
               size="lg"
-              className="mb-16 text-base font-semibold text-white uppercase font-RobotoSlab md:text-xl"
+              className="mb-16 text-base font-semibold text-white uppercase font-RobotoSlab md:text-xl hover:animate-pulse"
             >
               Explore Our Products
             </Button>

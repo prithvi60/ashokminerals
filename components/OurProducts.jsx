@@ -86,11 +86,11 @@ const OurProducts = ({ products }) => {
           <Link
             href={"/products"}
             title="products"
-            className="flex items-center gap-2 text-lg transition-colors ease-linear w-max lg:text-xl hover:underline underline-offset-4 hover:text-warning duration-400"
+            className="flex items-center gap-2 text-lg transition-colors ease-linear w-max lg:text-xl hover:underline group underline-offset-4 hover:text-warning duration-400"
           >
             <h4>View more products</h4>
-            <span>
-              <BsArrowDownRightCircle className="text-base -rotate-90 sm:text-lg lg:text-xl" />
+            <span className="inline-block group-hover:animate-shake">
+              <BsArrowDownRightCircle className="text-base transition-all duration-500 -rotate-90 sm:text-lg lg:text-xl group-hover:scale-110" />
             </span>
           </Link>
         </div>
@@ -107,7 +107,7 @@ function NextArrow(props) {
   return (
     <div
       className={
-        "p-1.5 md:p-2 xl:p-3 rounded-full border-2 border-solid bg-warning absolute bottom-[350px] lg:bottom-28 cursor-pointer hover:opacity-80 right-5 sm:right-12 lg:-right-16 group"
+        "p-1.5 md:p-2 xl:p-3 rounded-full border-2 border-solid bg-warning absolute bottom-[350px] lg:bottom-28 cursor-pointer hover:opacity-80 right-5 sm:right-12 lg:-right-16 group hover:animate-pulse"
       }
       onClick={onClick}
     >
@@ -125,7 +125,7 @@ function PrevArrow(props) {
       }
       onClick={onClick}
     >
-      <FaArrowLeft className="text-base text-white md:text-lg xl:text-xl group-hover:text-secondary" />
+      <FaArrowLeft className="text-base text-white md:text-lg xl:text-xl group-hover:text-secondary hover:animate-pulse" />
     </div>
   );
 }

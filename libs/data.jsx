@@ -75,10 +75,32 @@ export const navbarMenu = [
   {
     menu: "products",
     ref: "/products",
+    subMenu: [
+      { menuTitle: "Carbon", menuRef: "/products/carbon" },
+      {
+        menuTitle: "Silica and Quartz",
+        menuRef: "/products/silica_and_quartz",
+      },
+      {
+        menuTitle: "Graphite",
+        menuRef: "/products/graphite",
+      },
+    ],
   },
   {
     menu: "markets",
     ref: "/markets",
+    subMenu: [
+      { menuTitle: "Ceramics", menuRef: "/markets/ceramics" },
+      {
+        menuTitle: "Construction",
+        menuRef: "/markets/construction",
+      },
+      {
+        menuTitle: "Paper",
+        menuRef: "/markets/paper",
+      },
+    ],
   },
   {
     menu: "blog",
@@ -88,22 +110,22 @@ export const navbarMenu = [
     menu: "our company",
     ref: "",
     subMenu: [
-      { menuTitle: "Our History ", menuRef: "/our-history" },
+      { menuTitle: "Our History ", menuRef: "/our-company/our-history" },
       {
         menuTitle: "Our Associations & Certifications",
-        menuRef: "/our-associations&certifications",
+        menuRef: "/our-company/our-associations&certifications",
       },
       {
         menuTitle: "Our International Ties",
-        menuRef: "/our-international-ties",
+        menuRef: "/our-company/our-international-ties",
       },
       {
         menuTitle: "Leadership & Team",
-        menuRef: "/leadership&team",
+        menuRef: "/our-company/leadership&team",
       },
       {
         menuTitle: "Our Manufacturing Setup",
-        menuRef: "/our-manufacturing-setup",
+        menuRef: "/our-company/our-manufacturing-setup",
       },
     ],
   },

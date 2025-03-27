@@ -22,10 +22,12 @@ const WelcomeBoard = () => {
           variant="solid"
           size="lg"
           radius="none"
-          className="text-base font-semibold text-white capitalize font-RobotoSlab"
+          className="text-base font-semibold text-white capitalize hover:animate-pulse font-RobotoSlab group"
         >
           Know More
-          <BsArrowDownRightCircle className="text-base -rotate-90 sm:text-lg lg:text-xl" />
+          <span className="inline-block group-hover:animate-shake">
+            <BsArrowDownRightCircle className="text-base transition-all duration-500 -rotate-90 sm:text-lg lg:text-xl group-hover:scale-110" />
+          </span>
         </Button>
       </div>
     </section>

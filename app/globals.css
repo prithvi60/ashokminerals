@@ -14,6 +14,23 @@
   .post_content h5 {
     @apply py-3 text-lg font-semibold md:text-xl;
   }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+  }
+
+  .animate-shake {
+    animation: shake 0.2s infinite;
+  }
 }
 
 /* .custom-slider {
