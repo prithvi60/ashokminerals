@@ -8,13 +8,13 @@ import Link from "next/link";
 export const BlogSlug = ({ post }) => {
 
   return (
-    <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-64">
+    <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-16 xl:px-64">
       <div className="relative w-full h-full p-5 space-y-5 rounded-md">
         <h3 className="text-xl font-bold tracking-wide capitalize md:text-4xl xl:text-5xl">
           {post.title}
         </h3>
-        <div className="relative flex flex-col items-start w-full h-full gap-5 md:flex-row place-items-start">
-          <div className="w-full h-full md:w-1/2 md:sticky md:top-28">
+        <div className="relative w-full h-full space-y-10 md:space-y-20">
+          <div className="w-full h-full">
             <div className="relative w-full h-[320px]">
               <Image
                 alt={post.imageAlt}
@@ -27,7 +27,7 @@ export const BlogSlug = ({ post }) => {
               />
             </div>
           </div>
-          <div className="max-w-7xl w-full md:w-1/2 prose prose-blue mx-auto prose-h1:text-3.5xl prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:leading-relaxed prose-p:text-lg lg:prose-p:text-xl prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600">
+          <div className="max-w-7xl w-full prose prose-blue mx-auto prose-h1:text-3.5xl prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:leading-relaxed prose-p:text-base lg:prose-p:text-lg prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600">
             <PortableText value={post.body} components={customComponents} />
           </div>
         </div>

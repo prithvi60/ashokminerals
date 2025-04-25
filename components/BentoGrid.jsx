@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BentoGrid = () => {
   return (
-    <section className="flex flex-col items-center w-full h-full grid-cols-1 gap-2.5 px-6 py-10 md:grid font-RobotoSlab md:grid-cols-3 sm:px-10 lg:px-64 sm:py-12 lg:gap-6">
+    <section className="flex flex-col items-center w-full h-full grid-cols-1 gap-2.5 px-6 py-10 md:grid font-RobotoSlab md:grid-cols-3 sm:px-10 lg:px-16 xl:px-64 sm:py-12 lg:gap-6">
       <div className="relative w-full row-span-2 lg:row-span-3 h-56 md:min-h-[550px] overflow-hidden order-1 md:order-none">
         <Image
           alt="image"

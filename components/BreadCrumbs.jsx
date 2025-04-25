@@ -26,6 +26,7 @@ export const BreadCrumbs = () => {
         list: "shadow-small",
       }}
       itemClasses={{
+        base: "px-2 py-1",
         item: "text-primary/60 data-[current=true]:text-primary text-base sm:text-xl capitalize",
         separator: "text-primary/40",
       }}

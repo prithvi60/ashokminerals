@@ -6,7 +6,7 @@ import { footerMenuLinks } from "@/libs/data";
 
 const Footer = () => {
   return (
-    <footer className="w-full h-full px-6 py-10 mt-10 space-y-10 sm:px-12 sm:py-12 lg:px-64 font-RobotoSlab bg-black/90">
+    <footer className="w-full h-full px-6 py-10 mt-10 space-y-10 sm:px-12 sm:py-12 lg:px-16 xl:px-64 font-RobotoSlab bg-black/90">
       <div className="flex flex-col items-center justify-between gap-8 md:items-start md:flex-row">
         <div className="block w-full space-y-6 md:w-1/5">
           <div className="flex md:flex-col lg:flex-row gap-5 md:gap-2.5 lg:gap-5 justify-center md:justify-start items-center">

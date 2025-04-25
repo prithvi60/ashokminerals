@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const ThankYouComponent = () => {
   return (
-    <section className="flex flex-col items-center justify-center h-screen p-10 mb-10 space-y-6 sm:px-20 xl:px-64 sm:py-16 xl:py-28 font-EbGaramond bg-primary">
+    <section className="flex flex-col items-center justify-center h-screen p-10 mb-10 space-y-6 sm:px-20 lg:px-16 xl:px-64 sm:py-16 xl:py-28 font-EbGaramond bg-primary">
       <h3 className="text-3xl font-semibold text-center md:text-6xl">
         <div className="relative mx-auto h-14 w-14 md:h-28 md:w-28">
           <Image

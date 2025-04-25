@@ -73,40 +73,6 @@ import { PRODUCTS_QUERY } from "@/sanity/Queries";
 
 export const navbarMenu = [
   {
-    menu: "products",
-    ref: "/products",
-    subMenu: [
-      { menuTitle: "Carbon", menuRef: "/products/carbon" },
-      {
-        menuTitle: "Silica and Quartz",
-        menuRef: "/products/silica_and_quartz",
-      },
-      {
-        menuTitle: "Graphite",
-        menuRef: "/products/graphite",
-      },
-    ],
-  },
-  {
-    menu: "markets",
-    ref: "/markets",
-    subMenu: [
-      { menuTitle: "Ceramics", menuRef: "/markets/ceramics" },
-      {
-        menuTitle: "Construction",
-        menuRef: "/markets/construction",
-      },
-      {
-        menuTitle: "Paper",
-        menuRef: "/markets/paper",
-      },
-    ],
-  },
-  {
-    menu: "blog",
-    ref: "/blog",
-  },
-  {
     menu: "our company",
     ref: "",
     subMenu: [
@@ -128,6 +94,48 @@ export const navbarMenu = [
         menuRef: "/our-company/our-manufacturing-setup",
       },
     ],
+  },
+  {
+    menu: "products",
+    ref: "/products",
+    subMenu: [
+      { menuTitle: "Carbon", menuRef: "/products/carbon" },
+      {
+        menuTitle: "Silica and Quartz",
+        menuRef: "/products/silica_and_quartz",
+      },
+      {
+        menuTitle: "Graphite",
+        menuRef: "/products/graphite",
+      },
+      {
+        menuTitle: "more products",
+        menuRef: "/products",
+      },
+    ],
+  },
+  {
+    menu: "markets",
+    ref: "/markets",
+    subMenu: [
+      { menuTitle: "Ceramics", menuRef: "/markets/ceramics" },
+      {
+        menuTitle: "Construction",
+        menuRef: "/markets/construction",
+      },
+      {
+        menuTitle: "Paper",
+        menuRef: "/markets/paper",
+      },
+      {
+        menuTitle: "more markets",
+        menuRef: "/markets",
+      },
+    ],
+  },
+  {
+    menu: "blog",
+    ref: "/blog",
   },
 ];
 

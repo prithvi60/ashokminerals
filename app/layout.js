@@ -19,6 +19,9 @@ export const metadata = {
   title: "Ashok Minerals Enterprise",
   description: "Processor of Industrial Minerals since 1956",
   metadataBase: new URL("https://ashokminerals.com/"),
+  icons: {
+    icon: "/Ashok-Minerals-Final-Logo.jpg",
+  },
   openGraph: {
     title: "Ashok Minerals Enterprise",
     description: "Processor of Industrial Minerals since 1956",

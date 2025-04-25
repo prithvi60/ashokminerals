@@ -129,7 +129,7 @@ const NavbarComponent = () => {
                 {item?.subMenu?.map((l, index) => (
                   <Link
                     title={l.menuTitle}
-                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning active:text-warning transition-colors duration-500 ease-linear block font-normal z-10 capitalize ${l.menuTitle === isActiveState
+                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning active:text-warning transition-colors duration-500 ease-linear block font-normal z-10 capitalize ${(l.menuTitle === "more products" || l.menuTitle === "more markets") && "text-warning"} ${l.menuTitle === isActiveState
                       ? "text-warning"
                       : "text-black"
                       }`}
@@ -140,14 +140,13 @@ const NavbarComponent = () => {
                     <h4 className="mb-2.5">{l.menuTitle}</h4>
                   </Link>
                 ))}
-                {item.menu !== "our company" && (<Link
+                {/* {item.menu !== "our company" && (<Link
                   href={`${item.menu === "products" ? "/products" : "/markets"}`}
                   className="absolute flex items-center gap-1 text-warning bottom-2 right-2.5"
                 >
                   <IoInformationCircle className="text-warning" />
                   <h5>{`more...`}</h5>
-                </Link>)}
-
+                </Link>)} */}
               </div>
             )}
           </NavbarItem>

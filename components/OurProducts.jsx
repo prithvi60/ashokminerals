@@ -38,7 +38,7 @@ const OurProducts = ({ products }) => {
 
   return (
     <section className="w-full h-full space-y-5 font-RobotoSlab">
-      <h3 className="relative w-full px-6 pt-10 text-2xl font-semibold m:px-10 lg:px-64 sm:pt-12 sm:text-3xl lg:text-5xl">
+      <h3 className="relative w-full px-6 pt-10 text-2xl font-semibold m:px-10 lg:px-16 xl:px-64 sm:pt-12 sm:text-3xl lg:text-5xl">
         Our Products
       </h3>
       <div className="w-full px-6 pb-10 md:px-10 lg:px-52 sm:pb-12 font-RobotoSlab slider-container">

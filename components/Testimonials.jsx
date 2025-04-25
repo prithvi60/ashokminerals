@@ -51,7 +51,7 @@ const Testimonials = () => {
           fill
           className="object-cover object-center brightness-[0.1]"
         />
-        <div className="absolute w-full px-6 py-10 -translate-x-1/2 -translate-y-1/2 sm:px-10 lg:px-64 top-1/2 left-1/2 sm:py-12 text-primary slider-container">
+        <div className="absolute w-full px-6 py-10 -translate-x-1/2 -translate-y-1/2 sm:px-10 lg:px-16 xl:px-64 top-1/2 left-1/2 sm:py-12 text-primary slider-container">
           <Slider {...settings} className="mx-auto w-full md:!w-4/5">
             {testimonial.map((item, id) => (
               <div className="w-full mx-auto space-y-5 " key={id}>
@@ -68,7 +68,7 @@ const Testimonials = () => {
       </div>
       {/* logo marquee */}
       <div className="w-full h-[20vh]] bg-secondary">
-        <div className="w-full h-full px-6 py-6 sm:px-10 lg:px-64">
+        <div className="w-full h-full px-6 py-6 sm:px-10 lg:px-16 xl:px-64">
           <Marquee
             autoFill
             direction="left"

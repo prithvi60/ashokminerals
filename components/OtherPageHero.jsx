@@ -15,7 +15,7 @@ const OtherPageHero = ({ title, imgSrc, para, para2 }) => {
           />
 
           {/* Content Block */}
-          <div className="absolute top-0 left-0 z-20 px-6 space-y-6 py-7 sm:space-y-2 sm:px-10 lg:px-64">
+          <div className="absolute top-0 left-0 z-20 px-6 space-y-6 py-7 sm:space-y-2 sm:px-10 lg:px-16 xl:px-64">
             <div>
               <BreadCrumbs />
             </div>
@@ -37,7 +37,7 @@ const OtherPageHero = ({ title, imgSrc, para, para2 }) => {
           </div>
         </div>
       </div>
-      <h3 className="px-6 text-2xl font-bold tracking-wider capitalize sm:text-3xl lg:text-4xl sm:px-10 lg:px-64">
+      <h3 className="w-full text-3xl md:text-[44px] px-6 font-bold tracking-wider capitalize sm:px-10 lg:px-16 xl:px-64">
         {title}
       </h3>
     </section>
