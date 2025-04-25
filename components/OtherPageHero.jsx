@@ -26,14 +26,6 @@ const OtherPageHero = ({ title, imgSrc, para, para2 }) => {
                 src={"/ashok-minerals-logo.svg"}
                 className="opacity-80 brightness-[1.20]"
               /></div>
-            {/* <div className="block w-full mt-16 space-y-8 font-RobotoSlab">
-              <p className={`text-base font-normal sm:text-lg text-primary ${para2 !== "" ? "hidden md:block" : "block"}`}>
-                {para}
-              </p>
-              <p className={`text-base font-normal sm:text-lg text-primary ${para2 !== "" && "block md:hidden"}`}>
-                {para2}
-              </p>
-            </div> */}
           </div>
         </div>
       </div>

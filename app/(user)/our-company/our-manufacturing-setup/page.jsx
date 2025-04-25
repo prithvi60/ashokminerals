@@ -12,7 +12,7 @@ const Home = () => {
             <AccordionComponent data={manufacturing.lists} list={list} key={idx} idx={idx} />
           ))}
         </div>
-        <p className="text-base font-normal sm:text-lg">
+        <p className="para">
           {manufacturing.para}
         </p>
       </div>

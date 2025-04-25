@@ -17,7 +17,7 @@ export const ThankYouComponent = () => {
         </div>
         Thank You !
       </h3>
-      <p className="w-full text-lg text-center md:text-2xl font-RobotoSlab">
+      <p className="w-full text-lg text-center md:text-2xl font-RobotoSlab tracking-widest !leading-snug">
         We&apos;ve received your submission.
       </p>
       <Link

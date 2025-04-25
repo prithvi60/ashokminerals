@@ -10,7 +10,7 @@ const WelcomeBoard = () => {
         Excellence in Industrial and Specialty Minerals
       </h3>
       <div className="block w-full space-y-7">
-        <p className="w-full text-base font-normal opacity-75 sm:text-xl lg:text-2xl">
+        <p className="w-full text-base font-normal opacity-75 sm:text-xl tracking-widest !leading-snug">
           Ashok Minerals stands as a leading producer of coarse, fine &
           ultra-fine industrial and specialty minerals, offering a diverse and
           comprehensive range of products.

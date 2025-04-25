@@ -15,6 +15,10 @@
     @apply py-3 text-lg font-semibold md:text-xl;
   }
 
+  .para {
+    @apply text-base md:text-lg font-normal tracking-widest !leading-snug;
+  }
+
   @keyframes shake {
     0%,
     100% {

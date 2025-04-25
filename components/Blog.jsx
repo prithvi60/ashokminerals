@@ -51,7 +51,7 @@ const BlogCard = ({ post }) => {
         {/* <small className="tracking-wide text-default-500">
                 <Date dateString={post.modified} />
               </small> */}
-        <p className="text-lg font-bold uppercase">{post.blogShortRead}</p>
+        <p className="para uppercase">{post.blogShortRead}</p>
         {/* <div
                 className="text-base font-normal line-clamp-3"
                 dangerouslySetInnerHTML={{

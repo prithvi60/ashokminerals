@@ -20,7 +20,7 @@ export const ProductSpecification = ({ product }) => {
             />
           </div>
         </div>
-        <div className="max-w-7xl prose font-RobotoSlab w-full prose-blue mx-auto prose-h1:text-3.5xl text-black prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:leading-relaxed prose-p:text-base lg:prose-p:text-lg prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600">
+        <div className="max-w-7xl prose font-RobotoSlab w-full prose-blue mx-auto prose-h1:text-3.5xl text-black prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:para prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600 prose-li:para">
           <PortableText value={product.blockContent} components={customComponents} />
         </div>
       </div>

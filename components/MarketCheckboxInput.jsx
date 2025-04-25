@@ -62,7 +62,7 @@ const MarketCheckboxInput = (props) => {
         return (
             <Box padding={4}>
                 <Card>
-                    <div className="p-4">
+                    <div className="p-4 para">
                         <p>Loading markets...</p>
                     </div>
                 </Card>
@@ -92,7 +92,7 @@ const MarketCheckboxInput = (props) => {
             </Stack>
             {markets.length === 0 && (
                 <Box marginTop={4}>
-                    <p>No markets available. Please add markets in the Markets section.</p>
+                    <p className='para'>No markets available. Please add markets in the Markets section.</p>
                 </Box>
             )}
         </Box>

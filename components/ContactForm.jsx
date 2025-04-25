@@ -81,7 +81,7 @@ export const ContactForm = () => {
       className="relative w-full h-full space-y-10 md:h-auto font-RobotoSlab"
       id="contact"
     >
-      <div className="h-full px-6 py-10 space-y-10 bg-secondary sm:py-12 sm:px-10 lg:px-16 xl:px-64 md:space-y-0">
+      <div className="h-full px-6 py-10 space-y-10 bg-secondary sm:py-12 sm:px-10 lg:px-16 xl:px-64 md:space-y-0 relative">
         <h3 className="relative block w-full text-2xl font-semibold md:hidden sm:text-3xl lg:text-5xl">
           Contact us
         </h3>
@@ -92,16 +92,16 @@ export const ContactForm = () => {
               <h3 className="relative hidden w-full text-2xl font-semibold sm:text-3xl lg:text-5xl md:block">
                 Contact us
               </h3>
-              <p className="text-lg font-normal md:text-xl">
+              <p className="para">
                 Get in touch with us today through email, phone, or by filling out the form, and let us show you how Ashok Mineral enterprises can give you quality industrial minerals.
               </p>
               <p
-                className="text-lg font-normal underline md:text-xl underline-offset-4 hover:text-warning w-max"
+                className="underline underline-offset-4 para hover:text-warning w-max"
               // onClick={() => console.log("logged")}
               >
                 contact@ashokminerals.com
               </p>
-              <p className="text-lg font-normal md:text-xl hover:text-warning w-max">
+              <p className="para hover:text-warning w-max">
                 +91-44-24512581/82/83
               </p>
             </div>
@@ -110,11 +110,11 @@ export const ContactForm = () => {
                 <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
                   Customer Support
                 </h4>
-                <p className="text-lg font-normal md:text-xl">
+                <p className="para">
                   Our committed support team is available 24/7 to assist with any
                   questions or concerns.
                 </p>
-                <p className="text-lg font-normal md:text-xl">
+                <p className="para">
                   Available on whatsapp or calls - <span className="hover:text-warning">+91 98408 99343</span>
                 </p>
               </div>
@@ -122,7 +122,7 @@ export const ContactForm = () => {
                 <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
                   Sales & other Enquiries
                 </h4>
-                <p className="text-lg font-normal md:text-xl">
+                <p className="para">
                   For any media inquiries or press-related questions, we invite
                   you to reach out to us at{" "}
                   <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
@@ -139,12 +139,12 @@ export const ContactForm = () => {
             </div>
           </div>
           {/* Form */}
-          <div className="w-full h-auto px-4 space-y-5 rounded-md shadow-md bg-primary py-7 md:1/2 lg:w-2/5">
+          <div className="w-full h-full px-4 rounded-md shadow-md bg-primary py-7 md:1/2 lg:w-2/5 md:sticky md:top-24">
             <form
-              className="w-full h-auto space-y-8" onSubmit={handleSubmit}
+              className="w-full h-full space-y-3" onSubmit={handleSubmit}
             >
-              <h3 className="mb-12 text-lg font-semibold tracking-wide font-RobotoSlab md:text-xl xl:text-2xl">
-                Let’s Get in touch to Explore business opportunities
+              <h3 className="mb-8 text-lg font-semibold !leading-tight font-RobotoSlab md:text-xl tracking-widest">
+                Let&apos;s Get in touch to Explore business opportunities
               </h3>
               <Select
                 aria-label="options"
@@ -158,21 +158,22 @@ export const ContactForm = () => {
                 variant="faded"
                 className="mt-8 max-w-ful"
                 classNames={{
-                  label: "capitalize font-Poppins font-normal",
-                  trigger: "bg-secondary",
+                  base: "tracking-widest placeholder:tracking-widest",
+                  label: "capitalize font-Poppins font-normal tracking-widest",
+                  trigger: "bg-secondary h-10 min-h-10",
                   value: "capitalize",
                 }}
               >
                 {lists.map((list, idx) => (
-                  <SelectItem classNames={{ base: "capitalize" }} key={idx}>
+                  <SelectItem classNames={{ base: "capitalize tracking-widest" }} key={idx}>
                     {list}
                   </SelectItem>
                 ))}
               </Select>
-              <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-2">
+              <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
                 <Input
                   classNames={{
-                    inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                    inputWrapper: "bg-secondary font-RobotoSlab font-normal tracking-widest placeholder:tracking-widest h-10 min-h-10",
                   }}
                   name="firstName"
                   isRequired
@@ -186,7 +187,7 @@ export const ContactForm = () => {
                 />
                 <Input
                   classNames={{
-                    inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                    inputWrapper: "bg-secondary font-RobotoSlab font-normal tracking-widest placeholder:tracking-widest h-10 min-h-10",
                   }}
                   name="lastName"
                   isRequired
@@ -200,7 +201,7 @@ export const ContactForm = () => {
                 />
                 <Input
                   classNames={{
-                    inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                    inputWrapper: "bg-secondary font-RobotoSlab font-normal tracking-widest placeholder:tracking-widest h-10 min-h-10",
                   }}
                   name="companyName"
                   isRequired
@@ -216,7 +217,7 @@ export const ContactForm = () => {
               </div>
               <Input
                 classNames={{
-                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal tracking-widest placeholder:tracking-widest h-10 min-h-10",
                 }}
                 name="userEmail"
                 isRequired
@@ -230,7 +231,7 @@ export const ContactForm = () => {
               />
               <Input
                 classNames={{
-                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal tracking-widest placeholder:tracking-widest h-10 min-h-10",
                 }}
                 name="phoneNo"
                 size="lg"
@@ -244,8 +245,9 @@ export const ContactForm = () => {
               />
               <Textarea
                 classNames={{
-                  inputWrapper: "bg-secondary font-RobotoSlab font-normal",
+                  inputWrapper: "bg-secondary font-RobotoSlab font-normal tracking-widest placeholder:tracking-widest h-10 min-h-10",
                 }}
+                rows={2}
                 name="message"
                 isRequired
                 value={formData.message || ""}
@@ -288,14 +290,14 @@ export const ContactForm = () => {
           <h3 className="text-xl font-medium tracking-wide capitalize font-RobotoSlab md:text-xl">
             our Office location Details
           </h3>
-          <p className="text-2xl font-semibold md:text-2xl xl:text-3xl">
+          <p className="text-2xl tracking-widest !leading-snug font-semibold md:text-2xl xl:text-3xl">
             Connecting Near and Far
           </p>
-          <div className="text-lg font-normal font-RobotoSlab">
+          <div className="text-lg font-normal font-RobotoSlab tracking-widest">
             Ashok Mineral Enterprises
             <br />
             <br />
-            <span className="font-semibold text-warning">
+            <span className="font-semibold text-warning tracking-widest">
               {" "}
               Primary Manufacturing Unit & Warehouse :
             </span>
@@ -303,8 +305,8 @@ export const ContactForm = () => {
             <br /> Gummidipoondi - 601201.
             <br />
           </div>
-          <div className="text-lg font-normal font-RobotoSlab">
-            <span className="font-semibold text-warning">
+          <div className="text-lg font-normal font-RobotoSlab tracking-widest">
+            <span className="font-semibold text-warning tracking-widest">
               {" "}
               Office:
             </span>

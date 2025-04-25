@@ -68,7 +68,7 @@ const OurProducts = ({ products }) => {
                   <h4 className="text-lg font-semibold tracking-wider capitalize sm:text-xl lg:text-2xl">
                     {product.title}
                   </h4>
-                  <p className="text-sm font-normal line-clamp-3">
+                  <p className="text-sm font-normal tracking-widest !leading-snug line-clamp-3">
                     {product.summary}
                   </p>
                 </div>

@@ -109,7 +109,7 @@ const NavbarComponent = () => {
         {navbarMenu?.map((item, id) => (
           <NavbarItem key={id} className="relative group">
             <div
-              className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear ${!percent && path === "/" ? "text-primary" : "text-black"
+              className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear tracking-widest ${!percent && path === "/" ? "text-primary" : "text-black"
                 } lg:text-lg hover:underline hover:underline-offset-4 font-bold font-RobotoSlab  ${item.ref !== "" && "cursor-pointer"
                 }`}
             >
@@ -129,7 +129,7 @@ const NavbarComponent = () => {
                 {item?.subMenu?.map((l, index) => (
                   <Link
                     title={l.menuTitle}
-                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning active:text-warning transition-colors duration-500 ease-linear block font-normal z-10 capitalize ${(l.menuTitle === "more products" || l.menuTitle === "more markets") && "text-warning"} ${l.menuTitle === isActiveState
+                    className={`text-sm cursor-pointer lg:text-lg hover:text-warning active:text-warning tracking-widest transition-colors duration-500 ease-linear block font-normal z-10 capitalize ${(l.menuTitle === "more products" || l.menuTitle === "more markets") && "text-warning"} ${l.menuTitle === isActiveState
                       ? "text-warning"
                       : "text-black"
                       }`}
@@ -161,7 +161,7 @@ const NavbarComponent = () => {
             href="#contact"
             radius="none"
             variant="solid"
-            className="mt-4 text-base font-semibold text-white uppercase duration-500 font-RobotoSlab ms-3 lg:text-lg hover:animate-pulse group"
+            className="mt-4 text-base font-semibold text-white uppercase duration-500 font-RobotoSlab ms-3 lg:text-lg hover:animate-pulse group tracking-widest"
           >
             Contact Us
             <span className="inline-block group-hover:animate-shake">
@@ -211,10 +211,10 @@ const NavbarComponent = () => {
         </div>
         <div className="my-10 space-y-4">
           <div className="flex flex-col items-end justify-center gap-4">
-            {navbarMenu?.slice(0, 3).map((item, id) => (
+            {navbarMenu?.slice(0, navbarMenu.length).map((item, id) => (
               <Link
                 href={item.ref}
-                className="text-lg font-medium capitalize me-12 font-RobotoSlab"
+                className="text-lg font-medium tracking-widest capitalize me-12 font-RobotoSlab"
                 key={id}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -222,7 +222,7 @@ const NavbarComponent = () => {
               </Link>
             ))}
           </div>
-          {navbarMenu?.slice(3, 4).map((item, index) => (
+          {/* {navbarMenu?.slice(3, 4).map((item, index) => (
             <NavbarMenuItem key={index}>
               <Accordion
                 variant="light"
@@ -250,7 +250,7 @@ const NavbarComponent = () => {
                     <Link
                       onClick={() => setIsMenuOpen(false)}
                       title={l.menuTitle}
-                      className={`text-lg font-medium capitalize font-RobotoSlab text-end`}
+                      className={`text-lg font-medium tracking-widest capitalize font-RobotoSlab text-end`}
                       key={index}
                       href={`/our-company/${l.menuRef}`}
                     >
@@ -260,7 +260,7 @@ const NavbarComponent = () => {
                 </AccordionItem>
               </Accordion>
             </NavbarMenuItem>
-          ))}
+          ))} */}
         </div>
         <NavbarMenuItem className="w-full mb-8 text-end">
           <Button
@@ -269,7 +269,7 @@ const NavbarComponent = () => {
             href="#contact"
             variant="solid"
             radius="none"
-            className="mx-auto text-base font-semibold text-white uppercase font-RobotoSlab"
+            className="mx-auto text-base font-semibold tracking-widest text-white uppercase font-RobotoSlab"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us

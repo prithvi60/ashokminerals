@@ -34,11 +34,11 @@ export const FlipProductsCard = ({ data, type }) => {
                   {product.title}
                 </h4>
                 {type ? (
-                  <p className="text-sm font-normal line-clamp-2">
+                  <p className="text-sm font-normal line-clamp-2 tracking-widest !leading-snug">
                     {product.blogShortRead}
                   </p>
                 ) : (
-                  <p className="text-sm font-normal line-clamp-4 sm:line-clamp-5">
+                  <p className="text-sm font-normal line-clamp-4 sm:line-clamp-5 tracking-widest !leading-snug">
                     {product.summary}
                   </p>
                 )}

@@ -19,11 +19,11 @@ const BentoGrid = () => {
           className="object-cover object-center transition-all duration-500 ease-in-out rounded-md hover:scale-110"
         />
       </div>
-      <h3 className="flex items-center justify-center order-4 w-full h-full p-4 text-lg font-light tracking-wide rounded-md lg:col-span-1 md:p-6 sm:text-xl lg:text-2xl text-primary md:order-none bg-[linear-gradient(180deg,_#575757,_#FFFFFF_120%)]">
+      <h3 className="tracking-widest !leading-snug flex items-center justify-center order-4 w-full h-full p-4 text-lg font-light rounded-md lg:col-span-1 md:p-6 sm:text-xl lg:text-2xl text-primary md:order-none bg-[linear-gradient(180deg,_#575757,_#FFFFFF_120%)]">
         Pioneering Calcium Carbonate Mining
       </h3>
 
-      <h3 className="flex items-center justify-center order-2 w-full h-full col-span-2 p-4 text-lg font-light tracking-wide rounded-md lg:row-span-2 md:p-6 sm:text-xl lg:text-2xl text-primary md:order-none bg-[linear-gradient(180deg,_#BF0000,_#FFFFFF_130%)]">
+      <h3 className="tracking-widest !leading-snug flex items-center justify-center order-2 w-full h-full col-span-2 p-4 text-lg font-light rounded-md lg:row-span-2 md:p-6 sm:text-xl lg:text-2xl text-primary md:order-none bg-[linear-gradient(180deg,_#BF0000,_#FFFFFF_130%)]">
         A Legacy of Excellence: Three Generations of Family Entrepreneurship
       </h3>
     </section>

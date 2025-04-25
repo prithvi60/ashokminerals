@@ -6,7 +6,7 @@ export const InternationalTies = ({ countries }) => {
         <h4 className="text-lg font-semibold tracking-wide sm:text-xl lg:text-2xl">
           {countries.mainTitle}
         </h4>
-        <p className="text-base font-normal">{countries.para1}</p>
+        <p className="para">{countries.para1}</p>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 place-content-center md:grid-cols-4 lg:grid-cols-3 gap-x-2 gap-y-5 xl:grid-cols-4">
         {countries.logos.map((l, id) => (

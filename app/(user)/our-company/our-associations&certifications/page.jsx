@@ -31,7 +31,7 @@ const Home = () => {
                   className="object-contain"
                 />
               </div>
-              <h4 className="w-full text-lg font-medium text-center capitalize md:text-xl group-hover:text-warning">
+              <h4 className="w-full text-lg font-medium text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
                 {item.abbr}
               </h4>
             </div>
@@ -57,7 +57,7 @@ const Home = () => {
                   className="object-contain"
                 />
               </div>
-              <h4 className="w-full text-lg font-medium text-center capitalize md:text-xl group-hover:text-warning">
+              <h4 className="w-full text-lg font-medium text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
                 {item.abbr}
               </h4>
             </div>

@@ -31,7 +31,7 @@ export const AccordionComponent = ({ list, idx, data }) => {
             "!transition-transform !duration-300 !ease-linear text-xl !rotate-0 data-[open=true]:!rotate-0 text-black",
         }}
       >
-        <p className="text-base font-normal sm:text-lg text-zinc-600">
+        <p className="para text-zinc-600">
           {list.desc}
         </p>
       </AccordionItem>
