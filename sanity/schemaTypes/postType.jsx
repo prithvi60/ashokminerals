@@ -15,11 +15,19 @@ export const postType = defineType({
             name: "slug",
             type: "slug",
             title: "Slug",
+            description: "This will be auto-generated from the title",
             validation: (Rule) => Rule.required(),
             options: {
                 source: "title",
-                maxLength: 50,
-                slugify: (input) => input.toLowerCase().replace(/\s+/g, "-"),
+                maxLength: 96,
+                slugify: (input) =>
+                    input
+                        .toLowerCase()
+                        .replace(/[,\s().:']/g, "-")
+                        .replace(/[^\w-]+/g, "")
+                        .replace(/--+/g, "-")
+                        .replace(/^-+/, "")
+                        .replace(/-+$/, ""),
             },
         }),
         defineField({
@@ -59,15 +67,15 @@ export const postType = defineType({
                     marks: {
                         annotations: [
                             {
-                                name: 'productLink',
-                                title: 'Product Link',
-                                type: 'object',
+                                name: "productLink",
+                                title: "Product Link",
+                                type: "object",
                                 fields: [
                                     {
-                                        name: 'product',
-                                        title: 'Product',
-                                        type: 'reference',
-                                        to: [{ type: 'products' }],
+                                        name: "product",
+                                        title: "Product",
+                                        type: "reference",
+                                        to: [{ type: "products" }],
                                     },
                                 ],
                             },
