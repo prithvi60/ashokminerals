@@ -15,11 +15,19 @@ export const MarketListType = defineType({
             name: "slug",
             type: "slug",
             title: "Slug",
+            description: "This will be auto-generated from the title",
             validation: (Rule) => Rule.required(),
             options: {
                 source: "title",
-                maxLength: 50,
-                slugify: (input) => input.toLowerCase().replace(/\s+/g, "-"),
+                maxLength: 96,
+                slugify: (input) =>
+                    input
+                        .toLowerCase()
+                        .replace(/[,\s().:']/g, "-")
+                        .replace(/[^\w-]+/g, "")
+                        .replace(/--+/g, "-")
+                        .replace(/^-+/, "")
+                        .replace(/-+$/, ""),
             },
         }),
         defineField({

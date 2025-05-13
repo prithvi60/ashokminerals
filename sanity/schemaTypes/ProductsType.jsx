@@ -26,15 +26,11 @@ export const ProductsType = defineType({
                 slugify: (input) =>
                     input
                         .toLowerCase()
-                        // Replace special characters with hyphens
-                        .replace(/[,\s().:']/g, '-')
-                        // Remove all non-word characters except hyphens
-                        .replace(/[^\w-]+/g, '')
-                        // Replace multiple hyphens with single hyphen
-                        .replace(/--+/g, '-')
-                        // Trim hyphens from start and end
-                        .replace(/^-+/, '')
-                        .replace(/-+$/, '')
+                        .replace(/[,\s().:']/g, "-")
+                        .replace(/[^\w-]+/g, "")
+                        .replace(/--+/g, "-")
+                        .replace(/^-+/, "")
+                        .replace(/-+$/, ""),
             },
         }),
         defineField({
