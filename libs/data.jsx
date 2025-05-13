@@ -99,14 +99,14 @@ export const navbarMenu = [
     menu: "products",
     ref: "/products",
     subMenu: [
-      { menuTitle: "Carbon", menuRef: "/products/carbon" },
+      { menuTitle: "Carbon", menuRef: "/products/carbon-other-carbonaceous-products" },
       {
         menuTitle: "Silica and Quartz",
-        menuRef: "/products/silica_and_quartz",
+        menuRef: "/products/quartz-silica",
       },
       {
         menuTitle: "Graphite",
-        menuRef: "/products/graphite",
+        menuRef: "/products/graphite-natural-synthetic",
       },
       {
         menuTitle: "more products",
