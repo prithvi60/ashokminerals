@@ -20,7 +20,7 @@ export const BlogSlug = ({ post }) => {
                 alt={post.imageAlt}
                 src={post.imageUrl}
                 fill
-                style={{ objectFit: "cover", objectPosition: "center" }}
+                style={{ objectFit: "contain", objectPosition: "center" }}
                 quality={100}
                 priority
                 className="rounded-md"
