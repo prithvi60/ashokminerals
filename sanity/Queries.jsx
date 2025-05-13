@@ -35,7 +35,7 @@ export const POST_QUERY = groq`
 `;
 
 export const PRODUCTS_QUERY = groq`
-*[_type == "products"]|order(publishedAt asc) {
+*[_type == "products"]|order(title asc) {
   title,
   slug,
   summary,
@@ -72,7 +72,7 @@ export const MARKETS_QUERY = groq`
 }`;
 
 export const MARKETLIST_QUERY = groq`
-*[_type == "markets"]|order(publishedAt desc) {
+*[_type == "markets"]|order(title asc) {
   title,
   slug,
   publishedAt,

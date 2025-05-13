@@ -1,6 +1,9 @@
 "use client";
 
-import { BsArrowDownRightCircle, BsArrowDownRightCircleFill } from "react-icons/bs";
+import {
+  BsArrowDownRightCircle,
+  BsArrowDownRightCircleFill,
+} from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
 import { productSpecimen } from "@/libs/data";
@@ -8,7 +11,6 @@ import Slider from "react-slick";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
 const OurProducts = ({ products }) => {
-
   const settings = {
     dots: false,
     infinite: true,
@@ -33,8 +35,9 @@ const OurProducts = ({ products }) => {
     ],
     autoplay: true,
     autoplaySpeed: 4000,
-    pauseOnHover: true
+    pauseOnHover: true,
   };
+  // console.log(products[3].title.length > 10);
 
   return (
     <section className="w-full h-full space-y-5 font-RobotoSlab">
@@ -59,7 +62,9 @@ const OurProducts = ({ products }) => {
                     quality={100}
                   />
                 </div>
-                <h4 className="absolute text-base font-semibold tracking-wider capitalize transition-all ease-linear -translate-x-1/2 bottom-8 md:bottom-5 sm:text-lg lg:text-xl left-1/2 group-hover:text-warning duration-400">
+                <h4
+                  className={`absolute text-base font-semibold tracking-wider capitalize transition-all ease-linear bottom-8 md:bottom-5 sm:text-lg lg:text-xl group-hover:text-warning duration-400 ${product.title.length > 26 ? "left-2.5 md:left-3.5" : "left-1/2 -translate-x-1/2"}`}
+                >
                   {product.title}
                 </h4>
               </div>
@@ -100,7 +105,6 @@ const OurProducts = ({ products }) => {
 };
 
 export default OurProducts;
-
 
 function NextArrow(props) {
   const { onClick } = props;
