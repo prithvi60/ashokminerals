@@ -5,7 +5,7 @@ import Image from "next/image";
 import { PortableText } from "next-sanity";
 import Link from "next/link";
 
-export const BlogSlug = ({ post }) => {
+export const BlogSlug = ({ post, type }) => {
 
   return (
     <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-16 xl:px-64">
@@ -14,19 +14,21 @@ export const BlogSlug = ({ post }) => {
           {post.title}
         </h3>
         <div className="relative w-full h-full space-y-10 md:space-y-20">
-          <div className="w-full h-full">
-            <div className="relative w-full h-[320px]">
-              <Image
-                alt={post.imageAlt}
-                src={post.imageUrl}
-                fill
-                style={{ objectFit: "contain", objectPosition: "center" }}
-                quality={100}
-                priority
-                className="rounded-md"
-              />
+          {!type && (
+            <div className="w-full h-full">
+              <div className="relative w-full h-[320px]">
+                <Image
+                  alt={post.imageAlt}
+                  src={post.imageUrl}
+                  fill
+                  style={{ objectFit: "contain", objectPosition: "center" }}
+                  quality={100}
+                  priority
+                  className="rounded-md"
+                />
+              </div>
             </div>
-          </div>
+          )}
           <div className="max-w-7xl w-full prose prose-blue mx-auto prose-h1:text-3.5xl prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:leading-relaxed prose-p:para prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600 prose-li:para">
             <PortableText value={post.body} components={customComponents} />
           </div>

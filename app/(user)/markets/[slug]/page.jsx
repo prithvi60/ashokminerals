@@ -19,10 +19,11 @@ export default async function Home({ params }) {
     }
   );
 
+
   return (
     <section>
-      <OtherPageHero title={"Market Details"} imgSrc={"/hero_2.jpg"} para={""} />
-      <BlogSlug post={market} />
+      <OtherPageHero title={"Market Details"} imgSrc={market.imageUrl} para={""} type />
+      <BlogSlug post={market} type />
     </section>
   );
 }

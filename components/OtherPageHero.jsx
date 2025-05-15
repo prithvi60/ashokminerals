@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { BreadCrumbs } from "./BreadCrumbs";
 
-const OtherPageHero = ({ title, imgSrc, para, para2 }) => {
+const OtherPageHero = ({ title, imgSrc, para, para2, type }) => {
   return (
     <section className="w-full h-full space-y-10 mt-28">
       <div className="overflow-hidden">
@@ -11,7 +11,7 @@ const OtherPageHero = ({ title, imgSrc, para, para2 }) => {
             alt=""
             src={imgSrc}
             fill
-            className="object-cover object-center brightness-[0.70]"
+            className={`${type ? "object-fill object-center" : " object-cover"} object-center brightness-[0.70]`}
           />
 
           {/* Content Block */}
@@ -29,9 +29,11 @@ const OtherPageHero = ({ title, imgSrc, para, para2 }) => {
           </div>
         </div>
       </div>
-      <h3 className="w-full text-3xl md:text-[44px] px-6 font-bold tracking-wider capitalize sm:px-10 lg:px-16 xl:px-64">
-        {title}
-      </h3>
+      {!type && (
+        <h3 className="w-full text-3xl md:text-[44px] px-6 font-bold tracking-wider capitalize sm:px-10 lg:px-16 xl:px-64">
+          {title}
+        </h3>
+      )}
     </section>
 
   );
