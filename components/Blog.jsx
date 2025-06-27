@@ -62,7 +62,7 @@ const BlogCard = ({ post }) => {
       <CardFooter className="flex items-center justify-between">
         <Button
           color="warning"
-          size="lg"
+          size="sm"
           className="font-semibold text-primary"
         >
           Read More

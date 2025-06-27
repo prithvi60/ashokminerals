@@ -43,10 +43,10 @@ export const FlipProductsCard = ({ data, type }) => {
                   </p>
                 )}
               </div>
-              <h4 className="flex items-center gap-3 text-xl font-semibold tracking-wider underline capitalize transition-all duration-300 ease-out text-primary underline-offset-4 hover:no-underline">
+              <h4 className="flex items-center gap-3 text-base md:text-xl font-semibold tracking-wider underline capitalize transition-all duration-300 ease-out text-primary underline-offset-4 hover:no-underline">
                 Read more
                 <span>
-                  <BsArrowDownRightCircleFill className="mt-1 text-3xl -rotate-90 animate-pulse" />
+                  <BsArrowDownRightCircleFill className="mt-1 text-2xl md:text-3xl -rotate-90 animate-pulse" />
                 </span>
               </h4>
             </div>

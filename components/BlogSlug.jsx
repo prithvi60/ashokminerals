@@ -9,7 +9,7 @@ export const BlogSlug = ({ post, type }) => {
   return (
     <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-16 xl:px-64">
       <div className="relative w-full h-full p-5 space-y-5 rounded-md">
-        <h3 className="text-xl font-bold tracking-wide capitalize md:text-4xl xl:text-5xl">
+        <h3 className="text-xl font-medium tracking-wide capitalize md:text-4xl xl:text-5xl">
           {post.title}
         </h3>
         <div className="relative w-full h-full space-y-10 md:space-y-20">
@@ -28,7 +28,7 @@ export const BlogSlug = ({ post, type }) => {
               </div>
             </div>
           )}
-          <div className="max-w-7xl w-full prose prose-blue mx-auto prose-h1:text-3.5xl prose-h1:font-bold prose-h2:text-2xl prose-h2:font-bold prose-h3:text-2xl prose-h3:font-bold prose-h4:text-2xl prose-h4:font-bold prose-p:leading-relaxed prose-p:para prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600 prose-li:para">
+          <div className="max-w-7xl w-full prose prose-blue mx-auto prose-h1:text-3.5xl prose-h1:font-medium prose-h2:text-2xl prose-h2:font-medium prose-h3:text-2xl prose-h3:font-medium prose-h4:text-2xl prose-h4:font-medium prose-p:leading-relaxed prose-p:para prose-p:mt-4 prose-p:mb-4 prose-blockquote:leading-relaxed prose-blockquote:text-lg lg:prose-blockquote:text-xl prose-list:list-disc prose-list-decimal prose-li:marker:text-red-600 prose-li:para prose-strong:font-medium">
             <PortableText value={post.body} components={customComponents} />
           </div>
         </div>
