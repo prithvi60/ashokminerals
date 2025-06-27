@@ -14,7 +14,7 @@ const Home = () => {
       />
       {/* associations */}
       <div className="px-6 py-10 space-y-5 sm:py-12 sm:px-10 lg:px-16 xl:px-64">
-        <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl lg:text-2xl">
+        <h4 className="text-lg font-medium tracking-wide capitalize sm:text-xl lg:text-2xl">
           our Associations
         </h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-6 xl:gap-6 w-full">
@@ -31,7 +31,7 @@ const Home = () => {
                   className="object-contain"
                 />
               </div>
-              <h4 className="w-full text-lg font-medium text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
+              <h4 className="w-full text-lg font-normal font-Formular text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
                 {item.abbr}
               </h4>
             </div>
@@ -40,7 +40,7 @@ const Home = () => {
       </div>
       {/* certifications */}
       <div className="px-6 py-10 space-y-5 sm:py-14 sm:px-10 lg:px-16 xl:px-64">
-        <h4 className="text-lg font-semibold tracking-wide capitalize sm:text-xl lg:text-2xl">
+        <h4 className="text-lg font-medium tracking-wide capitalize sm:text-xl lg:text-2xl">
           our certifications
         </h4>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-6 md:gap-6">
@@ -57,7 +57,7 @@ const Home = () => {
                   className="object-contain"
                 />
               </div>
-              <h4 className="w-full text-lg font-medium text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
+              <h4 className="w-full text-lg font-medium font-Formular text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
                 {item.abbr}
               </h4>
             </div>

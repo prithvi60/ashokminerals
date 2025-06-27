@@ -6,7 +6,7 @@ import { BsArrowDownRightCircle } from "react-icons/bs";
 const WelcomeBoard = () => {
   return (
     <section className="grid w-full h-full grid-cols-1 px-6 py-10 md:px-10 lg:px-16 xl:px-64 sm:py-12 md:grid-cols-2 gap-7 font-RobotoSlab">
-      <h3 className="relative w-full text-xl font-bold text-black sm:text-3xl lg:text-5xl">
+      <h3 className="relative w-full text-xl font-medium tracking-wide text-black sm:text-3xl lg:text-5xl">
         Excellence in Industrial and Specialty Minerals
       </h3>
       <div className="block w-full space-y-7">
@@ -22,7 +22,7 @@ const WelcomeBoard = () => {
           variant="solid"
           size="lg"
           radius="none"
-          className="text-base font-semibold text-white capitalize hover:animate-pulse font-RobotoSlab group"
+          className="text-base font-semibold text-white capitalize hover:animate-pulse font-Formular group px-8 py-4"
         >
           Know More
           <span className="inline-block group-hover:animate-shake">

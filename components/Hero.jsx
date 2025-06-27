@@ -57,7 +57,7 @@ const Hero = () => {
             src={"/ashok-minerals-logo.svg"}
             className="z-10 w-36 h-36 md:w-60 md:h-60"
           />
-          <h4 className="px-16 text-3xl font-semibold capitalize md:text-6xl text-primary">
+          <h4 className="px-16 text-3xl font-medium tracking-wide capitalize md:text-6xl text-primary">
             Processors of <br></br>
             Industrial minerals since 1956
           </h4>
@@ -70,7 +70,7 @@ const Hero = () => {
               radius="none"
               variant="solid"
               size="lg"
-              className="mb-16 text-base font-semibold text-white uppercase font-RobotoSlab md:text-xl hover:animate-pulse"
+              className="mb-16 text-base font-semibold text-white capitalize font-Formular md:text-xl hover:animate-pulse px-8 py-4"
             >
               Explore Our Products
             </Button>

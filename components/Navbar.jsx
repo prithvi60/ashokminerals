@@ -110,7 +110,7 @@ const NavbarComponent = () => {
           <NavbarItem key={id} className="relative group">
             <div
               className={`flex items-center gap-2 py-10 text-base font-normal capitalize transition-colors duration-500 ease-linear tracking-widest ${!percent && path === "/" ? "text-primary" : "text-black"
-                } lg:text-lg hover:underline hover:underline-offset-4 font-bold font-RobotoSlab  ${item.ref !== "" && "cursor-pointer"
+                } lg:text-lg hover:underline hover:underline-offset-4 font-bold font-Formular  ${item.ref !== "" && "cursor-pointer"
                 }`}
             >
               <Link href={item.ref}>{item.menu}</Link>
@@ -124,7 +124,7 @@ const NavbarComponent = () => {
             </div>
             {item.subMenu && (
               <div
-                className={`absolute hidden top-[85px] left-0 p-4 shadow-md rounded-xl font-RobotoSlab bg-primary/90 group-hover:block`}
+                className={`absolute hidden top-[85px] left-0 p-4 shadow-md rounded-xl font-Formular bg-primary/90 group-hover:block`}
               >
                 {item?.subMenu?.map((l, index) => (
                   <Link
@@ -161,7 +161,7 @@ const NavbarComponent = () => {
             href="#contact"
             radius="none"
             variant="solid"
-            className="mt-4 text-base font-semibold text-white uppercase duration-500 font-RobotoSlab ms-3 lg:text-lg hover:animate-pulse group tracking-widest"
+            className="mt-4 text-base font-semibold text-white capitalize duration-500 font-Formular ms-3 lg:text-lg hover:animate-pulse group tracking-widest px-8 py-4"
           >
             Contact Us
             <span className="inline-block group-hover:animate-shake">
@@ -214,7 +214,7 @@ const NavbarComponent = () => {
             {navbarMenu?.slice(0, navbarMenu.length).map((item, id) => (
               <Link
                 href={item.ref}
-                className="text-lg font-medium tracking-widest capitalize me-12 font-RobotoSlab"
+                className="text-lg font-medium tracking-widest capitalize me-12 font-Formular"
                 key={id}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -222,45 +222,6 @@ const NavbarComponent = () => {
               </Link>
             ))}
           </div>
-          {/* {navbarMenu?.slice(3, 4).map((item, index) => (
-            <NavbarMenuItem key={index}>
-              <Accordion
-                variant="light"
-                selectedKeys={selectedKeys}
-                onSelectionChange={setSelectedKeys}
-              >
-                <AccordionItem
-                  key={index}
-                  aria-label={item.menu}
-                  title={item.menu}
-                  indicator={({ isOpen }) =>
-                    isOpen ? <FaCaretUp /> : <FaCaretDown />
-                  }
-                  classNames={{
-                    base: "text-black font-RobotoSlab",
-                    trigger: "justify-end py-0 ps-8",
-                    heading: "transition-all duration-300 ease-linear",
-                    titleWrapper: "!flex-none",
-                    title: "!text-black !capitalize text-lg font-medium",
-                    indicator:
-                      "transition-all duration-300 ease-linear text-warning text-xl !rotate-0",
-                  }}
-                >
-                  {item?.subMenu?.map((l, index) => (
-                    <Link
-                      onClick={() => setIsMenuOpen(false)}
-                      title={l.menuTitle}
-                      className={`text-lg font-medium tracking-widest capitalize font-RobotoSlab text-end`}
-                      key={index}
-                      href={`/our-company/${l.menuRef}`}
-                    >
-                      <h4 className="mb-2">{l.menuTitle}</h4>
-                    </Link>
-                  ))}
-                </AccordionItem>
-              </Accordion>
-            </NavbarMenuItem>
-          ))} */}
         </div>
         <NavbarMenuItem className="w-full mb-8 text-end">
           <Button
@@ -269,7 +230,7 @@ const NavbarComponent = () => {
             href="#contact"
             variant="solid"
             radius="none"
-            className="mx-auto text-base font-semibold tracking-widest text-white uppercase font-RobotoSlab"
+            className="mx-auto text-base font-semibold px-8 py-4 tracking-widest text-white capitalize font-Formular"
             onClick={() => setIsMenuOpen(false)}
           >
             Contact Us

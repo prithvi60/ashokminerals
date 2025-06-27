@@ -41,7 +41,7 @@ const OurProducts = ({ products }) => {
 
   return (
     <section className="w-full h-full space-y-5 font-RobotoSlab">
-      <h3 className="relative w-full px-6 pt-10 text-2xl font-semibold m:px-10 lg:px-16 xl:px-64 sm:pt-12 sm:text-3xl lg:text-5xl">
+      <h3 className="relative w-full px-6 pt-10 text-2xl font-medium tracking-wide m:px-10 lg:px-16 xl:px-64 sm:pt-12 sm:text-3xl lg:text-5xl">
         Our Products
       </h3>
       <div className="w-full px-6 pb-10 md:px-10 lg:px-52 sm:pb-12 font-RobotoSlab slider-container">
@@ -63,14 +63,14 @@ const OurProducts = ({ products }) => {
                   />
                 </div>
                 <h4
-                  className={`absolute text-base font-semibold tracking-wider capitalize transition-all ease-linear bottom-8 md:bottom-5 sm:text-lg lg:text-xl group-hover:text-warning duration-400 ${product.title.length > 26 ? "left-2.5 md:left-3.5" : "left-1/2 -translate-x-1/2"}`}
+                  className={`absolute text-base font-medium tracking-wide capitalize transition-all ease-linear bottom-8 md:bottom-5 sm:text-lg lg:text-xl group-hover:text-warning duration-400 ${product.title.length > 26 ? "left-2.5 md:left-3.5" : "left-1/2 -translate-x-1/2"}`}
                 >
                   {product.title}
                 </h4>
               </div>
               <div className="absolute top-0 left-0 flex flex-col items-start justify-between w-full h-48 gap-2 px-6 py-4 rounded-md shadow-xl sm:max-w-80 2xl:max-w-96 sm:h-56 group bg-warning text-primary backSideCard">
                 <div className="space-y-2">
-                  <h4 className="text-lg font-semibold tracking-wider capitalize sm:text-xl lg:text-2xl">
+                  <h4 className="text-lg font-medium tracking-wide capitalize sm:text-xl lg:text-2xl">
                     {product.title}
                   </h4>
                   <p className="text-sm font-normal tracking-widest !leading-snug line-clamp-3 font-Formular">

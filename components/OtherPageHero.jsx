@@ -30,7 +30,7 @@ const OtherPageHero = ({ title, imgSrc, para, para2, type }) => {
         </div>
       </div>
       {!type && (
-        <h3 className="w-full text-3xl md:text-[44px] px-6 font-bold tracking-wider capitalize sm:px-10 lg:px-16 xl:px-64">
+        <h3 className="w-full text-3xl md:text-[44px] px-6 font-medium tracking-wide capitalize sm:px-10 lg:px-16 xl:px-64">
           {title}
         </h3>
       )}

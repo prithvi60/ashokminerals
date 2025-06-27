@@ -24,7 +24,7 @@ export const AccordionComponent = ({ list, idx, data }) => {
           isOpen ? <IoIosArrowUp /> : <IoIosArrowDown />
         }
         classNames={{
-          base: "text-black font-RobotoSlab font-normal",
+          base: "text-black font-RobotoSlab font-medium",
           heading: "transition-all duration-300 ease-linear",
           title: "!text-black !capitalize text-xl",
           indicator:

@@ -7,10 +7,10 @@ const Home = () => {
       <OtherPageHero title={"Leadership"} imgSrc={"/hero_2.jpg"} para={""} />
       <div className="w-full px-6 py-10 space-y-12 sm:py-12 sm:px-10 lg:px-16 xl:px-64 font-RobotoSlab">
         <div className="space-y-4 md:space-y-6 rounded-lg my-5">
-          <h4 className="w-full text-3xl font-semibold tracking-wide capitalize md:text-[44px]">
+          <h4 className="w-full text-3xl font-medium tracking-wide capitalize md:text-[44px]">
             Our Leadership
           </h4>
-          <h5 className="w-full text-lg capitalize md:text-xl font-bold tracking-wide">
+          <h5 className="w-full text-lg capitalize md:text-xl font-medium tracking-wide">
             Mrs. Vanessa Bagdy & Mr. Raaj Bagdy
           </h5>
           <p className="para">
@@ -34,7 +34,7 @@ const Home = () => {
         </div>
         <div className="space-y-6 !mt-28">
           <div className="space-y-4 md:space-y-6 rounded-lg my-5">
-            <h4 className="w-full text-3xl font-semibold tracking-wide capitalize md:text-[44px]">
+            <h4 className="w-full text-3xl font-medium tracking-wide capitalize md:text-[44px]">
               Our Team
             </h4>
             <p className="para">

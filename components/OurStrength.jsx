@@ -4,7 +4,7 @@ import Image from "next/image";
 const OurStrength = () => {
   return (
     <section className="w-full h-full px-6 py-10 space-y-10 sm:px-10 lg:px-16 xl:px-64 sm:py-12 font-RobotoSlab">
-      <h3 className="relative w-full text-2xl font-semibold sm:text-3xl lg:text-5xl">
+      <h3 className="relative w-full text-2xl font-medium sm:text-3xl lg:text-5xl">
         Our Strength
       </h3>
       {/* Grid layout strength section */}

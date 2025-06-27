@@ -82,14 +82,14 @@ export const ContactForm = () => {
       id="contact"
     >
       <div className="h-full px-6 py-10 space-y-10 bg-secondary sm:py-12 sm:px-10 lg:px-16 xl:px-64 md:space-y-0 relative">
-        <h3 className="relative block w-full text-2xl font-semibold md:hidden sm:text-3xl lg:text-5xl">
+        <h3 className="relative block w-full text-2xl font-medium tracking-wide md:hidden sm:text-3xl lg:text-5xl">
           Contact us
         </h3>
         <div className="flex flex-col-reverse justify-center gap-6 lg:gap-12 md:flex-row">
           {/* contact details */}
           <div className="flex flex-col items-start w-full h-auto gap-10 mt-6 md:1/2 lg:w-3/5">
             <div className="block space-y-6">
-              <h3 className="relative hidden w-full text-2xl font-semibold sm:text-3xl lg:text-5xl md:block">
+              <h3 className="relative hidden w-full text-2xl font-medium tracking-wide sm:text-3xl lg:text-5xl md:block">
                 Contact us
               </h3>
               <p className="para font-Formular">
@@ -107,7 +107,7 @@ export const ContactForm = () => {
             </div>
             <div className="block space-y-10">
               <div className="block w-full space-y-4">
-                <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
+                <h4 className="text-xl font-medium tracking-wide capitalize sm:text-2xl">
                   Customer Support
                 </h4>
                 <p className="para">
@@ -119,7 +119,7 @@ export const ContactForm = () => {
                 </p>
               </div>
               <div className="block w-full space-y-4">
-                <h4 className="text-xl font-semibold tracking-wide capitalize sm:text-2xl">
+                <h4 className="text-xl font-medium tracking-wide capitalize sm:text-2xl">
                   Sales & other Enquiries
                 </h4>
                 <p className="para">
@@ -143,7 +143,7 @@ export const ContactForm = () => {
             <form
               className="w-full h-full space-y-3" onSubmit={handleSubmit}
             >
-              <h3 className="mb-8 text-lg font-semibold !leading-tight font-RobotoSlab md:text-xl tracking-widest">
+              <h3 className="mb-8 text-lg font-medium !leading-tight font-RobotoSlab md:text-xl tracking-widest">
                 Let&apos;s Get in touch to Explore business opportunities
               </h3>
               <Select
@@ -290,10 +290,10 @@ export const ContactForm = () => {
           <h3 className="text-xl font-medium tracking-wide capitalize font-RobotoSlab md:text-xl">
             our Office location Details
           </h3>
-          <p className="text-2xl tracking-widest !leading-snug font-semibold md:text-2xl xl:text-3xl">
+          <p className="text-2xl font-medium tracking-wide !leading-snug md:text-2xl xl:text-3xl">
             Connecting Near and Far
           </p>
-          <div className="text-lg font-normal font-RobotoSlab tracking-widest">
+          <div className="text-lg font-normal font-Formular tracking-widest">
             Ashok Mineral Enterprises
             <br />
             <br />
@@ -305,7 +305,7 @@ export const ContactForm = () => {
             <br /> Gummidipoondi - 601201.
             <br />
           </div>
-          <div className="text-lg font-normal font-RobotoSlab tracking-widest">
+          <div className="text-lg font-normal font-Formular tracking-widest">
             <span className="font-semibold text-warning tracking-widest">
               {" "}
               Office:

@@ -24,21 +24,21 @@ export const FlipProductsCard = ({ data, type }) => {
                   quality={100}
                 />
               </div>
-              <h4 className={`absolute text-base font-semibold tracking-wider !capitalize transition-all ease-linear bottom-8 md:bottom-5 sm:text-lg lg:text-xl group-hover:text-warning duration-400 ${product.title.length > 26 ? "left-2.5 md:left-3.5" : "left-1/2 -translate-x-1/2"}`}>
+              <h4 className={`absolute text-base font-medium tracking-wide !capitalize transition-all ease-linear bottom-8 md:bottom-5 sm:text-lg lg:text-xl group-hover:text-warning duration-400 font-RobotoSlab ${product.title.length > 26 ? "left-2.5 md:left-3.5" : "left-1/2 -translate-x-1/2"}`}>
                 {product.title.toLowerCase()}
               </h4>
             </div>
             <div className="absolute top-0 left-0 flex flex-col items-start justify-between w-full h-48 gap-2 px-6 py-4 rounded-md shadow-xl sm:max-w-80 2xl:max-w-96 sm:h-56 group bg-warning text-primary backSideCard">
               <div className="space-y-2">
-                <h4 className="text-lg font-semibold tracking-wider capitalize sm:text-xl lg:text-2xl !leading-6">
-                  {product.title}
+                <h4 className="text-lg font-medium tracking-wide font-RobotoSlab !capitalize sm:text-xl lg:text-2xl !leading-6">
+                  {product.title.toLowerCase()}
                 </h4>
                 {type ? (
-                  <p className="text-sm font-normal line-clamp-2 tracking-widest !leading-snug">
+                  <p className="text-sm font-normal font-Formular line-clamp-2 tracking-widest !leading-snug">
                     {product.blogShortRead}
                   </p>
                 ) : (
-                  <p className="text-sm font-normal line-clamp-2 sm:line-clamp-3 tracking-widest !leading-snug">
+                  <p className="text-sm font-normal font-Formular line-clamp-2 sm:line-clamp-3 tracking-widest !leading-snug">
                     {product.summary}
                   </p>
                 )}

@@ -3,7 +3,7 @@ export const InternationalTies = ({ countries }) => {
   return (
     <div className="block space-y-7">
       <div className="p-8 space-y-4 rounded-lg shadow-lg bg-secondary md:space-y-6 ">
-        <h4 className="text-lg font-semibold tracking-wide sm:text-xl lg:text-2xl">
+        <h4 className="text-lg font-medium tracking-wide sm:text-xl lg:text-2xl">
           {countries.mainTitle}
         </h4>
         <p className="para">{countries.para1}</p>

@@ -58,7 +58,7 @@ const Footer = () => {
                 className={`flex items-center sm:items-start gap-7 text-base font-normal capitalize transition-colors duration-300 ease-linear hover:text-warning font-RobotoSlab text-primary group`}
               >
                 <h4
-                  className={`text-lg font-bold tracking-widest text-primary font-RobotoSlab `}
+                  className={`text-lg font-semibold underline decoration-dashed underline-offset-8 decoration-red-600 tracking-widest text-primary font-RobotoSlab `}
                 >
                   {item.menu}
                 </h4>
@@ -67,7 +67,7 @@ const Footer = () => {
                 {item?.subMenu?.map((l, index) => (
                   <Link
                     title={l.menuTitle}
-                    className={`text-sm text-primary cursor-pointer lg:text-lg tracking-widest !leading-snug hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-light z-10 capitalize space-y-5 text-center sm:text-left`}
+                    className={`text-sm text-primary font-Formular cursor-pointer lg:text-lg tracking-widest !leading-snug hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-light z-10 capitalize space-y-5 text-center sm:text-left`}
                     key={index}
                     href={item.menu != "Quick Links" ? `/our-company/${l.menuRef}` : `${l.menuRef}`}
                   >
@@ -80,9 +80,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full h-full text-center">
-        <h4 className="text-base font-medium font-RobotoSlab  text-primary/50 tracking-widest">
+        <h4 className="text-base font-medium font-RobotoSlab text-primary/50 tracking-widest">
           © {new Date().getFullYear()}
-          <span className="font-semibold ms-1">
+          <span className="font-semibold font-Formular ms-1">
             Ashok Minerals Enterprises.
           </span>{" "}
           All Rights Reserved.
