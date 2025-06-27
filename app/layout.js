@@ -1,5 +1,6 @@
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -10,11 +11,17 @@ const robotoSlab = Roboto_Slab({
   weight: ["700", "400"],
 });
 
-// export const metadata = {
-//   title: "Ashok Minerals Enterprise",
-//   description:
-//     "Ashok Minerals stands as a leading producer of coarse, fine & ultra-fine industrial and specialty minerals, offering a diverse and comprehensive range of products.",
-// };
+const formular = localFont({
+  src: [
+    {
+      path: "../app/formular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-formular",
+});
+
 export const metadata = {
   title: "Ashok Minerals Enterprise",
   description: "Processor of Industrial Minerals since 1956",
@@ -40,7 +47,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${robotoSlab.variable} `}>{children}</body>
+      <body className={`${robotoSlab.variable} ${formular.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

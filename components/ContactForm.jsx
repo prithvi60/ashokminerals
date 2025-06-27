@@ -92,7 +92,7 @@ export const ContactForm = () => {
               <h3 className="relative hidden w-full text-2xl font-semibold sm:text-3xl lg:text-5xl md:block">
                 Contact us
               </h3>
-              <p className="para">
+              <p className="para font-Formular">
                 Get in touch with us today through email, phone, or by filling out the form, and let us show you how Ashok Mineral enterprises can give you quality industrial minerals.
               </p>
               <p

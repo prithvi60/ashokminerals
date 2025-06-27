@@ -20,6 +20,7 @@ module.exports = {
       },
       fontFamily: {
         RobotoSlab: ["var(--font-robotoSlab)"],
+        Formular: ["var(--font-formular)"],
       },
     },
   },

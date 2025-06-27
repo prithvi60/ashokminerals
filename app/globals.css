@@ -16,7 +16,7 @@
   }
 
   .para {
-    @apply text-base md:text-lg font-normal tracking-widest !leading-snug;
+    @apply text-base md:text-lg font-normal tracking-widest !leading-snug font-Formular;
   }
 
   @keyframes shake {

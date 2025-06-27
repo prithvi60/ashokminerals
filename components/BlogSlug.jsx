@@ -6,7 +6,6 @@ import { PortableText } from "next-sanity";
 import Link from "next/link";
 
 export const BlogSlug = ({ post, type }) => {
-
   return (
     <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-16 xl:px-64">
       <div className="relative w-full h-full p-5 space-y-5 rounded-md">
@@ -60,7 +59,7 @@ const customComponents = {
         </Link>
       );
     },
-  }
+  },
 };
 
 // const customComponents = {
