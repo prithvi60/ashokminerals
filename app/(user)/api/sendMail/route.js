@@ -24,7 +24,7 @@ export async function POST(req) {
 
   // Email options for the client (all user data and attachments)
   const clientMailOptions = {
-    from: `"Marketing@ashokminerals.com" <${"Marketing@ashokminerals.com"}>`,
+    from: `${userEmail} <${"Marketing@ashokminerals.com"}>`,
     to: process.env.EMAIL_ID,
     subject: `New Customer Form Submitted`,
     html: `
