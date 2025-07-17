@@ -7,7 +7,7 @@ export const ThankYouComponent = () => {
       <h3 className="text-3xl font-semibold text-center md:text-6xl">
         <div className="relative mx-auto h-14 w-14 md:h-28 md:w-28">
           <Image
-            src={"https://ik.imagekit.io/webibee/Webibee/thumbs-up.gif?updatedAt=1735894426371"}
+            src={"/thumbs-up.gif"}
             fill
             title="thumbs up"
             alt="thumbs up"
