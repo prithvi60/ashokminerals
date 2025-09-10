@@ -42,7 +42,7 @@ export const BreadCrumbs = () => {
             (() => handleClick(`/${path.replace(/\s/g, "-")}`))
           }
         >
-          {path.replace(/-/g, " ")}
+          {path.replace(/[-_]/g, " ")}
         </BreadcrumbItem>
       ))}
       {/* <BreadcrumbItem>Artist</BreadcrumbItem> */}

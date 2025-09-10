@@ -59,7 +59,7 @@ export async function POST(req) {
             </p>
         </div>
             `,
-    // bcc: [process.env.EMAIL_ID],
+    bcc: ["vanessa@ashokminerals.com"],
   };
 
   const userMailOptions = {
