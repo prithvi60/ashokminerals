@@ -11,8 +11,18 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(req) {
-  const { userName, detailFor, companyName, userEmail, phone, message } =
-    await req.json();
+  const {
+    userName,
+    detailFor,
+    companyName,
+    userEmail,
+    phone,
+    message,
+    reference,
+  } = await req.json();
+
+  const imageUrl =
+    "https://ik.imagekit.io/a7ag28udt/Ashok-Minerals-Logo.jpg?updatedAt=1757508276302";
 
   // !clientEmail
   if (!userEmail && !process.env.EMAIL_ID) {
@@ -25,10 +35,11 @@ export async function POST(req) {
   // Email options for the client (all user data and attachments)
   const clientMailOptions = {
     from: `${userEmail} <${"Marketing@ashokminerals.com"}>`,
+    // from: `${userEmail}`,
     to: process.env.EMAIL_ID,
-    subject: `New Customer Form Submitted`,
+    subject: `New Customer Form Submitted - ${reference} page`,
     html: `
-            <div>
+            <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 600px; margin: 0 auto; border: 1px solid #ddd;">
             <p style="font-size: 16px; color: #555;">Hi,</p>
             <p style="font-size: 16px; color: #555;">You have a new message from Ashok Minerals.</p>
             <hr style="border: none; border-top: 1px solid #ddd; margin: 20px 0;">
@@ -43,6 +54,9 @@ export async function POST(req) {
             <p style="font-size: 16px; color: #555;">Thanks & Regards</p>
             <br/>
             <br/>
+            <div style="margin-bottom: 10px;">
+             <img src=${imageUrl} alt="Ashok Minerals Logo" style="width: 150px; height: auto;">
+            </div>
             <p style="font-size: 16px; color: #555;"><strong>Ashok Mineral Enterprises</strong></p>
             <p style="font-size: 16px; color: #555;">
              Primary Manufacturing Unit & Warehouse:
@@ -64,25 +78,23 @@ export async function POST(req) {
 
   const userMailOptions = {
     from: `"${process.env.EMAIL_ID}" <${"Marketing@ashokminerals.com"}>`,
+    // from: `"${process.env.EMAIL_ID}"`,
     to: userEmail,
     subject: "Acknowledgment: We Received Your Submission",
     html: `
-          <div>
-            <p style="font-size: 16px; color: #555;">Dear <strong>${userName}</strong></p>
-            <br/>
-            <p style="font-size: 16px; color: #555;">Greetings from Ashok Mineral Enterprises!</p>
-            <br/>
+          <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 600px; margin: 0 auto; border: 1px solid #ddd;">
+            <p style="font-size: 16px; color: #555; margin-bottom: 10px;">Dear <strong>${userName}</strong></p>
+            <p style="font-size: 16px; color: #555; margin-bottom: 10px;">Greetings from Ashok Mineral Enterprises!</p>
             <p style="font-size: 16px; color: #555;">
                 We appreciate your interest in our products and acknowledge the receipt of your submission.
             </p>
-            <br/>
             <p style="font-size: 16px; color: #555;">
                 Our team will review your request and get back to you shortly. If you have any urgent inquiries, feel free to contact us at +91-44-24512581/82/83.
             </p>
-            <br/>
-            <p style="font-size: 16px; color: #555;">Thanks & Regards</p>
-            <br/>
-            <br/>
+            <p style="font-size: 16px; color: #555; margin-bottom: 26px;">Thanks & Regards</p>
+            <div style="margin-bottom: 10px;">
+             <img src=${imageUrl} alt="Ashok Minerals Logo" style="width: 150px; height: auto;">
+            </div>
             <p style="font-size: 16px; color: #555;"><strong>Ashok Mineral Enterprises</strong></p>
             <p style="font-size: 16px; color: #555;">
              Primary Manufacturing Unit & Warehouse:
