@@ -16,17 +16,13 @@ import { useEffect, useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
-import { Accordion, AccordionItem } from "@heroui/accordion";
-import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import { navbarMenu } from "@/libs/data";
-import { IoInformationCircle } from "react-icons/io5";
 import ModalComponent from "./ModalComponent";
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isActiveState, setIsActiveState] = useState(null);
-  const [selectedKeys, setSelectedKeys] = useState(new Set(["3"]));
   const [percent, setPercent] = useState(false);
   const path = usePathname();
   const handleScroll = () => {
@@ -107,7 +103,7 @@ const NavbarComponent = () => {
       </NavbarContent>
       {/* Desktop menubar */}
       <NavbarContent
-        className={`${path?.startsWith("/products") || path.startsWith("/markets") ? "xl:flex" : "lg:flex"} hidden lg:gap-5 ml-28`}
+        className={`${path?.startsWith("/products") || path.startsWith("/markets") ? "xl:flex" : "lg:flex"} hidden lg:gap-5 ml-28 mt-3`}
         justify="center"
       >
         {navbarMenu?.map((item, id) => (
@@ -160,7 +156,7 @@ const NavbarComponent = () => {
       {/* Contact button */}
       <NavbarContent
         justify="end"
-        className="!basis-0 !grow-0 hidden lg:flex gap-5 justify-between"
+        className="!basis-0 !grow-0 hidden xl:flex gap-5 justify-between mt-3"
       >
         {path?.startsWith("/products") || path.startsWith("/markets") || path.startsWith("/markets") ? (
           <>
@@ -168,10 +164,10 @@ const NavbarComponent = () => {
               <Button
                 as={Link}
                 color="warning"
-                href="https://wa.me/9840899343?text=Thank%20You%20For%20Connecting%20With%20Ashok%20Minerals%20Marketing%20Team,%20We%20Will%20Get%20In%20Touch%20With%20You%20As%20Soon%20As%20Possible."
+                href="tel:+919840899343"
                 radius="none"
                 variant="solid"
-                className="mt-4 text-base font-bold text-warning/50 capitalize duration-500 font-Formular ms-3 lg:text-lg hover:animate-pulse group bg-warning/30 tracking-widest px-8 py-4"
+                className="text-base font-bold text-warning/50 capitalize duration-500 font-Formular ms-3 lg:text-lg hover:animate-pulse group bg-warning/30 tracking-widest px-8 py-4"
               >
                 <span className="inline-block animate-shake">
                   <IoCall className="text-base text-warning transition-all duration-500 group-hover:scale-125" />
@@ -206,6 +202,44 @@ const NavbarComponent = () => {
         className={`${path?.startsWith("/products") || path.startsWith("/markets") ? "xl:hidden" : "lg:hidden"} !grow-0 !basis-0`}
         justify="end"
       >
+        {path?.startsWith("/products") || path.startsWith("/markets") || path.startsWith("/markets") ? (
+          <>
+            <NavbarItem className="block">
+              <Button
+                as={Link}
+                color="warning"
+                href="tel:+919840899343"
+                radius="none"
+                variant="solid"
+                className="text-sm md:text-base font-bold text-warning/50 capitalize duration-500 font-Formular md:ms-3 lg:text-lg hover:animate-pulse group bg-warning/30 tracking-widest px-4 md:px-8 py-2.5 md:py-4"
+              >
+                <span className="inline-block animate-shake">
+                  <IoCall className="text-base text-warning transition-all duration-500 group-hover:scale-125" />
+                </span>
+                +91 98408 99343
+              </Button>
+            </NavbarItem>
+            <NavbarItem className="hidden md:block">
+              <ModalComponent />
+            </NavbarItem>
+          </>
+        ) : (
+          <NavbarItem>
+            <Button
+              as={Link}
+              color="warning"
+              href="#contact"
+              radius="none"
+              variant="solid"
+              className="text-base font-semibold text-white capitalize duration-500 font-Formular ms-3 lg:text-lg hover:animate-pulse group tracking-widest px-8 py-4"
+            >
+              Contact Us
+              <span className="inline-block group-hover:animate-shake">
+                <IoCall className="text-base transition-all duration-500 text-primary group-hover:scale-125" />
+              </span>
+            </Button>
+          </NavbarItem>
+        )}
         <NavbarItem>
           <GiHamburgerMenu
             onClick={toggleMenu}
@@ -257,23 +291,7 @@ const NavbarComponent = () => {
             ))}
           </div>
         </div>
-        {path?.startsWith("/products") || path.startsWith("/markets") ? (
-          <NavbarMenuItem className="w-full mb-8 text-end">
-            <Button
-              as={Link}
-              color="warning"
-              href="https://wa.me/9840899343?text=Thank%20You%20For%20Connecting%20With%20Ashok%20Minerals%20Marketing%20Team,%20We%20Will%20Get%20In%20Touch%20With%20You%20As%20Soon%20As%20Possible."
-              radius="none"
-              variant="solid"
-              className="mt-4 text-base font-bold text-warning/50 capitalize duration-500 font-Formular ms-3 lg:text-lg hover:animate-pulse group bg-warning/30 tracking-widest px-8 py-4"
-            >
-              <span className="inline-block animate-shake">
-                <IoCall className="text-base text-warning transition-all duration-500 group-hover:scale-125" />
-              </span>
-              +91 98408 99343
-            </Button>
-          </NavbarMenuItem>
-        ) : (
+        {(!path?.startsWith("/products") || !path.startsWith("/markets")) && (
           <NavbarMenuItem className="w-full mb-8 text-end">
             <Button
               as={Link}

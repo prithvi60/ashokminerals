@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiAlertCircle } from "react-icons/fi";
+import { MdOutlineEmail } from "react-icons/md";
 import { useState } from "react";
 import { Contact } from "./Contact";
 
@@ -10,8 +10,9 @@ const ModalComponent = () => {
         <>
             <button
                 onClick={() => setIsOpen(true)}
-                className="mt-4 bg-warning text-primary text-base font-semibold text-white capitalize duration-500 font-Formular lg:text-lg hover:animate-pulse group tracking-widest px-8 py-2"
+                className="bg-warning text-primary text-base font-semibold capitalize duration-500 font-Formular lg:text-lg hover:animate-pulse group tracking-widest px-8 py-1.5 flex gap-2 items-center"
             >
+                <MdOutlineEmail className="text-lg md:text-xl text-primary" />
                 Send Enquiry
             </button>
             <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
