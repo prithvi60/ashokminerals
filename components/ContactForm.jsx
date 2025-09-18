@@ -121,7 +121,7 @@ export const ContactForm = () => {
             <br /> Chennai - 600041.
             <br />
             <br />
-            <span className="font-semibold">GST : 33AAPB8321M1Z0</span>
+            <span className="font-semibold">GST : 33AAAPB8321M1Z0</span>
           </div>
         </div>
       </div>

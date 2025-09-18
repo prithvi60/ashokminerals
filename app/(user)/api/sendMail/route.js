@@ -64,7 +64,7 @@ export async function POST(req) {
               F 15 & F86, Sipcot Industrial Complex,
               <br/>Gummidipoondi - 601201.
               <br/>
-              GST: 33AAPB8321M1Z0
+              GST: 33AAAPB8321M1Z0
               <br/>
                Phone: +91-44-24512581/82/83
                <br/>
@@ -84,30 +84,28 @@ export async function POST(req) {
     html: `
           <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; padding: 20px; border-radius: 8px; max-width: 600px; margin: 0 auto; border: 1px solid #ddd;">
             <p style="font-size: 16px; color: #555; margin-bottom: 10px;">Dear <strong>${userName}</strong></p>
-            <p style="font-size: 16px; color: #555; margin-bottom: 10px;">Greetings from Ashok Mineral Enterprises!</p>
+            <p style="font-size: 16px; color: #555; margin-bottom: 10px;">Thank you for your enquiry.</p>
             <p style="font-size: 16px; color: #555;">
-                We appreciate your interest in our products and acknowledge the receipt of your submission.
+                We will get back to you within 24 hours.
             </p>
             <p style="font-size: 16px; color: #555;">
-                Our team will review your request and get back to you shortly. If you have any urgent inquiries, feel free to contact us at +91-44-24512581/82/83.
+                if its urgent, you can connect with us by WhatsApp or Call at +91 9840899343.
             </p>
-            <p style="font-size: 16px; color: #555; margin-bottom: 26px;">Thanks & Regards</p>
+            <p style="font-size: 16px; color: #555; margin-bottom: 26px;"> Thanks & Regards,</p>
             <div style="margin-bottom: 10px;">
              <img src=${imageUrl} alt="Ashok Minerals Logo" style="width: 150px; height: auto;">
             </div>
             <p style="font-size: 16px; color: #555;"><strong>Ashok Mineral Enterprises</strong></p>
             <p style="font-size: 16px; color: #555;">
-             Primary Manufacturing Unit & Warehouse:
+             Office Address:
               <br/>
-              F 15 & F86, Sipcot Industrial Complex,
-              <br/>Gummidipoondi - 601201.
+              2A, first street, Karpagambal nagar,
               <br/>
-              GST: 33AAPB8321M1Z0
+              Kottivakkam,
               <br/>
-               Phone: +91-44-24512581/82/83
-               <br/>
-               Email: contact@ashokminerals.com
-               <br/>
+              Chennai - 600041.
+              <br/>
+              <br/>
             </p>
         </div>`,
   };
