@@ -7,9 +7,9 @@ export const ContactForm = () => {
       id="contact"
     >
       <div className="h-full px-6 py-10 space-y-10 bg-secondary sm:py-12 sm:px-10 lg:px-16 xl:px-64 md:space-y-0 relative">
-        <h3 className="relative block w-full text-2xl font-medium tracking-wide md:hidden sm:text-3xl lg:text-5xl">
+        <h2 className="relative block w-full text-2xl font-medium tracking-wide md:hidden sm:text-3xl lg:text-5xl">
           Contact us
-        </h3>
+        </h2>
         <div className="flex flex-col-reverse justify-center gap-6 lg:gap-12 md:flex-row">
           {/* contact details */}
           <div className="flex flex-col items-start w-full h-auto gap-10 mt-6 md:1/2 lg:w-3/5">
@@ -18,7 +18,9 @@ export const ContactForm = () => {
                 Contact us
               </h3>
               <p className="para font-Formular">
-                Get in touch with us today through email, phone, or by filling out the form, and let us show you how Ashok Mineral enterprises can give you quality industrial minerals.
+                Get in touch with us today through email, phone, or by filling
+                out the form, and let us show you how Ashok Mineral enterprises
+                can give you quality industrial minerals.
               </p>
               <p
                 className="underline underline-offset-4 para hover:text-warning w-max"
@@ -32,40 +34,48 @@ export const ContactForm = () => {
             </div>
             <div className="block space-y-10">
               <div className="block w-full space-y-4">
-                <h4 className="text-xl font-medium tracking-wide capitalize sm:text-2xl">
+                <h3 className="text-xl font-medium tracking-wide capitalize sm:text-2xl">
                   Customer Support
-                </h4>
+                </h3>
                 <p className="para">
-                  Our committed support team is available 24/7 to assist with any
-                  questions or concerns.
+                  Our committed support team is available 24/7 to assist with
+                  any questions or concerns.
                 </p>
                 <p className="para">
-                  Available on whatsapp or calls - <span className="hover:text-warning">+91 98408 99343</span>
+                  Available on whatsapp or calls -{" "}
+                  <span className="hover:text-warning">+91 98408 99343</span>
                 </p>
               </div>
               <div className="block w-full space-y-4">
-                <h4 className="text-xl font-medium tracking-wide capitalize sm:text-2xl">
+                <h3 className="text-xl font-medium tracking-wide capitalize sm:text-2xl">
                   Sales & other Enquiries
-                </h4>
+                </h3>
                 <p className="para">
                   For any media inquiries or press-related questions, we invite
                   you to reach out to us at{" "}
-                  <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
+                  <a
+                    href="mailto:vanessa@ashokminerals.com"
+                    className="mx-1 font-semibold hover:text-warning"
+                  >
                     marketing@ashokminerals.com
                   </a>
-                  . If you have marketing-related inquiries, please connect with us
-                  at
-                  <a href="mailto:vanessa@ashokminerals.com" className="mx-1 font-semibold hover:text-warning">
+                  . If you have marketing-related inquiries, please connect with
+                  us at
+                  <a
+                    href="mailto:vanessa@ashokminerals.com"
+                    className="mx-1 font-semibold hover:text-warning"
+                  >
                     vanessa@ashokminerals.com
                   </a>
-                  . <br />We look forward to hearing from you!
+                  . <br />
+                  We look forward to hearing from you!
                 </p>
               </div>
             </div>
           </div>
           {/* Form */}
           <div className="w-full h-full px-4 rounded-md shadow-md bg-primary py-7 md:1/2 lg:w-2/5 md:sticky md:top-24">
-          <Contact />
+            <Contact />
           </div>
         </div>
       </div>

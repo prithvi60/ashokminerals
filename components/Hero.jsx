@@ -27,6 +27,7 @@ const Hero = () => {
             }`}
         >
           <Image
+            title="bg image"
             priority
             loading={"eager"}
             alt="bg image"
@@ -50,6 +51,7 @@ const Hero = () => {
         </video>
         <div className="absolute flex flex-col items-center justify-center w-full h-full space-y-8 text-center -translate-x-1/2 -translate-y-1/2 md:space-y-12 top-1/2 left-1/2 font-RobotoSlab">
           <Image
+            title="ashok minerals logo"
             alt="ashok minerals logo"
             width={200}
             height={200}
@@ -57,14 +59,15 @@ const Hero = () => {
             src={"/ashok-minerals-logo.svg"}
             className="z-10 w-36 h-36 md:w-60 md:h-60"
           />
-          <h4 className="px-16 text-3xl font-medium tracking-wide capitalize md:text-6xl text-primary">
+          <h1 className="px-16 text-3xl font-medium tracking-wide capitalize md:text-6xl text-primary">
             Processors of <br></br>
             Industrial minerals since 1956
-          </h4>
+          </h1>
 
           <div className="flex items-center justify-center w-full gap-5">
             <Button
               as={Link}
+              type="button"
               color="warning"
               href="/products"
               radius="none"

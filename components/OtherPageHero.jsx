@@ -1,14 +1,15 @@
 import Image from "next/image";
 import { BreadCrumbs } from "./BreadCrumbs";
 
-const OtherPageHero = ({ title, imgSrc, para, para2, type }) => {
+const OtherPageHero = ({ title, imgSrc, type }) => {
   return (
     <section className="w-full h-full space-y-10 mt-28">
       <div className="overflow-hidden">
         <div className="relative w-full h-[40dvh] flex items-center justify-center">
           {/* Background Image */}
           <Image
-            alt=""
+            title="Background Image"
+            alt="Background Image"
             src={imgSrc}
             fill
             className={`${type ? "object-fill object-center" : " object-cover"} object-center brightness-[0.70]`}
@@ -21,6 +22,7 @@ const OtherPageHero = ({ title, imgSrc, para, para2, type }) => {
             </div>
             <div className="relative size-36 sm:size-40 xl:size-48">
               <Image
+                title="ashok minerals logo"
                 alt="ashok minerals logo"
                 fill
                 src={"/ashok-minerals-logo.svg"}
@@ -30,9 +32,9 @@ const OtherPageHero = ({ title, imgSrc, para, para2, type }) => {
         </div>
       </div>
       {!type && (
-        <h3 className="w-full text-3xl md:text-[44px] px-6 font-medium tracking-wide capitalize sm:px-10 lg:px-16 xl:px-64">
+        <h1 className="w-full text-3xl md:text-[44px] px-6 font-medium tracking-wide capitalize sm:px-10 lg:px-16 xl:px-64">
           {title}
-        </h3>
+        </h1>
       )}
     </section>
 

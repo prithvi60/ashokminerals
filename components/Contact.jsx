@@ -5,7 +5,6 @@ import { Select, SelectItem } from "@heroui/select";
 import { useState } from "react";
 import Loader from "./Loader";
 import { usePathname } from "next/navigation";
-import path from "path";
 
 const lists = [
     "sample interest",

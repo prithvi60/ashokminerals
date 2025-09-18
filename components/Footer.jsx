@@ -12,6 +12,7 @@ const Footer = () => {
           <div className="flex md:flex-col lg:flex-row gap-5 md:gap-2.5 lg:gap-5 justify-center md:justify-start items-center">
             <div className="relative w-20 h-20 overflow-hidden md:-mt-2.5">
               <Image
+                title="ashok minerals logo"
                 alt="ashok minerals logo"
                 fill
                 style={{ objectFit: "contain", objectPosition: "center" }}
@@ -57,11 +58,11 @@ const Footer = () => {
               <div
                 className={`flex items-center sm:items-start gap-7 text-base font-normal capitalize transition-colors duration-300 ease-linear hover:text-warning font-RobotoSlab text-primary group`}
               >
-                <h4
+                <h3
                   className={`text-lg font-semibold underline decoration-dashed underline-offset-8 decoration-red-600 tracking-widest text-primary font-RobotoSlab `}
                 >
                   {item.menu}
-                </h4>
+                </h3>
               </div>
               <div className={`font-RobotoSlab`}>
                 {item?.subMenu?.map((l, index) => (
@@ -69,9 +70,13 @@ const Footer = () => {
                     title={l.menuTitle}
                     className={`text-sm text-primary font-Formular cursor-pointer lg:text-lg tracking-widest !leading-snug hover:text-warning transition-colors duration-500 ease-linear w-full h-full font-light z-10 capitalize space-y-5 text-center sm:text-left`}
                     key={index}
-                    href={item.menu != "Quick Links" ? `/our-company/${l.menuRef}` : `${l.menuRef}`}
+                    href={
+                      item.menu != "Quick Links"
+                        ? `/our-company/${l.menuRef}`
+                        : `${l.menuRef}`
+                    }
                   >
-                    <h4 className="w-full h-full mb-2">{l.menuTitle}</h4>
+                    <h3 className="w-full h-full mb-2">{l.menuTitle}</h3>
                   </Link>
                 ))}
               </div>
@@ -80,13 +85,13 @@ const Footer = () => {
         </div>
       </div>
       <div className="w-full h-full text-center">
-        <h4 className="text-base font-medium font-RobotoSlab text-primary/50 tracking-widest">
+        <h3 className="text-base font-medium font-RobotoSlab text-primary/50 tracking-widest">
           © {new Date().getFullYear()}
           <span className="font-semibold font-Formular ms-1">
             Ashok Minerals Enterprises.
           </span>{" "}
           All Rights Reserved.
-        </h4>
+        </h3>
       </div>
     </footer>
   );

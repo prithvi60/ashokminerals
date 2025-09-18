@@ -9,14 +9,15 @@ export const BlogSlug = ({ post, type }) => {
   return (
     <section className="w-full h-full px-6 py-10 space-y-8 font-RobotoSlab bg-primary sm:px-12 lg:px-16 xl:px-64">
       <div className="relative w-full h-full p-5 space-y-5 rounded-md">
-        <h3 className="text-xl font-medium tracking-wide capitalize md:text-4xl xl:text-5xl">
+        <h2 className="text-xl font-medium tracking-wide capitalize md:text-4xl xl:text-5xl">
           {post.title}
-        </h3>
+        </h2>
         <div className="relative w-full h-full space-y-10 md:space-y-20">
           {!type && (
             <div className="w-full h-full">
               <div className="relative w-full h-[320px]">
                 <Image
+                  title={post.imageAlt}
                   alt={post.imageAlt}
                   src={post.imageUrl}
                   fill
@@ -54,7 +55,7 @@ const customComponents = {
 
       const href = slug ? `/products/${slug}` : "#";
       return (
-        <Link href={href} className="text-blue-600 hover:underline">
+        <Link title={slug} href={href} className="text-blue-600 hover:underline">
           {children}
         </Link>
       );

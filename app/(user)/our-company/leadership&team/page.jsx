@@ -7,12 +7,12 @@ const Home = () => {
       <OtherPageHero title={"Leadership"} imgSrc={"/hero_2.jpg"} para={""} />
       <div className="w-full px-6 py-10 space-y-12 sm:py-12 sm:px-10 lg:px-16 xl:px-64 font-RobotoSlab">
         <div className="space-y-4 md:space-y-6 rounded-lg my-5">
-          <h4 className="w-full text-3xl font-medium tracking-wide capitalize md:text-[44px]">
+          <h1 className="w-full text-3xl font-medium tracking-wide capitalize md:text-[44px]">
             Our Leadership
-          </h4>
-          <h5 className="w-full text-lg capitalize md:text-xl font-medium tracking-wide">
+          </h1>
+          <h2 className="w-full text-lg capitalize md:text-xl font-medium tracking-wide">
             Mrs. Vanessa Bagdy & Mr. Raaj Bagdy
-          </h5>
+          </h2>
           <p className="para">
             At the heart of Ashok Mineral Enterprises is a leadership duo that embodies balance and synergy—like Yin and Yang, they complement each other perfectly. Together, they form the perfect balance—Vanessa, the Yin, brings fresh perspectives, innovation, and strategic vision, while Raaj, the Yang, provides wisdom, stability, and a wealth of experience.
           </p>
@@ -28,25 +28,25 @@ const Home = () => {
           </div>
           <div className="w-full md:w-1/2 md:sticky md:top-5 h-full">
             <div className="relative w-full h-96 md:h-[335px] lg:h-[425px] overflow-hidden">
-              <Image alt="founder image" src={"/founders.png"} fill loading="lazy" className="object-contain object-center" />
+              <Image title="founder" alt="founder image" src={"/founders.png"} fill loading="lazy" className="object-contain object-center" />
             </div>
           </div>
         </div>
         <div className="space-y-6 !mt-28">
           <div className="space-y-4 md:space-y-6 rounded-lg my-5">
-            <h4 className="w-full text-3xl font-medium tracking-wide capitalize md:text-[44px]">
+            <h3 className="w-full text-3xl font-medium tracking-wide capitalize md:text-[44px]">
               Our Team
-            </h4>
+            </h3>
             <p className="para">
               At Ashok Mineral Enterprises, our team of 25 young and dynamic executives is dedicated to putting customers first. We go above and beyond to meet customer needs, demonstrating a strong work ethic and a willingness to go the extra mile to ensure satisfaction. We believe that our growth is intrinsically linked to our customer&apos;s success, and we always keep the big picture in mind, focusing on building long-term relationships.
             </p>
           </div>
           <div className="w-full max-w-6xl mx-auto h-full flex flex-col-reverse justify-between gap-5 md:flex-row relative pt-10">
             <div className="relative w-full h-56 md:h-[335px] lg:h-[310px] overflow-hidden">
-              <Image alt="founder image" src={"/teamashok1.jpg"} fill loading="lazy" className="object-contain object-center" />
+              <Image title="founder" alt="founder image" src={"/teamashok1.jpg"} fill loading="lazy" className="object-contain object-center" />
             </div>
             <div className="relative w-full h-56 md:h-[335px] lg:h-[310px] overflow-hidden">
-              <Image alt="founder image" src={"/teamashok2.jpg"} fill loading="lazy" className="object-contain object-center" />
+              <Image title="founder" alt="founder image" src={"/teamashok2.jpg"} fill loading="lazy" className="object-contain object-center" />
             </div>
           </div>
         </div>

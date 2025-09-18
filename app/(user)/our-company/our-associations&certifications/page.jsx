@@ -14,9 +14,9 @@ const Home = () => {
       />
       {/* associations */}
       <div className="px-6 py-10 space-y-5 sm:py-12 sm:px-10 lg:px-16 xl:px-64">
-        <h4 className="text-lg font-medium tracking-wide capitalize sm:text-xl lg:text-2xl">
+        <h2 className="text-lg font-medium tracking-wide capitalize sm:text-xl lg:text-2xl">
           our Associations
-        </h4>
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center gap-5 pt-6 xl:gap-6 w-full">
           {association.map((item, id) => (
             <div
@@ -25,24 +25,25 @@ const Home = () => {
             >
               <div className="relative overflow-hidden transition-all duration-300 ease-linear rounded-lg w-28 h-28 sm:rounded-full group-hover:scale-105">
                 <Image
+                  title={item.altTxt}
                   alt={item.altTxt}
                   src={item.imgSrc}
                   fill
                   className="object-contain"
                 />
               </div>
-              <h4 className="w-full text-lg font-normal font-Formular text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
+              <h3 className="w-full text-lg font-normal font-Formular text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
                 {item.abbr}
-              </h4>
+              </h3>
             </div>
           ))}
         </div>
       </div>
       {/* certifications */}
       <div className="px-6 py-10 space-y-5 sm:py-14 sm:px-10 lg:px-16 xl:px-64">
-        <h4 className="text-lg font-medium tracking-wide capitalize sm:text-xl lg:text-2xl">
+        <h3 className="text-lg font-medium tracking-wide capitalize sm:text-xl lg:text-2xl">
           our certifications
-        </h4>
+        </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pt-6 md:gap-6">
           {certifications.map((item, id) => (
             <div
@@ -51,15 +52,16 @@ const Home = () => {
             >
               <div className="relative overflow-hidden transition-all duration-300 ease-linear rounded-lg w-28 h-28 sm:rounded-full group-hover:scale-105">
                 <Image
+                  title={item.altTxt}
                   alt={item.altTxt}
                   src={item.imgSrc}
                   fill
                   className="object-contain"
                 />
               </div>
-              <h4 className="w-full text-lg font-medium font-Formular text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
+              <h3 className="w-full text-lg font-medium font-Formular text-center capitalize md:text-xl group-hover:text-warning tracking-widest !leading-snug">
                 {item.abbr}
-              </h4>
+              </h3>
             </div>
           ))}
         </div>

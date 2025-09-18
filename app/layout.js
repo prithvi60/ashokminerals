@@ -30,6 +30,12 @@ export const metadata = {
   icons: {
     icon: "/Ashok-Minerals-Final-Logo.jpg",
   },
+  alternates: {
+    canonical: "https://ashokminerals.com/",
+    languages: {
+      "en-US": "/",
+    },
+  },
   keywords: [
     "best mineral manufacturers india",
     "chennai mineral exporters",
@@ -56,14 +62,21 @@ export const metadata = {
     title: "Ashok Minerals Enterprise",
     description: "Processor of Industrial Minerals since 1956",
     url: "https://ashokminerals.com/",
+    type: "website",
     images: [
       {
-        url: "/hero_1.jpg",
+        url: "https://ashokminerals.com/hero_1.jpg",
         width: 1200,
         height: 630,
         alt: "Ashok Minerals ",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ashok Minerals Enterprise",
+    description: "Processor of Industrial Minerals since 1956",
+    images: ["https://ashokminerals.com/hero_1.jpg"],
   },
   robots: {
     index: true,
@@ -71,8 +84,8 @@ export const metadata = {
   },
 };
 
-const ahrefsKey = process.env.NEXT_PUBLIC_AHREFS_KEY || '';
-const gtmId = process.env.NEXT_PUBLIC_GTM_ID || '';
+const ahrefsKey = process.env.NEXT_PUBLIC_AHREFS_KEY || "";
+const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "";
 
 export default function RootLayout({ children }) {
   return (
@@ -81,39 +94,39 @@ export default function RootLayout({ children }) {
         {children}
       </body>
       {/* Ahrefs Analytics Script */}
-            {ahrefsKey && (
-              <Script
-                id="ahrefs-analytics"
-                strategy="afterInteractive"
-                src="https://analytics.ahrefs.com/analytics.js"
-                data-key={ahrefsKey}
-                async
-              />
-            )}
-      
-            {/* Google Tag Manager (gtag.js) */}
-            {gtmId && (
-              <>
-                <Script
-                  id="gtag"
-                  strategy="afterInteractive"
-                  src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}
-                  async
-                />
-                <Script
-                  id="gtag-config"
-                  strategy="afterInteractive"
-                  dangerouslySetInnerHTML={{
-                    __html: `
+      {ahrefsKey && (
+        <Script
+          id="ahrefs-analytics"
+          strategy="afterInteractive"
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key={ahrefsKey}
+          async
+        />
+      )}
+
+      {/* Google Tag Manager (gtag.js) */}
+      {gtmId && (
+        <>
+          <Script
+            id="gtag"
+            strategy="afterInteractive"
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtmId}`}
+            async
+          />
+          <Script
+            id="gtag-config"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
                         gtag('js', new Date());
                         gtag('config', '${gtmId}');
                       `,
-                  }}
-                />
-              </>
-            )}
+            }}
+          />
+        </>
+      )}
     </html>
   );
 }

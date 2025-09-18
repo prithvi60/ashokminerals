@@ -19,6 +19,7 @@ import { IoClose } from "react-icons/io5";
 import { usePathname } from "next/navigation";
 import { navbarMenu } from "@/libs/data";
 import ModalComponent from "./ModalComponent";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const NavbarComponent = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -74,10 +75,12 @@ const NavbarComponent = () => {
           className={`${!percent && path === "/" ? "opacity-0" : "opacity-100"} ${path === "/" ? "flex" : "hidden"}`}
         >
           <Link
+            title="Ashok Minerals Home"
             href={"/"}
             className="relative overflow-hidden cursor-pointer size-16 md:size-20"
           >
             <Image
+              title="Ashok Minerals Logo"
               alt="ashok minerals logo"
               fill
               style={{ objectFit: "contain", objectPosition: "center" }}
@@ -88,10 +91,12 @@ const NavbarComponent = () => {
         {path !== "/" && (
           <NavbarBrand>
             <Link
+              title="Ashok Minerals Home"
               href={"/"}
               className="relative overflow-hidden cursor-pointer size-16 md:size-20"
             >
               <Image
+                title="Ashok Minerals Logo"
                 alt="ashok minerals logo"
                 fill
                 style={{ objectFit: "contain", objectPosition: "center" }}
@@ -113,7 +118,7 @@ const NavbarComponent = () => {
                 } lg:text-lg hover:underline hover:underline-offset-4 font-bold font-Formular  ${item.ref !== "" && "cursor-pointer"
                 }`}
             >
-              <Link href={item.ref}>{item.menu}</Link>
+              <Link title={item.menu} href={item.ref}>{item.menu}</Link>
               {item.menu !== "blog" && (
                 <TiArrowSortedDown
                   className={` ${item.menu === "blog" ? "hidden" : "block"
@@ -137,16 +142,9 @@ const NavbarComponent = () => {
                     href={`${l.menuRef}`}
                     onClick={() => setIsActiveState(l.menuTitle)}
                   >
-                    <h4 className="mb-2.5">{l.menuTitle}</h4>
+                    <span className="mb-2.5 block">{l.menuTitle}</span>
                   </Link>
                 ))}
-                {/* {item.menu !== "our company" && (<Link
-                  href={`${item.menu === "products" ? "/products" : "/markets"}`}
-                  className="absolute flex items-center gap-1 text-warning bottom-2 right-2.5"
-                >
-                  <IoInformationCircle className="text-warning" />
-                  <h5>{`more...`}</h5>
-                </Link>)} */}
               </div>
             )}
           </NavbarItem>
@@ -163,14 +161,16 @@ const NavbarComponent = () => {
             <NavbarItem>
               <Button
                 as={Link}
+                title="Contact Ashok Minerals via Whatsapp"
+                role="button"
                 color="warning"
-                href="tel:+919840899343"
+                href="https://wa.me/9840899343?text=Thank%20You%20For%20Connecting%20With%20Ashok%20Minerals%20Marketing%20Team,%20We%20Will%20Get%20In%20Touch%20With%20You%20As%20Soon%20As%20Possible."
                 radius="none"
                 variant="solid"
-                className="text-base font-bold text-warning/50 capitalize duration-500 font-Formular ms-3 lg:text-lg hover:animate-pulse group bg-warning/30 tracking-widest px-8 py-4"
+                className="text-sm md:text-base font-bold text-warning/80 capitalize duration-500 font-Formular md:ms-3 lg:text-lg hover:animate-pulse group bg-warning/10 tracking-widest px-4 md:px-8 py-2.5 md:py-4"
               >
                 <span className="inline-block animate-shake">
-                  <IoCall className="text-base text-warning transition-all duration-500 group-hover:scale-125" />
+                  <IoLogoWhatsapp className="text-base text-warning transition-all duration-500 group-hover:scale-125" />
                 </span>
                 +91 98408 99343
               </Button>
@@ -183,6 +183,7 @@ const NavbarComponent = () => {
           <NavbarItem>
             <Button
               as={Link}
+              type="button"
               color="warning"
               href="#contact"
               radius="none"
@@ -207,14 +208,15 @@ const NavbarComponent = () => {
             <NavbarItem className="block">
               <Button
                 as={Link}
+                type="button"
                 color="warning"
-                href="tel:+919840899343"
+                href="https://wa.me/9840899343?text=Thank%20You%20For%20Connecting%20With%20Ashok%20Minerals%20Marketing%20Team,%20We%20Will%20Get%20In%20Touch%20With%20You%20As%20Soon%20As%20Possible."
                 radius="none"
                 variant="solid"
-                className="text-sm md:text-base font-bold text-warning/50 capitalize duration-500 font-Formular md:ms-3 lg:text-lg hover:animate-pulse group bg-warning/30 tracking-widest px-4 md:px-8 py-2.5 md:py-4"
+                className="text-sm md:text-base font-bold text-warning/80 capitalize duration-500 font-Formular md:ms-3 lg:text-lg hover:animate-pulse group bg-warning/10 tracking-widest px-4 md:px-8 py-2.5 md:py-4"
               >
                 <span className="inline-block animate-shake">
-                  <IoCall className="text-base text-warning transition-all duration-500 group-hover:scale-125" />
+                  <IoLogoWhatsapp className="text-base text-warning transition-all duration-500 group-hover:scale-125" />
                 </span>
                 +91 98408 99343
               </Button>
@@ -227,6 +229,7 @@ const NavbarComponent = () => {
           <NavbarItem>
             <Button
               as={Link}
+              type="button"
               color="warning"
               href="#contact"
               radius="none"
@@ -281,6 +284,7 @@ const NavbarComponent = () => {
           <div className="flex flex-col items-end justify-center gap-4">
             {navbarMenu?.slice(0, navbarMenu.length).map((item, id) => (
               <Link
+                title={item.menu}
                 href={item.ref}
                 className="text-lg font-medium tracking-widest capitalize me-12 font-Formular"
                 key={id}
@@ -295,6 +299,7 @@ const NavbarComponent = () => {
           <NavbarMenuItem className="w-full mb-8 text-end">
             <Button
               as={Link}
+              type="button"
               color="warning"
               href="#contact"
               variant="solid"

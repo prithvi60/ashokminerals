@@ -10,10 +10,13 @@ const ModalComponent = () => {
         <>
             <button
                 onClick={() => setIsOpen(true)}
-                className="bg-warning text-primary text-base font-semibold capitalize duration-500 font-Formular lg:text-lg hover:animate-pulse group tracking-widest px-8 py-1.5 flex gap-2 items-center"
+                className="bg-warning text-primary text-base font-semibold capitalize duration-500 font-Formular lg:text-lg hover:animate-pulse group tracking-wide text-center px-8 py-1.5 block"
             >
-                <MdOutlineEmail className="text-lg md:text-xl text-primary" />
-                Send Enquiry
+                <div className="flex items-center gap-x-2">
+                    <MdOutlineEmail className="text-lg md:text-xl text-primary" />
+                    Send Enquiry
+                </div>
+                <div className="text-[8px] -mt-2 ml-5 tracking-wide text-primary">Response within 5 minutes</div>
             </button>
             <SpringModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </>

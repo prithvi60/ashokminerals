@@ -9,7 +9,6 @@ import { SpringModal } from "./ModalComponent";
 export default function FloatingButton() {
   const path = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  console.log(path);
 
   return (
     <div className="fixed bottom-8 right-4" style={{ zIndex: "1000" }}>

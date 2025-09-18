@@ -3,9 +3,9 @@ export const InternationalTies = ({ countries }) => {
   return (
     <div className="block space-y-7">
       <div className="p-8 space-y-4 rounded-lg shadow-lg bg-secondary md:space-y-6 ">
-        <h4 className="text-lg font-medium tracking-wide sm:text-xl lg:text-2xl">
+        <h2 className="text-lg font-medium tracking-wide sm:text-xl lg:text-2xl">
           {countries.mainTitle}
-        </h4>
+        </h2>
         <p className="para">{countries.para1}</p>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 place-content-center md:grid-cols-4 lg:grid-cols-3 gap-x-2 gap-y-5 xl:grid-cols-4">
@@ -15,6 +15,7 @@ export const InternationalTies = ({ countries }) => {
             key={id}
           >
             <Image
+              title="national flag"
               alt={"national flag"}
               src={l.logo}
               fill

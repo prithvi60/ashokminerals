@@ -5,13 +5,14 @@ import Image from "next/image";
 export const ProductSpecification = ({ product }) => {
   return (
     <section className="block px-6 py-10 space-y-6 sm:space-y-10 font-RobotoSlab sm:py-12 sm:px-10 lg:px-16 xl:px-64">
-      <h3 className="text-2xl font-medium tracking-wider capitalize sm:text-3xl lg:text-4xl">
+      <h2 className="text-2xl font-medium tracking-wider capitalize sm:text-3xl lg:text-4xl">
         {product.title}
-      </h3>
+      </h2>
       <div className="relative block space-y-10 md:space-y-20">
         <div className="w-full h-full">
           <div className="relative w-full h-56 overflow-hidden sm:h-96">
             <Image
+              title={product.imageAlt}
               alt={product.imageAlt}
               src={product.imageUrl}
               fill
