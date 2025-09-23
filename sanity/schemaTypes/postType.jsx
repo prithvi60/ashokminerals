@@ -79,35 +79,35 @@ export const postType = defineType({
                                     },
                                 ],
                             },
+                            {
+                                name: 'link',
+                                type: 'object',
+                                title: 'URL',
+                                fields: [
+                                    {
+                                        title: 'URL',
+                                        name: 'href',
+                                        type: 'url',
+                                    }
+                                ]
+                            },
                         ],
                     },
-                    {
-                    name: 'link',
-                    type: 'object',
-                    title: 'URL',
+                },
+                {
+                    type: "image",
                     fields: [
                         {
-                            title: 'URL',
-                            name: 'href',
-                            type: 'url',
-                        }
-                    ]
-                },
-                },
-            {
-                type: "image",
-                fields: [
-                    {
-                        name: "alt",
-                        type: "string",
-                        title: "Alternative text",
+                            name: "alt",
+                            type: "string",
+                            title: "Alternative text",
+                        },
+                    ],
+                    options: {
+                        hotspot: true,
                     },
-                ],
-                options: {
-                    hotspot: true,
                 },
-            },
             ],
-}),
+        }),
     ],
 });
