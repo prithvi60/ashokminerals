@@ -40,7 +40,6 @@ export const MarketListType = defineType({
             name: "isometricImage",
             type: "image",
             title: "Market Main Product Image",
-            validation: (Rule) => Rule.required().max(5242880).error('Image size must be 5MB or less'),
             fields: [
                 {
                     name: "alt",
@@ -56,7 +55,6 @@ export const MarketListType = defineType({
             name: "image",
             type: "image",
             title: "Market Product Image",
-            validation: (Rule) => Rule.required().max(5242880).error('Image size must be 5MB or less'),
             fields: [
                 {
                     name: "alt",
@@ -96,7 +94,6 @@ export const MarketListType = defineType({
                 },
                 {
                     type: "image",
-                    validation: (Rule) => Rule.max(5242880).error('Image size must be 5MB or less'),
                     fields: [
                         {
                             name: "alt",

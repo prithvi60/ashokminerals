@@ -37,7 +37,6 @@ export const ProductsType = defineType({
             name: "mainImage",
             type: "image",
             title: "Isometric View Image",
-            validation: (Rule) => Rule.required().max(5242880).error('Image size must be 5MB or less'),
             options: {
                 hotspot: true,
             },
@@ -65,7 +64,6 @@ export const ProductsType = defineType({
             name: "productImage",
             type: "image",
             title: "Product Image",
-            validation: (Rule) => Rule.required().max(5242880).error('Image size must be 5MB or less'),
             options: {
                 hotspot: true,
             },
@@ -85,7 +83,6 @@ export const ProductsType = defineType({
                 { type: "block" },
                 {
                     type: "image",
-                    validation: (Rule) => Rule.max(5242880).error('Image size must be 5MB or less'),
                     options: {
                         hotspot: true,
                     },
